@@ -11,4 +11,8 @@ module denis.zagorodnev {
 //    exports denis.zagorodnev;
     opens denis.zagorodnev to javafx.fxml;
     exports denis.zagorodnev;
+    exports denis.zagorodnev.settings;
+    opens denis.zagorodnev.settings to javafx.fxml;
+    exports denis.zagorodnev.controller;
+    opens denis.zagorodnev.controller to javafx.fxml;
 }

@@ -1,25 +1,27 @@
 package denis.zagorodnev;
 
-import denis.zagorodnev.englishtab.EnglishTab;
-import denis.zagorodnev.mathtab.MathTab;
+import denis.zagorodnev.controller.EnglishTabController;
+import denis.zagorodnev.settings.Root;
 import denis.zagorodnev.settings.SizeWindow;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import java.io.IOException;
 
-public class GeneralWindows {
+public class GeneralWindowNewFormat {
 
     private static final double WIDTH = SizeWindow.WIDTH.setSize(1.2);
     private static final double HEIGHT = SizeWindow.HEIGHT.setSize(1.2);
     private static final Stage WINDOW = new Stage();
-    private static final TabPane LESSON_TABS = new TabPane();
 
-    public static void getGeneralWindows() {
-        LESSON_TABS.getTabs().addAll(EnglishTab.getTab(), MathTab.getTab());
+    public static void getGeneralWindows() throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Root.class.getResource(
+                "/denis/zagorodnev/general-window.fxml"));
         WINDOW.setTitle("Образование");
         WINDOW.getIcons().add(new Image("/icone.png"));
-        WINDOW.setScene(new Scene(LESSON_TABS, WIDTH, HEIGHT));
+        WINDOW.setScene(new Scene(fxmlLoader.load(), WIDTH, HEIGHT));
         WINDOW.show();
     }
 }

@@ -1,13 +1,19 @@
-package denis.zagorodnev;
+package denis.zagorodnev.settings;
 
+import denis.zagorodnev.GeneralWindowNewFormat;
+import denis.zagorodnev.GeneralWindows;
 import denis.zagorodnev.controller.NewWordController;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MainStart extends Application {
+import java.io.IOException;
+
+public class Root extends Application {
 
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
 
     @Override
@@ -18,7 +24,8 @@ public class MainStart extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        GeneralWindows.getGeneralWindows();
+//       GeneralWindows.getGeneralWindows();
+        GeneralWindowNewFormat.getGeneralWindows();
     }
 
     @Override
@@ -31,7 +38,7 @@ public class MainStart extends Application {
     }
 //    @Override
 //    public void start(Stage stage) throws IOException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
+//        FXMLLoader fxmlLoader = new FXMLLoader(Root.class.getResource("denis.zagorodnev.general-window.fxml"));
 //        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
 //        stage.setTitle("Hello!");
 //        stage.setScene(scene);

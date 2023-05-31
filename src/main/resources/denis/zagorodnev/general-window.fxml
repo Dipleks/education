@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.EnglishTabController">
+  <tabs>
+    <Tab text="Английский">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Button layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#addWord" text="Добавить слово" />
+                  <Label fx:id="connectDB" layoutY="18.0" text="Подключена БД/Не подключена БД" textFill="#16fb05"/>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Математика">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
