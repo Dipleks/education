@@ -3,3 +3,4 @@
 {"original":"testJandS","translation":"testJandS"},
 {"original":"testnew","translation":"testnew"},
 {"original":"","translation":""},
+{"original":"ter","translation":"ter"},
