@@ -4,39 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d07f7f4-22c6-48a4-b4fd-08886274d2d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/GeneralWindows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/controller/NewWordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/englishtab/EnglishTab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/englishtab/NewWord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/mathtab/MathTab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/model/db/BackupDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/model/db/DataSourceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/model/db/ExportDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/model/db/NewWordDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/model/entity/WordsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/settings/ErrorWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/denis/zagorodnev/settings/SizeWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/denis/zagorodnev/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/save/words.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/save/words.txt" afterDir="false" />
+    <list default="true" id="1d07f7f4-22c6-48a4-b4fd-08886274d2d2" name="Changes" comment="update project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +38,9 @@
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
     ]
   }
 }]]></component>
@@ -106,11 +78,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685552598192</updated>
-      <workItem from="1685552599353" duration="2322000" />
+      <workItem from="1685552599353" duration="3182000" />
     </task>
+    <task id="LOCAL-00001" summary="update project">
+      <created>1685555453586</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685555453586</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update project" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project" />
   </component>
 </project>
