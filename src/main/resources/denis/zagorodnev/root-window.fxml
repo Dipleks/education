@@ -3,8 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-         prefHeight="2160.0" prefWidth="3840.0" tabClosingPolicy="UNAVAILABLE"
+<TabPane prefWidth="3840.0" prefHeight="2160.0"
+         tabClosingPolicy="UNAVAILABLE"
          xmlns="http://javafx.com/javafx/17.0.2-ea"
          xmlns:fx="http://javafx.com/fxml/1"
          fx:controller="denis.zagorodnev.controller.EnglishTabController">
@@ -20,7 +20,6 @@
                    text="Подключена БД/Не подключена БД"
                    textFill="#16fb05"
                    AnchorPane.rightAnchor="20.0" />
-
         </AnchorPane>
     </Tab>
 
