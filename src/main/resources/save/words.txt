@@ -9,3 +9,4 @@
 {"original":"test","translation":"home"},
 {"original":"yt","translation":"yt"},
 {"original":"56","translation":"56"},
+{"original":"yyy","translation":"yyyy"},
