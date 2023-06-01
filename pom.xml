@@ -99,7 +99,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>denis.zagorodnev.Education</mainClass>
+                            <mainClass>denis.zagorodnev.EducationApp</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
@@ -110,13 +110,14 @@
                     </execution>
                 </executions>
             </plugin>
+
             <!--Подключение всех зависимостей-->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>denis.zagorodnev.Education</mainClass>
+                            <mainClass>denis.zagorodnev.EducationApp</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

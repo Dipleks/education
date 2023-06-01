@@ -6,3 +6,6 @@ INSERT INTO public.words (original, translation) VALUES ('testnew', 'testnew');
 INSERT INTO public.words (original, translation) VALUES ('ter', 'ter');
 INSERT INTO public.words (original, translation) VALUES ('sdfgsdgf', 'sdfgsdfg');
 INSERT INTO public.words (original, translation) VALUES ('sdfg444', 'sdfgs555');
+INSERT INTO public.words (original, translation) VALUES ('test', 'home');
+INSERT INTO public.words (original, translation) VALUES ('yt', 'yt');
+INSERT INTO public.words (original, translation) VALUES ('56', '56');

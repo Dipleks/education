@@ -1,6 +1,5 @@
 package denis.zagorodnev;
 
-import denis.zagorodnev.controller.EnglishTabController;
 import denis.zagorodnev.settings.Root;
 import denis.zagorodnev.settings.SizeWindow;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +8,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class GeneralWindowNewFormat {
+public class RootWindow {
 
     private static final double WIDTH = SizeWindow.WIDTH.setSize(1.2);
     private static final double HEIGHT = SizeWindow.HEIGHT.setSize(1.2);
@@ -18,7 +17,7 @@ public class GeneralWindowNewFormat {
     public static void getGeneralWindows() throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(Root.class.getResource(
-                "/denis/zagorodnev/general-window.fxml"));
+                "/denis/zagorodnev/root-window.fxml"));
         WINDOW.setTitle("Образование");
         WINDOW.getIcons().add(new Image("/icone.png"));
         WINDOW.setScene(new Scene(fxmlLoader.load(), WIDTH, HEIGHT));
