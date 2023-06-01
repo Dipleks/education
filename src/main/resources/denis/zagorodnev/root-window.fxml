@@ -11,12 +11,16 @@
 
     <Tab text="Английский">
         <AnchorPane minHeight="0.0" minWidth="0.0">
-            <Button layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#addWord" text="Добавить слово" />
+            <Button layoutX="25.0" layoutY="14.0" mnemonicParsing="false"
+                    onAction="#addWord"
+                    text="Добавить слово" />
+
             <Label fx:id="connectDB"
                    layoutX="883.0" layoutY="14.0"
                    text="Подключена БД/Не подключена БД"
                    textFill="#16fb05"
                    AnchorPane.rightAnchor="20.0" />
+
         </AnchorPane>
     </Tab>
 
