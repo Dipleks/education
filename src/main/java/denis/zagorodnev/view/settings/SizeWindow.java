@@ -1,4 +1,4 @@
-package denis.zagorodnev.settings;
+package denis.zagorodnev.view.settings;
 
 import javafx.stage.Screen;
 

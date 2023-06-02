@@ -1,7 +1,7 @@
-package denis.zagorodnev.englishtab;
+package denis.zagorodnev.view.englishtab;
 
 import denis.zagorodnev.controller.NewWordController;
-import denis.zagorodnev.settings.SizeWindow;
+import denis.zagorodnev.view.settings.SizeWindow;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

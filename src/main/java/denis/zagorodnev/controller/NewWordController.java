@@ -1,11 +1,13 @@
 package denis.zagorodnev.controller;
 
-import denis.zagorodnev.englishtab.NewWord;
+import denis.zagorodnev.view.englishtab.NewWord;
 import denis.zagorodnev.model.db.BackupDatabase;
-import denis.zagorodnev.model.db.NewWordDatabase;
-import denis.zagorodnev.settings.ErrorWindow;
+import denis.zagorodnev.database.NewWordDatabase;
+import denis.zagorodnev.view.settings.ErrorAddWord;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class NewWordController {
 
@@ -23,7 +25,11 @@ public class NewWordController {
                 inputTranslation.clear();
                 SAVE = true;
             } else {
-                ErrorWindow.getErrorWindow(window,"Попытка добавить пустое поле!");
+                try {
+                    ErrorAddWord.getErrorAddWord(window);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
             BackupDatabase.saveWordInFile(original, translation);
         });

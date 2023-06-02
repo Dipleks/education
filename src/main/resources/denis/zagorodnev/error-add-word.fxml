@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="262.0" prefWidth="457.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.ErrorAddWordController">
+   <children>
+      <Label layoutX="97.0" layoutY="67.0" text="Попытка добавить пустое поле!">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button layoutX="212.0" layoutY="148.0" mnemonicParsing="false" onAction="#pushForExit" text="ОК" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

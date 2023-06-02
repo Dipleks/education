@@ -1,7 +1,7 @@
 package denis.zagorodnev;
 
-import denis.zagorodnev.settings.Root;
-import denis.zagorodnev.settings.SizeWindow;
+import denis.zagorodnev.view.settings.Root;
+import denis.zagorodnev.view.settings.SizeWindow;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;

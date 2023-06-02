@@ -1,4 +1,4 @@
-package denis.zagorodnev.model.db;
+package denis.zagorodnev.database;
 
 import org.postgresql.ds.PGSimpleDataSource;
 

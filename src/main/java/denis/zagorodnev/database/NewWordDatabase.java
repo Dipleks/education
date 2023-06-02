@@ -1,5 +1,6 @@
-package denis.zagorodnev.model.db;
+package denis.zagorodnev.database;
 
+import denis.zagorodnev.database.DataSourceProvider;
 import denis.zagorodnev.model.entity.WordsEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 

@@ -1,4 +1,4 @@
-package denis.zagorodnev.settings;
+package denis.zagorodnev.view.settings;
 
 import denis.zagorodnev.RootWindow;
 import denis.zagorodnev.controller.NewWordController;
@@ -19,7 +19,6 @@ public class Root extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
         RootWindow.getGeneralWindows();
     }
 

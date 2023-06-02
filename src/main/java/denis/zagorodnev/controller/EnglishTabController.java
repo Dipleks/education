@@ -1,7 +1,6 @@
 package denis.zagorodnev.controller;
 
-import denis.zagorodnev.englishtab.NewWord;
-import denis.zagorodnev.settings.SizeWindow;
+import denis.zagorodnev.view.englishtab.NewWord;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 

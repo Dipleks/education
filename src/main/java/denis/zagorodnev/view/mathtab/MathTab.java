@@ -1,4 +1,4 @@
-package denis.zagorodnev.mathtab;
+package denis.zagorodnev.view.mathtab;
 
 import javafx.scene.control.Tab;
 
