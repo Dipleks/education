@@ -30,3 +30,5 @@ INSERT INTO public.words (original, translation) VALUES ('', '');
 INSERT INTO public.words (original, translation) VALUES ('', '');
 INSERT INTO public.words (original, translation) VALUES ('', '');
 INSERT INTO public.words (original, translation) VALUES ('', '');
+INSERT INTO public.words (original, translation) VALUES ('', '');
+INSERT INTO public.words (original, translation) VALUES ('', '');
