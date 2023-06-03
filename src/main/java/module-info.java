@@ -7,12 +7,10 @@ module denis.zagorodnev {
     requires java.naming;
     requires com.fasterxml.jackson.databind;
 
-//    opens denis.zagorodnev;
-//    exports denis.zagorodnev;
     opens denis.zagorodnev to javafx.fxml;
     exports denis.zagorodnev;
     exports denis.zagorodnev.view.settings;
     opens denis.zagorodnev.view.settings to javafx.fxml;
-    exports denis.zagorodnev.controller;
-    opens denis.zagorodnev.controller to javafx.fxml;
+    exports denis.zagorodnev.controller.englishtab;
+    opens denis.zagorodnev.controller.englishtab to javafx.fxml;
 }

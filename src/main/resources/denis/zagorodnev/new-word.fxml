@@ -3,12 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="329.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.NewWordController">
+<AnchorPane prefHeight="329.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.englishtab.NewWordController">
    <children>
-      <Label layoutX="169.0" layoutY="80.0" text="Слово на английском:" />
-      <Label layoutX="169.0" layoutY="148.0" text="Перевод на русский:" />
-      <TextField fx:id="original" layoutX="169.0" layoutY="97.0" />
-      <TextField fx:id="translation" layoutX="170.0" layoutY="165.0" />
-      <Button layoutX="210.0" layoutY="216.0" mnemonicParsing="false" onAction="#addWord" text="Добавить" />
+      <Label layoutX="140.0" layoutY="80.0" text="Слово на английском:" />
+      <Label layoutX="140.0" layoutY="148.0" text="Перевод на русский:" />
+      <TextField fx:id="original" layoutX="140.0" layoutY="97.0" />
+      <TextField fx:id="translation" layoutX="140.0" layoutY="165.0" />
+      <Button layoutX="180.0" layoutY="216.0" mnemonicParsing="false" onAction="#addWord" text="Добавить" />
    </children>
 </AnchorPane>

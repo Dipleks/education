@@ -1,4 +1,4 @@
-package denis.zagorodnev.controller;
+package denis.zagorodnev.controller.englishtab;
 
 import denis.zagorodnev.view.settings.ErrorAddWord;
 import javafx.fxml.FXML;

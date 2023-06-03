@@ -1,7 +1,6 @@
-package denis.zagorodnev.controller;
+package denis.zagorodnev.controller.englishtab;
 
 import denis.zagorodnev.view.englishtab.NewWord;
-import denis.zagorodnev.view.englishtab.NewWordOld;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -13,7 +12,6 @@ public class EnglishTabController {
 
     @FXML
     public void addWord() throws IOException {
-       // NewWordOld.getWordsWindow();
         NewWord.getWordsWindow();
     }
 }

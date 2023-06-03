@@ -7,7 +7,7 @@
          tabClosingPolicy="UNAVAILABLE"
          xmlns="http://javafx.com/javafx/17.0.2-ea"
          xmlns:fx="http://javafx.com/fxml/1"
-         fx:controller="denis.zagorodnev.controller.EnglishTabController">
+         fx:controller="denis.zagorodnev.controller.englishtab.EnglishTabController">
 
     <Tab text="Английский">
         <AnchorPane minHeight="0.0" minWidth="0.0">
