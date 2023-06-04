@@ -3,7 +3,6 @@ package denis.zagorodnev.view.englishtab;
 import denis.zagorodnev.view.settings.NewWindow;
 import denis.zagorodnev.view.settings.SizeWindow;
 import javafx.stage.Stage;
-import java.io.IOException;
 
 public class ErrorAddWord {
 
@@ -12,7 +11,7 @@ public class ErrorAddWord {
     private static final Stage ERROR = new Stage();
     private static Stage WINDOW;
 
-    public static void getErrorAddWord(Stage window) throws IOException {
+    public static void getErrorAddWord(Stage window) {
         WINDOW = window;
         NewWindow.getNewWindow(
                 "/denis/zagorodnev/error-add-word.fxml",

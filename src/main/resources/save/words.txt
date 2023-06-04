@@ -1,7 +1,0 @@
-{"original":"test","translation":"тест"},
-{"original":"test","translation":"тест"},
-{"original":"yes","translation":"да"},
-{"original":"no","translation":"нет"},
-{"original":"rrrrr","translation":"rrrrr"},
-{"original":"word","translation":"слово"},
-{"original":"test22","translation":"test22"},

@@ -1,7 +1,7 @@
 package denis.zagorodnev.view.englishtab;
 
 import denis.zagorodnev.database.NewWordDatabase;
-import denis.zagorodnev.model.db.BackupDatabase;
+import denis.zagorodnev.model.english.WordsBackup;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -15,15 +15,11 @@ public class ButtonAdd {
 
         if (!original.trim().equals("") && !translation.trim().equals("")) {
             NewWordDatabase.addWord(original, translation);
-            BackupDatabase.saveWordInFile(original, translation);
+            WordsBackup.saveWordInFile(original, translation);
             inputInEng.clear();
             inputTranslation.clear();
         } else {
-            try {
-                ErrorAddWord.getErrorAddWord(window);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            ErrorAddWord.getErrorAddWord(window);
         }
     }
 }
