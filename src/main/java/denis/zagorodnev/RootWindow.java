@@ -1,5 +1,6 @@
 package denis.zagorodnev;
 
+import denis.zagorodnev.controller.englishtab.EnglishTabController;
 import denis.zagorodnev.view.settings.Root;
 import denis.zagorodnev.view.settings.SizeWindow;
 import javafx.fxml.FXMLLoader;
