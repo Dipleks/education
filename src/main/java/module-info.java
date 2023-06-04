@@ -15,4 +15,6 @@ module denis.zagorodnev {
     opens denis.zagorodnev.controller.englishtab to javafx.fxml;
     exports denis.zagorodnev.model.entity;
     opens denis.zagorodnev.model.entity to javafx.fxml;
+    exports denis.zagorodnev.view.englishtab;
+    opens denis.zagorodnev.view.englishtab to javafx.fxml;
 }

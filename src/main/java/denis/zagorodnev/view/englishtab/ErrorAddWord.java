@@ -1,5 +1,7 @@
-package denis.zagorodnev.view.settings;
+package denis.zagorodnev.view.englishtab;
 
+import denis.zagorodnev.view.settings.NewWindow;
+import denis.zagorodnev.view.settings.SizeWindow;
 import javafx.stage.Stage;
 import java.io.IOException;
 

@@ -2,7 +2,6 @@ package denis.zagorodnev.view.englishtab;
 
 import denis.zagorodnev.database.NewWordDatabase;
 import denis.zagorodnev.model.db.BackupDatabase;
-import denis.zagorodnev.view.settings.ErrorAddWord;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
