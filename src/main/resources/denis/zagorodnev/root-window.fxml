@@ -8,19 +8,17 @@
     <Tab text="Английский">
         <content>
             <AnchorPane minHeight="0.0" minWidth="0.0">
-            <Button layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#addWord" text="Добавить слово" />
-            <Label fx:id="connectDB" layoutX="883.0" layoutY="14.0" text="Подключена БД/Не подключена БД" textFill="#16fb05" AnchorPane.rightAnchor="20.0" />
-            <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" onAction="#passTest" text="Пройти тест (откроется окно с вкладками слова, предложения)" />
-                <TableView fx:id="topTableWord" layoutX="100" layoutY="100"
-                           prefHeight="364.0" prefWidth="355.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-                    <columns>
-                        <TableColumn fx:id="original" prefWidth="139.33334863185883" text="name" />
-                        <TableColumn fx:id="translation" minWidth="2.33331298828125" prefWidth="126.33329772949219" text="fam" />
-                    </columns>
-                    <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                    </columnResizePolicy>
-                </TableView>
+                 <TableView fx:id="topTableWord">
+                     <columns>
+                         <TableColumn fx:id="original" prefWidth="150" text="Оригинал" />
+                         <TableColumn fx:id="translation" prefWidth="150" text="Перевод" />
+                     </columns>
+                     <columnResizePolicy>
+                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                 </TableView>
+                <Button layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#addWord" text="Добавить слово" />
+                <Button layoutX="140.0" layoutY="14.0" mnemonicParsing="false" onAction="#passTest" text="Пройти тест (откроется окно с вкладками слова, предложения)" />
             </AnchorPane>
         </content>
     </Tab>

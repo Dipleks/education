@@ -4,7 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="163.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.englishtab.ErrorAddWordController">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="denis.zagorodnev.controller.englishtab.ErrorAddWordController">
    <children>
       <Label layoutX="34.0" layoutY="27.0" prefHeight="25.0" prefWidth="222.0" text="Error: trying to add an empty word.">
          <font>

@@ -26,4 +26,12 @@ public enum SizeWindow {
     }
 
     public abstract double setSize(double size);
+
+    public static double getRootWindowWIDTH() {
+        return SizeWindow.WIDTH.setSize(1.2);
+    }
+
+    public static double getRootWindowHEIGHT() {
+        return SizeWindow.HEIGHT.setSize(1.2);
+    }
 }

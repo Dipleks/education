@@ -1,27 +1,25 @@
 package denis.zagorodnev.view.englishtab;
 
-import denis.zagorodnev.view.settings.Root;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
+import denis.zagorodnev.view.settings.NewWindow;
+import denis.zagorodnev.view.settings.SizeWindow;
 import javafx.stage.Stage;
 import java.io.IOException;
 
 public class NewWord {
+
+    private static final double WIDTH = SizeWindow.WIDTH.setSize(3);
+    private static final double HEIGHT = SizeWindow.HEIGHT.setSize(2);
     private static final Stage WINDOW = new Stage();
 
-    public static void getWordsWindow() {
-        FXMLLoader fxmlLoader = new FXMLLoader(Root.class.getResource(
-                "/denis/zagorodnev/new-word.fxml"));
-        try {
-            WINDOW.setScene(new Scene(fxmlLoader.load()));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        WINDOW.getIcons().add(new Image("/icone.png"));
-        WINDOW.setTitle("Добавить новое слово");
-        WINDOW.setAlwaysOnTop(true);
-        WINDOW.show();
+    public static void getWordsWindow() throws IOException {
+        NewWindow.getNewWindow(
+                "/denis/zagorodnev/new-word.fxml",
+                WINDOW,
+                WIDTH,
+                HEIGHT,
+                "Добавить новое слово",
+                true
+        );
     }
 
     public static Stage getWINDOW() {

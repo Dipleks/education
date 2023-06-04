@@ -1,27 +1,24 @@
 package denis.zagorodnev;
 
-import denis.zagorodnev.controller.englishtab.EnglishTabController;
-import denis.zagorodnev.view.settings.Root;
+import denis.zagorodnev.view.settings.NewWindow;
 import denis.zagorodnev.view.settings.SizeWindow;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 
 public class RootWindow {
 
-    private static final double WIDTH = SizeWindow.WIDTH.setSize(1.2);
-    private static final double HEIGHT = SizeWindow.HEIGHT.setSize(1.2);
+    private static final double WIDTH = SizeWindow.getRootWindowWIDTH();
+    private static final double HEIGHT = SizeWindow.getRootWindowHEIGHT();
     private static final Stage WINDOW = new Stage();
 
     public static void getGeneralWindows() throws IOException {
-
-        FXMLLoader fxmlLoader = new FXMLLoader(Root.class.getResource(
-                "/denis/zagorodnev/root-window.fxml"));
-        WINDOW.setTitle("Образование");
-        WINDOW.getIcons().add(new Image("/icone.png"));
-        WINDOW.setScene(new Scene(fxmlLoader.load(), WIDTH, HEIGHT));
-        WINDOW.show();
+        NewWindow.getNewWindow(
+                "/denis/zagorodnev/root-window.fxml",
+                WINDOW,
+                WIDTH,
+                HEIGHT,
+                "Образование",
+                false
+        );
     }
 }

@@ -3,7 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="329.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.englishtab.NewWordController">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="denis.zagorodnev.controller.englishtab.NewWordController">
    <children>
       <Label layoutX="140.0" layoutY="80.0" text="Слово на английском:" />
       <Label layoutX="140.0" layoutY="148.0" text="Перевод на русский:" />
