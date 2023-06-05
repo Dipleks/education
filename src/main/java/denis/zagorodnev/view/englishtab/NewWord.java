@@ -14,8 +14,8 @@ public class NewWord {
         NewWindow.getNewWindow(
                 "/denis/zagorodnev/new-word.fxml",
                 WINDOW,
-                WIDTH,
-                HEIGHT,
+                420,
+                350,
                 "Добавить новое слово",
                 true
         );

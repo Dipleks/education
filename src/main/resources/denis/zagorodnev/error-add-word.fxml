@@ -7,16 +7,16 @@
 <AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="denis.zagorodnev.controller.englishtab.ErrorAddWordController">
-   <children>
-      <Label layoutX="34.0" layoutY="27.0" prefHeight="25.0" prefWidth="222.0" text="Error: trying to add an empty word.">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-      <Button layoutX="229.0" layoutY="92.0" mnemonicParsing="false" onAction="#pushForExit" prefHeight="25.0" prefWidth="53.0" text="ОК" textAlignment="CENTER" />
-      <Label layoutX="34.0" layoutY="52.0" text="Попытка добавить пустое поле!">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-   </children>
+   <Label layoutX="34.0" layoutY="27.0" prefHeight="25.0" prefWidth="222.0" text="Error: trying to add an empty word.">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <Button layoutX="229.0" layoutY="92.0" mnemonicParsing="false" onAction="#pushForExit" prefHeight="25.0"
+           prefWidth="53.0" text="ОК" textAlignment="CENTER"/>
+   <Label layoutX="34.0" layoutY="52.0" text="Попытка добавить пустое поле!">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
 </AnchorPane>
