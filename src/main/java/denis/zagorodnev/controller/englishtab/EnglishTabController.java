@@ -3,6 +3,7 @@ package denis.zagorodnev.controller.englishtab;
 import denis.zagorodnev.database.TopWordsDatabase;
 import denis.zagorodnev.model.entity.TopWordsEntity;
 import denis.zagorodnev.view.englishtab.NewWord;
+import denis.zagorodnev.view.englishtab.TasksInEnglish;
 import denis.zagorodnev.view.settings.SizeWindow;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -45,6 +46,6 @@ public class EnglishTabController implements Initializable {
 
     @FXML
     public void passTest() {
-        // TODO вызов окна с вкладками тест слов, тест предложений и тд
+        TasksInEnglish.getTasksInEnglish();
     }
 }

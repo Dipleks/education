@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="599.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.englishtab.TasksInEnglishController">
+   <children>
+      <TabPane prefHeight="599.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Слова">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="213.0" layoutY="190.0" text="Тут будут тесты по словам" textFill="#e10404">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Предложения">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="171.0" layoutY="199.0" text="Тут будет тесты по предложениям" textFill="#ee0a0a">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Словарь">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="172.0" layoutY="162.0" text="Тут будет таблица всех слов из БД" textFill="#eb0909">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
