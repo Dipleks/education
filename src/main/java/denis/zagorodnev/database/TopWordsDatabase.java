@@ -1,8 +1,7 @@
 package denis.zagorodnev.database;
 
 import denis.zagorodnev.model.entity.TopWordsEntity;
-import denis.zagorodnev.view.englishtab.ErrorConnectDatabase;
-import org.postgresql.util.PSQLException;
+import javafx.scene.control.Alert;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.ArrayList;
@@ -26,9 +25,17 @@ public class TopWordsDatabase {
                     )
             );
         } catch (Exception e) {
-            ErrorConnectDatabase.getErrorConnectWindow();
+            getErrorDatabaseConnect();
         }
-
         return list;
+    }
+
+    private static void getErrorDatabaseConnect() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information error");
+        alert.setContentText("Error: no database connection." +
+                "\nОтсутствует подключение к базе данных!");
+        alert.setHeaderText(null);
+        alert.showAndWait();
     }
 }

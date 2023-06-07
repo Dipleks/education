@@ -1,6 +1,7 @@
 package denis.zagorodnev.database;
 
 import denis.zagorodnev.model.entity.WordsEntity;
+import denis.zagorodnev.view.englishtab.NewWord;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class NewWordDatabase {
@@ -11,11 +12,18 @@ public class NewWordDatabase {
         WordsEntity wordsEntity = new WordsEntity()
                 .setOriginal(original)
                 .setTranslation(translation);
+        try {
+            template.update(
+                    String.format("INSERT INTO words (original, translation) VALUES ('%s', '%s')",
+                            wordsEntity.getOriginal(),
+                            wordsEntity.getTranslation())
+            );
+        } catch (Exception e) {
+            NewWord.getErrorAddWord(
+                    "Error: no database connection." +
+                            "\nОтсутствует подключение к базе данных!" +
+                            "\nСлова добавлены в локальное хранилище!");
+        }
 
-        template.update(
-                String.format("INSERT INTO words (original, translation) VALUES ('%s', '%s')",
-                        wordsEntity.getOriginal(),
-                        wordsEntity.getTranslation())
-        );
     }
 }
