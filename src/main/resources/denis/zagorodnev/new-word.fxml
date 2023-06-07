@@ -3,12 +3,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="denis.zagorodnev.controller.englishtab.NewWordController">
-   <Label layoutX="140.0" layoutY="80.0" text="Слово на английском:"/>
-   <Label layoutX="140.0" layoutY="148.0" text="Перевод на русский:"/>
-   <TextField fx:id="original" layoutX="140.0" layoutY="97.0"/>
-   <TextField fx:id="translation" layoutX="140.0" layoutY="165.0"/>
-   <Button layoutX="180.0" layoutY="216.0" mnemonicParsing="false" onAction="#addWord" text="Добавить"/>
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.englishtab.NewWordController">
+   <StackPane fx:id="newWordPane" prefHeight="250.0" prefWidth="250.0">
+      <VBox alignment="CENTER" spacing="20.0">
+         <VBox maxWidth="200.0" prefHeight="45.0" prefWidth="200.0">
+            <Label layoutX="140.0" layoutY="80.0" text="Слово на английском:" />
+            <TextField fx:id="original" layoutX="140.0" layoutY="97.0" />
+         </VBox>
+         <VBox maxWidth="200.0" prefHeight="44.0" prefWidth="200.0">
+            <Label layoutX="140.0" layoutY="148.0" text="Перевод на русский:" />
+            <TextField fx:id="translation" layoutX="140.0" layoutY="165.0" />
+         </VBox>
+         <Button layoutX="180.0" layoutY="216.0" mnemonicParsing="false" onAction="#addWord" text="Добавить" />
+      </VBox>
+   </StackPane>
+
 </AnchorPane>

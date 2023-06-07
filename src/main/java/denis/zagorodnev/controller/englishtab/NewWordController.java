@@ -1,21 +1,32 @@
 package denis.zagorodnev.controller.englishtab;
 
-import denis.zagorodnev.view.englishtab.ButtonAdd;
 import denis.zagorodnev.view.englishtab.NewWord;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 
-public class NewWordController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class NewWordController implements Initializable {
 
     @FXML
-    public TextField original;
+    private TextField original;
     @FXML
-    public TextField translation;
+    private TextField translation;
+    @FXML
+    private StackPane newWordPane;
 
     @FXML
     public void addWord(ActionEvent actionEvent) {
-        ButtonAdd.addWord(original, translation, NewWord.getWINDOW());
+        NewWord.addWord(original, translation);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        newWordPane.setPrefWidth(NewWord.getWIDTH());
+        newWordPane.setPrefHeight(NewWord.getHEIGHT());
     }
 }

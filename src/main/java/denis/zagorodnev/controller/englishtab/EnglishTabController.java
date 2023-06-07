@@ -31,7 +31,7 @@ public class EnglishTabController implements Initializable {
             FXCollections.observableArrayList(TopWordsDatabase.getTopWords());
 
     @FXML
-    private void addWord() throws IOException {
+    private void addWord() {
         NewWord.getWordsWindow();
     }
 
