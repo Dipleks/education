@@ -35,6 +35,7 @@ public class EnglishTabController implements Initializable {
     private TableColumn<TopWordsEntity, String> translation;
 
     private static final String FXML_URL_TASK = "/denis/zagorodnev/tasks-in-english.fxml";
+    private static final String FXML_URL_DICTIONARY = "/denis/zagorodnev/dictionary-word.fxml";
 
     private final ObservableList<TopWordsEntity> list =
             FXCollections.observableArrayList(TopWordsDatabase.getTopWords());
@@ -55,17 +56,21 @@ public class EnglishTabController implements Initializable {
 
     @FXML
     private void passTest() {
-        rootPane.getChildren().clear();
-        try {
-            rootPane.getChildren().add(
-                    new FXMLLoader(Root.class.getResource(FXML_URL_TASK)).load());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        getFXML(FXML_URL_TASK);
     }
 
     @FXML
     private void getDictionary() {
-        // TODO покажет список всех слов
+        getFXML(FXML_URL_DICTIONARY);
+    }
+
+    private void getFXML(String fxml) {
+        rootPane.getChildren().clear();
+        try {
+            rootPane.getChildren().add(
+                    new FXMLLoader(Root.class.getResource(fxml)).load());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

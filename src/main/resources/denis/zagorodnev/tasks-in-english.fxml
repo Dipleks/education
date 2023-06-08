@@ -1,37 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
 
-<TabPane tabClosingPolicy="UNAVAILABLE"
-         prefHeight="2160.0" prefWidth="3840.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-         xmlns:fx="http://javafx.com/fxml/1"
-         fx:controller="denis.zagorodnev.controller.englishtab.TasksInEnglishController">
-    <Tab text="Слова">
-        <Label layoutX="213.0" layoutY="190.0" text="Тут будут тесты по словам" textFill="#e10404">
-            <font>
-                <Font size="31.0"/>
-            </font>
-        </Label>
-        <Button layoutX="37.0" layoutY="25.0" mnemonicParsing="false" onAction="#openRootWindow"
-                text="На главную"/>
-    </Tab>
-
-    <Tab text="Предложения">
-        <Label layoutX="171.0" layoutY="199.0" text="Тут будет тесты по предложениям"
-               textFill="#ee0a0a">
-            <font>
-                <Font size="29.0"/>
-            </font>
-        </Label>
-    </Tab>
-
-    <Tab text="Словарь">
-        <Label layoutX="172.0" layoutY="162.0" text="Тут будет таблица всех слов из БД"
-               textFill="#eb0909">
-            <font>
-                <Font size="29.0"/>
-            </font>
-        </Label>
-    </Tab>
-</TabPane>
+<AnchorPane prefHeight="2160.0" prefWidth="3840.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.englishtab.TasksInEnglishController">
+    <Button layoutX="39.0" layoutY="34.0" mnemonicParsing="false" onAction="#openRootWindow" text="На главный экран" />
+   <Label layoutX="308.0" layoutY="104.0" prefHeight="48.0" prefWidth="158.0" text="Слово для перевода" />
+   <TextField layoutX="288.0" layoutY="152.0" text="Перевод" />
+   <Button layoutX="262.0" layoutY="205.0" mnemonicParsing="false" text="проверить" />
+   <Button layoutX="369.0" layoutY="205.0" mnemonicParsing="false" text="не знаю" />
+</AnchorPane>

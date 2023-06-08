@@ -4,7 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<TabPane prefHeight="2160.0" prefWidth="3840.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="denis.zagorodnev.controller.englishtab.EnglishTabController">
+<TabPane prefHeight="2160.0" prefWidth="3840.0" tabClosingPolicy="UNAVAILABLE"
+         xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="denis.zagorodnev.controller.englishtab.EnglishTabController">
 
     <Tab text="Английский">
         <AnchorPane fx:id="rootPane" minHeight="0.0" minWidth="0.0">
