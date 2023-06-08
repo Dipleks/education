@@ -1,12 +1,10 @@
 package denis.zagorodnev.controller.englishtab;
 
 import denis.zagorodnev.view.englishtab.NewWord;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -20,7 +18,7 @@ public class NewWordController implements Initializable {
     private StackPane newWordPane;
 
     @FXML
-    public void addWord(ActionEvent actionEvent) {
+    private void addWord() {
         NewWord.addWord(original, translation);
     }
 
