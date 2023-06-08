@@ -1,5 +1,6 @@
 package denis.zagorodnev.controller.englishtab;
 
+import denis.zagorodnev.RootWindow;
 import denis.zagorodnev.database.TopWordsDatabase;
 import denis.zagorodnev.model.entity.TopWordsEntity;
 import denis.zagorodnev.view.englishtab.NewWord;
@@ -47,5 +48,6 @@ public class EnglishTabController implements Initializable {
     @FXML
     public void passTest() {
         TasksInEnglish.getTasksInEnglish();
+        RootWindow.getWINDOW().close();
     }
 }
