@@ -7,13 +7,16 @@ import denis.zagorodnev.view.settings.Root;
 import denis.zagorodnev.view.settings.SizeWindow;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,7 +24,9 @@ import java.util.ResourceBundle;
 public class EnglishTabController implements Initializable {
 
     @FXML
-    private Pane rootPane;
+    private VBox topTableWordPane;
+    @FXML
+    private AnchorPane rootPane;
     @FXML
     private TableView<TopWordsEntity> topTableWord;
     @FXML
@@ -41,10 +46,10 @@ public class EnglishTabController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        topTableWord.setLayoutX(SizeWindow.getRootWindowWIDTH() / 2 - original.getWidth());
-        topTableWord.setLayoutY(SizeWindow.getRootWindowHEIGHT() / 6);
-        original.setCellValueFactory(new PropertyValueFactory<TopWordsEntity, String>("original"));
-        translation.setCellValueFactory(new PropertyValueFactory<TopWordsEntity, String>("translation"));
+        topTableWordPane.setLayoutX(SizeWindow.getRootWindowWIDTH() / 2 - original.getWidth());
+        topTableWordPane.setLayoutY(SizeWindow.getRootWindowHEIGHT() / 6);
+        original.setCellValueFactory(new PropertyValueFactory<>("original"));
+        translation.setCellValueFactory(new PropertyValueFactory<>("translation"));
         topTableWord.setItems(list);
     }
 
@@ -57,5 +62,10 @@ public class EnglishTabController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @FXML
+    private void getDictionary() {
+        // TODO покажет список всех слов
     }
 }
