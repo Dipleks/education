@@ -7,14 +7,14 @@ module denis.zagorodnev {
     requires java.naming;
     requires com.fasterxml.jackson.databind;
 
-    opens denis.zagorodnev to javafx.fxml;
-    exports denis.zagorodnev;
-    exports denis.zagorodnev.view.settings;
-    opens denis.zagorodnev.view.settings to javafx.fxml;
-    exports denis.zagorodnev.controller.englishtab;
-    opens denis.zagorodnev.controller.englishtab to javafx.fxml;
-    exports denis.zagorodnev.model.entity;
-    opens denis.zagorodnev.model.entity to javafx.fxml;
-    exports denis.zagorodnev.view.englishtab;
-    opens denis.zagorodnev.view.englishtab to javafx.fxml;
+    opens dipleks to javafx.fxml;
+    exports dipleks;
+    exports dipleks.view.settings;
+    opens dipleks.view.settings to javafx.fxml;
+    exports dipleks.controller.englishtab;
+    opens dipleks.controller.englishtab to javafx.fxml;
+    exports dipleks.model.entity;
+    opens dipleks.model.entity to javafx.fxml;
+    exports dipleks.view.englishtab;
+    opens dipleks.view.englishtab to javafx.fxml;
 }

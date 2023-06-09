@@ -20,3 +20,4 @@ INSERT INTO words (original, translation) VALUES ('dfsgsdgf', 'sdfg');
 INSERT INTO words (original, translation) VALUES ('11111', '1111');
 INSERT INTO words (original, translation) VALUES ('=ввв', 'вввв');
 INSERT INTO words (original, translation) VALUES ('sdfg', 'hh');
+INSERT INTO words (original, translation) VALUES ('wer', 'wert');
