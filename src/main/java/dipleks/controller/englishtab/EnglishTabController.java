@@ -1,7 +1,7 @@
 package dipleks.controller.englishtab;
 
-import dipleks.database.TopWordsDatabase;
-import dipleks.model.entity.TopWordsEntity;
+import dipleks.model.database.TopWordsDatabase;
+import dipleks.model.database.entity.TopWordsEntity;
 import dipleks.view.englishtab.NewWord;
 import dipleks.view.settings.Root;
 import dipleks.view.settings.SizeWindow;

@@ -1,6 +1,6 @@
 package dipleks.view.englishtab;
 
-import dipleks.database.NewWordDatabase;
+import dipleks.model.database.NewWordDatabase;
 import dipleks.model.english.WordsBackup;
 import dipleks.view.settings.NewWindow;
 import dipleks.view.settings.SizeWindow;

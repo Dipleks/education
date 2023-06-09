@@ -13,8 +13,8 @@ module denis.zagorodnev {
     opens dipleks.view.settings to javafx.fxml;
     exports dipleks.controller.englishtab;
     opens dipleks.controller.englishtab to javafx.fxml;
-    exports dipleks.model.entity;
-    opens dipleks.model.entity to javafx.fxml;
+    exports dipleks.model.database.entity;
+    opens dipleks.model.database.entity to javafx.fxml;
     exports dipleks.view.englishtab;
     opens dipleks.view.englishtab to javafx.fxml;
 }

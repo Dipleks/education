@@ -1,6 +1,6 @@
-package dipleks.database;
+package dipleks.model.database;
 
-import dipleks.model.entity.TopWordsEntity;
+import dipleks.model.database.entity.TopWordsEntity;
 import javafx.scene.control.Alert;
 import org.springframework.jdbc.core.JdbcTemplate;
 

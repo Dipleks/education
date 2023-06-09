@@ -1,18 +1,9 @@
-package dipleks.model.entity;
+package dipleks.model.database.entity;
 
 public class WordsEntity {
     private int id;
     private String original;
     private String translation;
-
-    public int getId() {
-        return id;
-    }
-
-    public WordsEntity setId(int id) {
-        this.id = id;
-        return this;
-    }
 
     public String getOriginal() {
         return original;

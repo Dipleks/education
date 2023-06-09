@@ -1,4 +1,4 @@
-package dipleks.model.entity;
+package dipleks.model.database.entity;
 
 public class TopWordsEntity {
     String original;
