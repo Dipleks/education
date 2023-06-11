@@ -14,7 +14,7 @@ public class ListWordsDatabase {
         JdbcTemplate template = new JdbcTemplate(DataSourceProvider.INSTANCE.getDataSource());
 
         return template.query(
-                "SELECT original, translation FROM words ORDER BY id DESC LIMIT 10;",
+                "SELECT original, translation FROM words ORDER BY id DESC;",
                 (rs, rowNum) -> new TopWordsEntity(
                         rs.getString("original"),
                         rs.getString("translation")

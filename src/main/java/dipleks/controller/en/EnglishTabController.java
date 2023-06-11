@@ -36,9 +36,14 @@ public class EnglishTabController implements Initializable {
     private TableColumn<TopWordsEntity, String> original;
     @FXML
     private TableColumn<TopWordsEntity, String> translation;
+    @FXML
+    private TableColumn<TopWordsEntity, String> favorites;
+
 
     private static final String FXML_URL_TASK = "/dipleks/view.en/tasks-in-english.fxml";
     private static final String FXML_URL_DICTIONARY = "/dipleks/view.en/dictionary-word.fxml";
+    private static final double WIDTH = SizeWindow.getRootWindowWIDTH();
+    private static final double HEIGHT = SizeWindow.getRootWindowHEIGHT();
 
     @FXML
     private void addWord() {
@@ -47,10 +52,12 @@ public class EnglishTabController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        menuBar.setPrefWidth(SizeWindow.getRootWindowWIDTH());
-        tabPane.setPrefWidth(SizeWindow.getRootWindowWIDTH());
-        topTableWordPane.setLayoutX(SizeWindow.getRootWindowWIDTH() / 2 - original.getWidth());
-        topTableWordPane.setLayoutY(SizeWindow.getRootWindowHEIGHT() / 6);
+        getSizeView();
+        double sizeWidthTable = original.getWidth() + translation.getWidth() + favorites.getWidth();
+
+        topTableWordPane.setLayoutX(WIDTH / 2 - sizeWidthTable / 2);
+        topTableWordPane.setLayoutY(HEIGHT / 6);
+
         original.setCellValueFactory(new PropertyValueFactory<>("original"));
         translation.setCellValueFactory(new PropertyValueFactory<>("translation"));
         try {
@@ -78,5 +85,14 @@ public class EnglishTabController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private void getSizeView() {
+        menuBar.setPrefWidth(WIDTH);
+        tabPane.setPrefWidth(WIDTH);
+
+        original.setPrefWidth(WIDTH / 5);
+        translation.setPrefWidth(WIDTH / 5);
+        favorites.setPrefWidth(WIDTH / 10);
     }
 }

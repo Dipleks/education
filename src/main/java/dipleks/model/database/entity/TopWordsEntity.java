@@ -3,6 +3,7 @@ package dipleks.model.database.entity;
 public class TopWordsEntity {
     String original;
     String translation;
+    String favorites;
 
     public TopWordsEntity(String name, String fam) {
         this.original = name;
@@ -15,6 +16,14 @@ public class TopWordsEntity {
 
     public String getTranslation() {
         return translation;
+    }
+
+    public String getFavorites() {
+        return favorites;
+    }
+
+    public void setFavorites(String favorites) {
+        this.favorites = favorites;
     }
 
     @Override

@@ -12,18 +12,10 @@ public class NewWordDatabase {
         WordsEntity wordsEntity = new WordsEntity()
                 .setOriginal(original)
                 .setTranslation(translation);
-        try {
-            template.update(
-                    String.format("INSERT INTO words (original, translation) VALUES ('%s', '%s')",
-                            wordsEntity.getOriginal(),
-                            wordsEntity.getTranslation())
-            );
-        } catch (Exception e) {
-            NewWordWindow.getErrorAddWord(
-                    "Error: no database connection." +
-                            "\nОтсутствует подключение к базе данных!" +
-                            "\nСлова добавлены в локальное хранилище!");
-        }
-
+        template.update(
+                String.format("INSERT INTO words (original, translation) VALUES ('%s', '%s')",
+                        wordsEntity.getOriginal(),
+                        wordsEntity.getTranslation())
+        );
     }
 }
