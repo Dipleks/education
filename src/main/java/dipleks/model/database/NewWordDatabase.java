@@ -1,7 +1,7 @@
 package dipleks.model.database;
 
 import dipleks.model.database.entity.WordsEntity;
-import dipleks.view.englishtab.NewWord;
+import dipleks.view.en.NewWordWindow;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class NewWordDatabase {
@@ -19,7 +19,7 @@ public class NewWordDatabase {
                             wordsEntity.getTranslation())
             );
         } catch (Exception e) {
-            NewWord.getErrorAddWord(
+            NewWordWindow.getErrorAddWord(
                     "Error: no database connection." +
                             "\nОтсутствует подключение к базе данных!" +
                             "\nСлова добавлены в локальное хранилище!");

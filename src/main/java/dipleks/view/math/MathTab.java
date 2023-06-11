@@ -1,4 +1,4 @@
-package dipleks.view.mathtab;
+package dipleks.view.math;
 
 import javafx.scene.control.Tab;
 

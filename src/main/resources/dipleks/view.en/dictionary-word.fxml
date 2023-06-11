@@ -6,6 +6,6 @@
 
 <AnchorPane prefHeight="2160.0" prefWidth="3840.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="dipleks.controller.englishtab.DictionaryWordController">
+            fx:controller="dipleks.controller.en.DictionaryWordController">
    <Button layoutX="32.0" layoutY="36.0" mnemonicParsing="false" onAction="#openRootWindow" text="На главный экран"/>
 </AnchorPane>

@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="2160.0" prefWidth="3840.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dipleks.controller.englishtab.TasksInEnglishController">
+<AnchorPane prefHeight="2160.0" prefWidth="3840.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dipleks.controller.en.TasksInEnglishController">
     <Button layoutX="39.0" layoutY="34.0" mnemonicParsing="false" onAction="#openRootWindow" text="На главный экран" />
    <Label layoutX="308.0" layoutY="104.0" prefHeight="48.0" prefWidth="158.0" text="Слово для перевода" />
    <TextField layoutX="288.0" layoutY="152.0" text="Перевод" />

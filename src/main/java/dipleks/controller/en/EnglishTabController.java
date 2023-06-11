@@ -1,17 +1,18 @@
-package dipleks.controller.englishtab;
+package dipleks.controller.en;
 
-import dipleks.model.database.TopWordsDatabase;
+import dipleks.view.en.RootWindow;
 import dipleks.model.database.entity.TopWordsEntity;
-import dipleks.view.englishtab.NewWord;
+import dipleks.model.en.ListWords;
+import dipleks.view.en.NewWordWindow;
 import dipleks.view.settings.Root;
 import dipleks.view.settings.SizeWindow;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -23,6 +24,8 @@ import java.util.ResourceBundle;
 public class EnglishTabController implements Initializable {
 
     @FXML
+    private TextField search;
+    @FXML
     private VBox topTableWordPane;
     @FXML
     private AnchorPane rootPane;
@@ -33,15 +36,12 @@ public class EnglishTabController implements Initializable {
     @FXML
     private TableColumn<TopWordsEntity, String> translation;
 
-    private static final String FXML_URL_TASK = "/dipleks/tasks-in-english.fxml";
-    private static final String FXML_URL_DICTIONARY = "/dipleks/dictionary-word.fxml";
-
-    private final ObservableList<TopWordsEntity> list =
-            FXCollections.observableArrayList(TopWordsDatabase.getTopWords());
+    private static final String FXML_URL_TASK = "/dipleks/view.en/tasks-in-english.fxml";
+    private static final String FXML_URL_DICTIONARY = "/dipleks/view.en/dictionary-word.fxml";
 
     @FXML
     private void addWord() {
-        NewWord.getWordsWindow();
+        NewWordWindow.getWordsWindow();
     }
 
     @Override
@@ -50,7 +50,11 @@ public class EnglishTabController implements Initializable {
         topTableWordPane.setLayoutY(SizeWindow.getRootWindowHEIGHT() / 6);
         original.setCellValueFactory(new PropertyValueFactory<>("original"));
         translation.setCellValueFactory(new PropertyValueFactory<>("translation"));
-        topTableWord.setItems(list);
+        try {
+            topTableWord.setItems(ListWords.getListWords());
+        } catch (Exception e) {
+            RootWindow.getErrorDatabaseConnect();
+        }
     }
 
     @FXML

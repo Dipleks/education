@@ -4,9 +4,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<TabPane prefHeight="2160.0" prefWidth="3840.0" tabClosingPolicy="UNAVAILABLE"
-         xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-         fx:controller="dipleks.controller.englishtab.EnglishTabController">
+
+<TabPane prefHeight="2160.0" prefWidth="3840.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dipleks.controller.en.EnglishTabController">
 
     <Tab text="Английский">
         <AnchorPane fx:id="rootPane" minHeight="0.0" minWidth="0.0">
@@ -15,11 +14,12 @@
                     <Font name="System Bold Italic" size="24.0" />
                 </font>
             </Label>
-            <VBox fx:id="topTableWordPane" alignment="CENTER" layoutX="320.0" layoutY="101.0" spacing="5.0">
-                <Label text="Топ 10 слов:" textFill="#239d78">
+            <VBox fx:id="topTableWordPane" alignment="CENTER_LEFT" layoutX="320.0" layoutY="101.0" spacing="5.0">
+                <Label text="Поиск по словам:" textFill="#239d78">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font></Label>
+            <TextField fx:id="search" promptText="Search..." />
                 <TableView fx:id="topTableWord" prefHeight="315" style="-fx-font-style: italic; -fx-font-size: 14px;">
                     <columns>
                         <TableColumn fx:id="translation" prefWidth="150" style="-fx-alignment: center;" text="Перевод" />

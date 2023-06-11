@@ -1,25 +1,22 @@
-package dipleks.view.englishtab;
+package dipleks.view.en;
 
-import dipleks.model.database.NewWordDatabase;
-import dipleks.model.english.WordsBackup;
 import dipleks.view.settings.NewWindow;
 import dipleks.view.settings.SizeWindow;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.util.Optional;
 
-public class NewWord {
+public class NewWordWindow {
 
     private static final double WIDTH = SizeWindow.WIDTH.setSize(3);
     private static final double HEIGHT = SizeWindow.HEIGHT.setSize(2);
     private static final Stage WINDOW = new Stage();
     private static final boolean ALWAYS_ON_TOP = true;
     private static final String TITLE_WINDOW = "Добавить новое слово";
-    private static final String FXML_URL = "/dipleks/new-word.fxml";
+    private static final String FXML_URL = "/dipleks/view.en/new-word.fxml";
 
-    private NewWord() {
+    private NewWordWindow() {
     }
 
     public static void getWordsWindow() {
@@ -31,21 +28,6 @@ public class NewWord {
                 TITLE_WINDOW,
                 ALWAYS_ON_TOP
         );
-    }
-
-    public static void addWord(TextField inputInEng, TextField inputTranslation) {
-        String original = inputInEng.getText();
-        String translation = inputTranslation.getText();
-
-        if (!original.trim().equals("") && !translation.trim().equals("")) {
-            NewWordDatabase.addWord(original, translation);
-            WordsBackup.saveWordInFile(original, translation);
-            inputInEng.clear();
-            inputTranslation.clear();
-        } else {
-            getErrorAddWord("Error: trying to add an empty word." +
-                    "\nПопытка добавить пустое поле!");
-        }
     }
 
     public static void getErrorAddWord(String infoText) {

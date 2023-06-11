@@ -11,10 +11,10 @@ module denis.zagorodnev {
     exports dipleks;
     exports dipleks.view.settings;
     opens dipleks.view.settings to javafx.fxml;
-    exports dipleks.controller.englishtab;
-    opens dipleks.controller.englishtab to javafx.fxml;
+    exports dipleks.controller.en;
+    opens dipleks.controller.en to javafx.fxml;
     exports dipleks.model.database.entity;
     opens dipleks.model.database.entity to javafx.fxml;
-    exports dipleks.view.englishtab;
-    opens dipleks.view.englishtab to javafx.fxml;
+    exports dipleks.view.en;
+    opens dipleks.view.en to javafx.fxml;
 }

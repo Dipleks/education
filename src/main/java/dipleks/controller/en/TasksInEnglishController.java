@@ -1,6 +1,6 @@
-package dipleks.controller.englishtab;
+package dipleks.controller.en;
 
-import dipleks.RootWindow;
+import dipleks.view.en.RootWindow;
 import javafx.fxml.FXML;
 
 public class TasksInEnglishController {
