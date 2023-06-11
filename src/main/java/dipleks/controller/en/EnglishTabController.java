@@ -9,10 +9,7 @@ import dipleks.view.settings.SizeWindow;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -23,6 +20,10 @@ import java.util.ResourceBundle;
 
 public class EnglishTabController implements Initializable {
 
+    @FXML
+    private MenuBar menuBar;
+    @FXML
+    private TabPane tabPane;
     @FXML
     private TextField search;
     @FXML
@@ -46,6 +47,8 @@ public class EnglishTabController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        menuBar.setPrefWidth(SizeWindow.getRootWindowWIDTH());
+        tabPane.setPrefWidth(SizeWindow.getRootWindowWIDTH());
         topTableWordPane.setLayoutX(SizeWindow.getRootWindowWIDTH() / 2 - original.getWidth());
         topTableWordPane.setLayoutY(SizeWindow.getRootWindowHEIGHT() / 6);
         original.setCellValueFactory(new PropertyValueFactory<>("original"));

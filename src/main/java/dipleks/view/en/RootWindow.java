@@ -11,8 +11,7 @@ public class RootWindow {
     private static final double HEIGHT = SizeWindow.getRootWindowHEIGHT();
     private static final Stage WINDOW = new Stage();
     private static final String TITLE_WINDOW = "Образование";
-//    private static final String FXML_URL = "/dipleks/view.en/root-window.fxml";
-    private static final String FXML_URL = "/dipleks/view.en/r.fxml";
+    private static final String FXML_URL = "/dipleks/view.en/root-window.fxml";
 
     private RootWindow() {
     }
