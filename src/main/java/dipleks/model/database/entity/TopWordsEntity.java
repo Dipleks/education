@@ -1,9 +1,9 @@
 package dipleks.model.database.entity;
 
 public class TopWordsEntity {
-    String original;
-    String translation;
-    String favorites;
+    private final String original;
+    private final String translation;
+    private boolean favorites;
 
     public TopWordsEntity(String name, String fam) {
         this.original = name;
@@ -18,11 +18,11 @@ public class TopWordsEntity {
         return translation;
     }
 
-    public String getFavorites() {
+    public boolean getFavorites() {
         return favorites;
     }
 
-    public void setFavorites(String favorites) {
+    public void setFavorites(boolean favorites) {
         this.favorites = favorites;
     }
 

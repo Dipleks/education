@@ -6,13 +6,20 @@ import dipleks.model.en.ListWords;
 import dipleks.view.en.NewWordWindow;
 import dipleks.view.settings.Root;
 import dipleks.view.settings.SizeWindow;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
@@ -37,7 +44,7 @@ public class EnglishTabController implements Initializable {
     @FXML
     private TableColumn<TopWordsEntity, String> translation;
     @FXML
-    private TableColumn<TopWordsEntity, String> favorites;
+    private TableColumn<TopWordsEntity, Boolean> favorites;
 
 
     private static final String FXML_URL_TASK = "/dipleks/view.en/tasks-in-english.fxml";
@@ -60,6 +67,7 @@ public class EnglishTabController implements Initializable {
 
         original.setCellValueFactory(new PropertyValueFactory<>("original"));
         translation.setCellValueFactory(new PropertyValueFactory<>("translation"));
+        favorites.setCellFactory(e -> new CheckBoxTableCell<>());
         try {
             topTableWord.setItems(ListWords.getListWords());
         } catch (Exception e) {

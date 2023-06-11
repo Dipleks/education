@@ -2,57 +2,56 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="2160.0" prefWidth="3840.0"
-            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="dipleks.controller.en.EnglishTabController">
     <MenuBar fx:id="menuBar" layoutY="1.0">
         <Menu mnemonicParsing="false" text="File">
-            <MenuItem mnemonicParsing="false" text="Close"/>
+            <MenuItem mnemonicParsing="false" text="Close" />
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
-            <MenuItem mnemonicParsing="false" text="Delete"/>
+            <MenuItem mnemonicParsing="false" text="Delete" />
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
-            <MenuItem mnemonicParsing="false" text="About"/>
+            <MenuItem mnemonicParsing="false" text="About" />
         </Menu>
     </MenuBar>
 
     <TabPane fx:id="tabPane" layoutY="25" tabClosingPolicy="UNAVAILABLE">
         <Tab text="Английский">
             <AnchorPane fx:id="rootPane" minHeight="0.0" minWidth="0.0">
-                <Label text="В разработке!" textFill="#ed4949" AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="50">
+                <Label text="В разработке!" textFill="#ed4949"
+                       AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="50">
                     <font>
-                        <Font name="System Bold Italic" size="24.0"/>
+                        <Font name="System Bold Italic" size="24.0" />
                     </font>
                 </Label>
-                <VBox fx:id="topTableWordPane" alignment="CENTER_LEFT" layoutX="320.0" layoutY="101.0" spacing="5.0">
+                <VBox fx:id="topTableWordPane" alignment="CENTER_LEFT" spacing="5.0">
                     <Label text="Поиск по словам:" textFill="#239d78">
                         <font>
-                            <Font name="System Bold Italic" size="18.0"/>
+                            <Font name="System Bold Italic" size="18.0" />
                         </font>
                     </Label>
-                    <TextField fx:id="search" promptText="Search..."/>
+                    <TextField fx:id="search" promptText="Search..." />
                     <TableView fx:id="topTableWord" prefHeight="315"
                                style="-fx-font-style: italic; -fx-font-size: 14px;">
                         <columns>
-                            <TableColumn fx:id="translation" style="-fx-alignment: center;"
-                                         text="Перевод"/>
-                            <TableColumn fx:id="original" style="-fx-alignment: center;"
-                                         text="Оригинал"/>
-                            <TableColumn fx:id="favorites" style="-fx-alignment: center;"
-                                         text="Избранное"/>
+                            <TableColumn fx:id="translation" style="-fx-alignment: center;" text="Перевод" />
+                            <TableColumn fx:id="original" style="-fx-alignment: center;" text="Оригинал" />
+                            <TableColumn fx:id="favorites" style="-fx-alignment: center;" text="Избранное"/>
                         </columns>
                         <columnResizePolicy>
-                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                         </columnResizePolicy>
                     </TableView>
                 </VBox>
                 <HBox spacing="20.0" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20">
-                    <Button mnemonicParsing="false" onAction="#addWord" text="Добавить слово"/>
-                    <Button mnemonicParsing="false" onAction="#passTest" text="Проверь себя"/>
-                    <Button mnemonicParsing="false" onAction="#getDictionary" text="Словарь"/>
+                    <Button mnemonicParsing="false" onAction="#addWord" text="Добавить слово" />
+                    <Button mnemonicParsing="false" onAction="#passTest" text="Проверь себя" />
+                    <Button mnemonicParsing="false" onAction="#getDictionary" text="Словарь" />
                 </HBox>
             </AnchorPane>
         </Tab>
@@ -61,7 +60,7 @@
             <AnchorPane minHeight="0.0" minWidth="0.0">
                 <Label layoutX="278.0" layoutY="183.0" text="В разработке!!!" textFill="#eb3232">
                     <font>
-                        <Font name="System Bold Italic" size="52.0"/>
+                        <Font name="System Bold Italic" size="52.0" />
                     </font>
                 </Label>
             </AnchorPane>

@@ -30,3 +30,5 @@ INSERT INTO words (original, translation) VALUES ('frrr', 'frrr');
 INSERT INTO words (original, translation) VALUES ('sdfgs', 'sdfg');
 INSERT INTO words (original, translation) VALUES ('3333333', '3333333');
 INSERT INTO words (original, translation) VALUES ('sert', 'wert');
+INSERT INTO words (original, translation) VALUES ('r4', 'r4');
+INSERT INTO words (original, translation) VALUES ('drthtery', 'ertyeyt');
