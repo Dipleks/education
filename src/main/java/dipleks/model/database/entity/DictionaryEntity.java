@@ -1,11 +1,11 @@
 package dipleks.model.database.entity;
 
-public class TopWordsEntity {
+public class DictionaryEntity {
     private final String original;
     private final String translation;
     private boolean favorites;
 
-    public TopWordsEntity(String name, String fam) {
+    public DictionaryEntity(String name, String fam) {
         this.original = name;
         this.translation = fam;
     }

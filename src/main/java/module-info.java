@@ -17,4 +17,6 @@ module denis.zagorodnev {
     opens dipleks.model.database.entity to javafx.fxml;
     exports dipleks.view.en;
     opens dipleks.view.en to javafx.fxml;
+    exports dipleks.model.en;
+    opens dipleks.model.en to javafx.fxml;
 }

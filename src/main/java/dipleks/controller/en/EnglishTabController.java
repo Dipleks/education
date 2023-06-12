@@ -1,25 +1,22 @@
 package dipleks.controller.en;
 
 import dipleks.view.en.RootWindow;
-import dipleks.model.database.entity.TopWordsEntity;
+import dipleks.model.database.entity.DictionaryEntity;
 import dipleks.model.en.ListWords;
 import dipleks.view.en.NewWordWindow;
 import dipleks.view.settings.Root;
 import dipleks.view.settings.SizeWindow;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
@@ -38,13 +35,13 @@ public class EnglishTabController implements Initializable {
     @FXML
     private AnchorPane rootPane;
     @FXML
-    private TableView<TopWordsEntity> topTableWord;
+    private TableView<DictionaryEntity> topTableWord;
     @FXML
-    private TableColumn<TopWordsEntity, String> original;
+    private TableColumn<DictionaryEntity, String> original;
     @FXML
-    private TableColumn<TopWordsEntity, String> translation;
+    private TableColumn<DictionaryEntity, String> translation;
     @FXML
-    private TableColumn<TopWordsEntity, Boolean> favorites;
+    private TableColumn<DictionaryEntity, Boolean> favorites;
 
 
     private static final String FXML_URL_TASK = "/dipleks/view.en/tasks-in-english.fxml";
@@ -60,16 +57,38 @@ public class EnglishTabController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         getSizeView();
-        double sizeWidthTable = original.getWidth() + translation.getWidth() + favorites.getWidth();
-
-        topTableWordPane.setLayoutX(WIDTH / 2 - sizeWidthTable / 2);
         topTableWordPane.setLayoutY(HEIGHT / 6);
+        getSearchableDictionary();
+    }
+
+    private void getSearchableDictionary() {
 
         original.setCellValueFactory(new PropertyValueFactory<>("original"));
         translation.setCellValueFactory(new PropertyValueFactory<>("translation"));
         favorites.setCellFactory(e -> new CheckBoxTableCell<>());
         try {
-            topTableWord.setItems(ListWords.getListWords());
+            final ObservableList<DictionaryEntity> dictionary = ListWords.getListWords();
+            topTableWord.setItems(dictionary);
+
+            FilteredList<DictionaryEntity> filteredList =
+                    new FilteredList<>(dictionary, b -> true);
+            search.textProperty().addListener((observable, oldValue, newValue) ->
+                    filteredList.setPredicate(topWordsEntity -> {
+
+                if (newValue.isEmpty() || newValue.isBlank()) {
+                    return true;
+                }
+
+                String searchKeyword = newValue.toLowerCase();
+
+                if (topWordsEntity.getOriginal().toLowerCase().contains(searchKeyword)) {
+                    return true;
+                } else return topWordsEntity.getTranslation().toLowerCase().contains(searchKeyword);
+            }));
+
+            SortedList<DictionaryEntity> sortedList = new SortedList<>(filteredList);
+            sortedList.comparatorProperty().bind(dictionary.sorted().comparatorProperty());
+            topTableWord.setItems(sortedList);
         } catch (Exception e) {
             RootWindow.getErrorDatabaseConnect();
         }
@@ -77,19 +96,14 @@ public class EnglishTabController implements Initializable {
 
     @FXML
     private void passTest() {
-        getFXML(FXML_URL_TASK);
+        getFXML();
     }
 
-    @FXML
-    private void getDictionary() {
-        getFXML(FXML_URL_DICTIONARY);
-    }
-
-    private void getFXML(String fxml) {
+    private void getFXML() {
         rootPane.getChildren().clear();
         try {
             rootPane.getChildren().add(
-                    new FXMLLoader(Root.class.getResource(fxml)).load());
+                    new FXMLLoader(Root.class.getResource(EnglishTabController.FXML_URL_TASK)).load());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

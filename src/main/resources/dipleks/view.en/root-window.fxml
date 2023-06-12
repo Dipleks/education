@@ -29,7 +29,8 @@
                         <Font name="System Bold Italic" size="24.0" />
                     </font>
                 </Label>
-                <VBox fx:id="topTableWordPane" alignment="CENTER_LEFT" spacing="5.0">
+                <VBox fx:id="topTableWordPane" alignment="CENTER_LEFT" spacing="5.0"
+                        AnchorPane.leftAnchor="40">
                     <Label text="Поиск по словам:" textFill="#239d78">
                         <font>
                             <Font name="System Bold Italic" size="18.0" />
@@ -37,7 +38,7 @@
                     </Label>
                     <TextField fx:id="search" promptText="Search..." />
                     <TableView fx:id="topTableWord" prefHeight="315"
-                               style="-fx-font-style: italic; -fx-font-size: 14px;">
+                               style="-fx-font-style: italic; -fx-font-size: 13px;">
                         <columns>
                             <TableColumn fx:id="translation" style="-fx-alignment: center;" text="Перевод" />
                             <TableColumn fx:id="original" style="-fx-alignment: center;" text="Оригинал" />
@@ -51,7 +52,6 @@
                 <HBox spacing="20.0" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20">
                     <Button mnemonicParsing="false" onAction="#addWord" text="Добавить слово" />
                     <Button mnemonicParsing="false" onAction="#passTest" text="Проверь себя" />
-                    <Button mnemonicParsing="false" onAction="#getDictionary" text="Словарь" />
                 </HBox>
             </AnchorPane>
         </Tab>
