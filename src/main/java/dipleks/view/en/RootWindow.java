@@ -17,6 +17,7 @@ public class RootWindow {
     }
 
     public static void getGeneralWindows() {
+        WINDOW.setResizable(false);
         NewWindow.getNewWindow(
                 FXML_URL,
                 WINDOW,
