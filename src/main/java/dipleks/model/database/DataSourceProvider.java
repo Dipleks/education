@@ -14,7 +14,7 @@ public enum DataSourceProvider {
             ds = new PGSimpleDataSource();
             ds.setServerNames(new String[] {"localhost"});
             ds.setPortNumbers(new int[] {5432});
-            ds.setDatabaseName("loading");
+            ds.setDatabaseName("education");
             ds.setUser("postgres");
             ds.setPassword("353808");
         }

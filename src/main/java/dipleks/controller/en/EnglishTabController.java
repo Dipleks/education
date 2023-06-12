@@ -17,7 +17,6 @@ import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -43,22 +42,31 @@ public class EnglishTabController implements Initializable {
     @FXML
     private TableColumn<DictionaryEntity, Boolean> favorites;
 
-
     private static final String FXML_URL_TASK = "/dipleks/view.en/tasks-in-english.fxml";
-    private static final String FXML_URL_DICTIONARY = "/dipleks/view.en/dictionary-word.fxml";
     private static final double WIDTH = SizeWindow.getRootWindowWIDTH();
     private static final double HEIGHT = SizeWindow.getRootWindowHEIGHT();
-
-    @FXML
-    private void addWord() {
-        NewWordWindow.getWordsWindow();
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         getSizeView();
         topTableWordPane.setLayoutY(HEIGHT / 6);
         getSearchableDictionary();
+    }
+
+    @FXML
+    private void addWord() {
+        NewWordWindow.getWordsWindow();
+    }
+
+    @FXML
+    private void passTest() {
+        rootPane.getChildren().clear();
+        try {
+            rootPane.getChildren().add(
+                    new FXMLLoader(Root.class.getResource(EnglishTabController.FXML_URL_TASK)).load());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void getSearchableDictionary() {
@@ -75,16 +83,16 @@ public class EnglishTabController implements Initializable {
             search.textProperty().addListener((observable, oldValue, newValue) ->
                     filteredList.setPredicate(topWordsEntity -> {
 
-                if (newValue.isEmpty() || newValue.isBlank()) {
-                    return true;
-                }
+                        if (newValue.isEmpty() || newValue.isBlank()) {
+                            return true;
+                        }
 
-                String searchKeyword = newValue.toLowerCase();
+                        String searchKeyword = newValue.toLowerCase();
 
-                if (topWordsEntity.getOriginal().toLowerCase().contains(searchKeyword)) {
-                    return true;
-                } else return topWordsEntity.getTranslation().toLowerCase().contains(searchKeyword);
-            }));
+                        if (topWordsEntity.getOriginal().toLowerCase().contains(searchKeyword)) {
+                            return true;
+                        } else return topWordsEntity.getTranslation().toLowerCase().contains(searchKeyword);
+                    }));
 
             SortedList<DictionaryEntity> sortedList = new SortedList<>(filteredList);
             sortedList.comparatorProperty().bind(dictionary.sorted().comparatorProperty());
@@ -94,24 +102,9 @@ public class EnglishTabController implements Initializable {
         }
     }
 
-    @FXML
-    private void passTest() {
-        getFXML();
-    }
-
-    private void getFXML() {
-        rootPane.getChildren().clear();
-        try {
-            rootPane.getChildren().add(
-                    new FXMLLoader(Root.class.getResource(EnglishTabController.FXML_URL_TASK)).load());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     private void getSizeView() {
-        menuBar.setPrefWidth(WIDTH);
-        tabPane.setPrefWidth(WIDTH);
+        menuBar.setPrefWidth(SizeWindow.WIDTH.setSize(1));
+        tabPane.setPrefWidth(SizeWindow.WIDTH.setSize(1));
 
         original.setPrefWidth(WIDTH / 5);
         translation.setPrefWidth(WIDTH / 5);

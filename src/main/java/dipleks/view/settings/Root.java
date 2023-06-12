@@ -6,6 +6,12 @@ import javafx.stage.Stage;
 
 public class Root extends Application {
 
+    @Override
+    public void init() throws Exception {
+        //TODO тут будет проверка настроек БД из файла
+        System.out.println("Настройки БД подтянуты!");
+    }
+
     public static void main(String[] args) {
         launch();
     }
