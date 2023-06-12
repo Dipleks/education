@@ -1,13 +1,16 @@
-package dipleks.model.database.entity;
+package dipleks.database.entity;
+
+import javafx.scene.control.CheckBox;
 
 public class DictionaryEntity {
     private final String original;
     private final String translation;
-    private boolean favorites;
+    private CheckBox favorites;
 
     public DictionaryEntity(String name, String fam) {
         this.original = name;
         this.translation = fam;
+        this.favorites = new CheckBox();
     }
 
     public String getOriginal() {
@@ -18,11 +21,11 @@ public class DictionaryEntity {
         return translation;
     }
 
-    public boolean getFavorites() {
+    public CheckBox getFavorites() {
         return favorites;
     }
 
-    public void setFavorites(boolean favorites) {
+    public void setFavorites(CheckBox favorites) {
         this.favorites = favorites;
     }
 

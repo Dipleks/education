@@ -1,4 +1,4 @@
-package dipleks.model.database;
+package dipleks.database;
 
 import org.postgresql.ds.PGSimpleDataSource;
 

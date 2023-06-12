@@ -1,21 +1,24 @@
 package dipleks.controller.en;
 
+import dipleks.model.en.Favorites;
 import dipleks.view.en.RootWindow;
-import dipleks.model.database.entity.DictionaryEntity;
+import dipleks.database.entity.DictionaryEntity;
 import dipleks.model.en.ListWords;
 import dipleks.view.en.NewWordWindow;
 import dipleks.view.settings.Root;
 import dipleks.view.settings.SizeWindow;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.URL;
@@ -46,11 +49,18 @@ public class EnglishTabController implements Initializable {
     private static final double WIDTH = SizeWindow.getRootWindowWIDTH();
     private static final double HEIGHT = SizeWindow.getRootWindowHEIGHT();
 
+    private ObservableList<DictionaryEntity> dictionary;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         getSizeView();
         topTableWordPane.setLayoutY(HEIGHT / 6);
         getSearchableDictionary();
+    }
+
+    @FXML
+    private void addFavorites() {
+        Favorites.getListFavorites(dictionary);
     }
 
     @FXML
@@ -73,9 +83,11 @@ public class EnglishTabController implements Initializable {
 
         original.setCellValueFactory(new PropertyValueFactory<>("original"));
         translation.setCellValueFactory(new PropertyValueFactory<>("translation"));
-        favorites.setCellFactory(e -> new CheckBoxTableCell<>());
+//        favorites.setCellFactory(e -> new CheckBoxTableCell<>());
+        favorites.setCellValueFactory(new PropertyValueFactory<>("favorites"));
+
         try {
-            final ObservableList<DictionaryEntity> dictionary = ListWords.getListWords();
+            dictionary = ListWords.getListWords();
             topTableWord.setItems(dictionary);
 
             FilteredList<DictionaryEntity> filteredList =

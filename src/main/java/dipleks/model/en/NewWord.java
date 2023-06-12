@@ -1,6 +1,6 @@
 package dipleks.model.en;
 
-import dipleks.model.database.NewWordDatabase;
+import dipleks.database.NewWordDatabase;
 
 public class NewWord {
 

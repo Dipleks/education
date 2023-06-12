@@ -1,7 +1,6 @@
-package dipleks.model.database;
+package dipleks.database;
 
-import dipleks.model.database.entity.WordsEntity;
-import dipleks.view.en.NewWordWindow;
+import dipleks.database.entity.WordsEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class NewWordDatabase {

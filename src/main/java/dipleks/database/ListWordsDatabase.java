@@ -1,6 +1,6 @@
-package dipleks.model.database;
+package dipleks.database;
 
-import dipleks.model.database.entity.DictionaryEntity;
+import dipleks.database.entity.DictionaryEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.List;
 
