@@ -28,16 +28,11 @@ public class RootWindow {
         );
     }
 
-    public static void getErrorDatabaseConnect() {
+    public static void getAlert(String title, String contentText) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information error");
-        alert.setContentText("Error: no database connection." +
-                "\nОтсутствует подключение к базе данных!");
+        alert.setTitle(title);
+        alert.setContentText(contentText);
         alert.setHeaderText(null);
         alert.showAndWait();
-    }
-
-    public static Stage getWINDOW() {
-        return WINDOW;
     }
 }

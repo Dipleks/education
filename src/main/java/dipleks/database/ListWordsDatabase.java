@@ -6,19 +6,28 @@ import java.util.List;
 
 public class ListWordsDatabase {
 
+    private static final JdbcTemplate TEMPLATE =
+            new JdbcTemplate(DataSourceProvider.INSTANCE.getDataSource());
+
     private ListWordsDatabase() {
     }
 
-    public static List<DictionaryEntity> getTopWords() throws Exception {
+    public static List<DictionaryEntity> getTopWords() {
 
-        JdbcTemplate template = new JdbcTemplate(DataSourceProvider.INSTANCE.getDataSource());
-
-        return template.query(
-                "SELECT original, translation FROM words ORDER BY id DESC;",
+        return TEMPLATE.query(
+                "SELECT original, translation, favorites FROM words ORDER BY id DESC;",
                 (rs, rowNum) -> new DictionaryEntity(
                         rs.getString("original"),
-                        rs.getString("translation")
+                        rs.getString("translation"),
+                        rs.getBoolean("favorites")
                 )
         );
+    }
+
+    public static void changeFavoritesList(boolean valueFavorites, String original) {
+
+        JdbcTemplate template = new JdbcTemplate(DataSourceProvider.INSTANCE.getDataSource());
+        template.update("UPDATE words SET favorites = "
+                + valueFavorites + " WHERE original = '" + original + "';");
     }
 }

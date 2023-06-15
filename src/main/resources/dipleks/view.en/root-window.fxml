@@ -42,7 +42,7 @@
                         </TableView>
                         <Button mnemonicParsing="false"
                                 onAction="#addFavorites"
-                                text="Отмеченное в избранное"/>
+                                text="Сохранить список Избанного"/>
                     </VBox>
                 </VBox>
                 <HBox spacing="20.0" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20">

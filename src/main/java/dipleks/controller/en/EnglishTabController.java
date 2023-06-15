@@ -7,18 +7,15 @@ import dipleks.model.en.ListWords;
 import dipleks.view.en.NewWordWindow;
 import dipleks.view.settings.Root;
 import dipleks.view.settings.SizeWindow;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.URL;
@@ -61,6 +58,7 @@ public class EnglishTabController implements Initializable {
     @FXML
     private void addFavorites() {
         Favorites.getListFavorites(dictionary);
+        RootWindow.getAlert("Избранное", "Ваш выбор сохранен!");
     }
 
     @FXML
@@ -83,7 +81,6 @@ public class EnglishTabController implements Initializable {
 
         original.setCellValueFactory(new PropertyValueFactory<>("original"));
         translation.setCellValueFactory(new PropertyValueFactory<>("translation"));
-//        favorites.setCellFactory(e -> new CheckBoxTableCell<>());
         favorites.setCellValueFactory(new PropertyValueFactory<>("favorites"));
 
         try {
@@ -110,7 +107,10 @@ public class EnglishTabController implements Initializable {
             sortedList.comparatorProperty().bind(dictionary.sorted().comparatorProperty());
             topTableWord.setItems(sortedList);
         } catch (Exception e) {
-            RootWindow.getErrorDatabaseConnect();
+            RootWindow.getAlert("Information error",
+                    "Error: no database connection." +
+                    "\nОтсутствует подключение к базе данных!"
+            );
         }
     }
 

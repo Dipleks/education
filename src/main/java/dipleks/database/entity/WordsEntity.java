@@ -4,6 +4,7 @@ public class WordsEntity {
     private int id;
     private String original;
     private String translation;
+    private boolean favorites;
 
     public String getOriginal() {
         return original;
