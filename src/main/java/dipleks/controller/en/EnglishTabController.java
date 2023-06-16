@@ -1,6 +1,7 @@
 package dipleks.controller.en;
 
 import dipleks.model.en.Favorites;
+import dipleks.view.en.FavoritesWindow;
 import dipleks.view.en.RootWindow;
 import dipleks.database.entity.DictionaryEntity;
 import dipleks.model.en.ListWords;
@@ -10,12 +11,15 @@ import dipleks.view.settings.SizeWindow;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.URL;
@@ -118,8 +122,15 @@ public class EnglishTabController implements Initializable {
         menuBar.setPrefWidth(SizeWindow.WIDTH.setSize(1));
         tabPane.setPrefWidth(SizeWindow.WIDTH.setSize(1));
 
+        //favoritesOriginal.setPrefWidth(WIDTH / 5);
         original.setPrefWidth(WIDTH / 5);
+       // favoritesTranslation.setPrefWidth(WIDTH / 5);
         translation.setPrefWidth(WIDTH / 5);
         favorites.setPrefWidth(WIDTH / 10);
+    }
+
+    @FXML
+    private void openFavorites() {
+        FavoritesWindow.getWordsWindow();
     }
 }

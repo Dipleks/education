@@ -30,4 +30,16 @@ public class ListWordsDatabase {
         template.update("UPDATE words SET favorites = "
                 + valueFavorites + " WHERE original = '" + original + "';");
     }
+
+    public static List<DictionaryEntity> getWordsFavorites() {
+
+        return TEMPLATE.query(
+                "SELECT original, translation, favorites FROM words WHERE favorites = true;",
+                (rs, rowNum) -> new DictionaryEntity(
+                        rs.getString("original"),
+                        rs.getString("translation"),
+                        rs.getBoolean("favorites")
+                )
+        );
+    }
 }
