@@ -11,15 +11,12 @@ import dipleks.view.settings.SizeWindow;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.URL;
@@ -61,7 +58,7 @@ public class EnglishTabController implements Initializable {
 
     @FXML
     private void addFavorites() {
-        Favorites.getListFavorites(dictionary);
+        new Favorites().getListFavorites(dictionary);
         RootWindow.getAlert("Избранное", "Ваш выбор сохранен!");
     }
 
