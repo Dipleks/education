@@ -58,7 +58,7 @@ public class EnglishTabController implements Initializable {
 
     @FXML
     private void addFavorites() {
-        new Favorites().getListFavorites(dictionary);
+        Favorites.getListFavorites(dictionary);
         RootWindow.getAlert("Избранное", "Ваш выбор сохранен!");
     }
 

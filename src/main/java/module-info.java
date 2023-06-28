@@ -6,7 +6,6 @@ module denis.zagorodnev {
     requires spring.jdbc;
     requires java.naming;
     requires com.fasterxml.jackson.databind;
-    requires kotlin.stdlib;
 
     opens dipleks to javafx.fxml;
     exports dipleks;

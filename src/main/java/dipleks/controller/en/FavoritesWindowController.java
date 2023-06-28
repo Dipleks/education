@@ -33,7 +33,7 @@ public class FavoritesWindowController implements Initializable {
 
     @FXML
     private void saveChange() {
-        new Favorites().getListFavorites(dictionary);
+        Favorites.getListFavorites(dictionary);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class FavoritesWindowController implements Initializable {
         favorites.setCellValueFactory(new PropertyValueFactory<>("favorites"));
 
         try {
-            dictionary = new ListFavorites().getListFavorites();
+            dictionary = ListFavorites.getListFavorites();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
