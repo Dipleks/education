@@ -4,7 +4,7 @@ import dipleks.view.settings.NewWindow;
 import dipleks.view.settings.SizeWindow;
 import javafx.stage.Stage;
 
-public class FavoritesWindow {
+public class Favorites {
 
     private static final double WIDTH = SizeWindow.WIDTH.setSize(2.5);
     private static final double HEIGHT = SizeWindow.HEIGHT.setSize(1.5);
@@ -13,11 +13,11 @@ public class FavoritesWindow {
     private static final String TITLE_WINDOW = "Избранное";
     private static final String FXML_URL = "/dipleks/view.en/favorites-window.fxml";
 
-    private FavoritesWindow() {
+    private Favorites() {
     }
 
     public static void getWordsWindow() {
-        NewWindow.getNewWindow(
+        NewWindow.WINDOW.create(
                 FXML_URL,
                 WINDOW,
                 WIDTH,
@@ -29,9 +29,5 @@ public class FavoritesWindow {
 
     public static double getHEIGHT() {
         return HEIGHT;
-    }
-
-    public static Stage getWINDOW() {
-        return WINDOW;
     }
 }

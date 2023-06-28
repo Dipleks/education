@@ -1,9 +1,8 @@
 package dipleks.controller.en;
 
 import dipleks.database.entity.DictionaryEntity;
-import dipleks.model.en.Favorites;
-import dipleks.model.en.ListFavorites;
-import dipleks.view.en.FavoritesWindow;
+import dipleks.model.en.Words;
+import dipleks.view.en.Favorites;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,7 +32,7 @@ public class FavoritesWindowController implements Initializable {
 
     @FXML
     private void saveChange() {
-        Favorites.getListFavorites(dictionary);
+        Words.LIST.updateFavorites(dictionary);
     }
 
     @Override
@@ -43,14 +42,14 @@ public class FavoritesWindowController implements Initializable {
         favorites.setCellValueFactory(new PropertyValueFactory<>("favorites"));
 
         try {
-            dictionary = ListFavorites.getListFavorites();
+            dictionary = Words.LIST.showFavorites();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
         favoritesTable.setItems(dictionary);
 
-        favoritesPane.setPrefWidth(FavoritesWindow.getHEIGHT());
-        favoritesPane.setPrefHeight(FavoritesWindow.getHEIGHT());
+        favoritesPane.setPrefWidth(Favorites.getHEIGHT());
+        favoritesPane.setPrefHeight(Favorites.getHEIGHT());
 
     }
 }

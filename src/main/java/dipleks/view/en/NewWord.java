@@ -7,7 +7,7 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import java.util.Optional;
 
-public class NewWordWindow {
+public class NewWord {
 
     private static final double WIDTH = SizeWindow.WIDTH.setSize(3);
     private static final double HEIGHT = SizeWindow.HEIGHT.setSize(2);
@@ -16,11 +16,11 @@ public class NewWordWindow {
     private static final String TITLE_WINDOW = "Добавить новое слово";
     private static final String FXML_URL = "/dipleks/view.en/new-word.fxml";
 
-    private NewWordWindow() {
+    private NewWord() {
     }
 
     public static void getWordsWindow() {
-        NewWindow.getNewWindow(
+        NewWindow.WINDOW.create(
                 FXML_URL,
                 WINDOW,
                 WIDTH,

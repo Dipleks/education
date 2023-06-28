@@ -1,7 +1,7 @@
 package dipleks.controller.en;
 
-import dipleks.model.en.NewWord;
-import dipleks.view.en.NewWordWindow;
+import dipleks.model.en.Words;
+import dipleks.view.en.NewWord;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
@@ -23,18 +23,18 @@ public class NewWordController implements Initializable {
         String original = this.original.getText().trim();
         String translation = this.translation.getText().trim();
         if (!original.equals("") && !translation.equals("")) {
-            NewWord.addWord(original, translation);
+            Words.LIST.add(original, translation);
             this.original.clear();
             this.translation.clear();
         } else {
-            NewWordWindow.getErrorAddWord("Error: trying to add an empty word." +
+            NewWord.getErrorAddWord("Error: trying to add an empty word." +
                     "\nПопытка добавить пустое поле!");
         }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        newWordPane.setPrefWidth(NewWordWindow.getWIDTH());
-        newWordPane.setPrefHeight(NewWordWindow.getHEIGHT());
+        newWordPane.setPrefWidth(NewWord.getWIDTH());
+        newWordPane.setPrefHeight(NewWord.getHEIGHT());
     }
 }

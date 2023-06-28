@@ -38,3 +38,6 @@ INSERT INTO words (original, translation) VALUES ('test2806', 'test2806');
 INSERT INTO words (original, translation) VALUES ('ert', 'ert');
 INSERT INTO words (original, translation) VALUES ('terrrrrr', 'yerrrrrrr');
 INSERT INTO words (original, translation) VALUES ('1117', '1117');
+INSERT INTO words (original, translation) VALUES ('r28', 'r28');
+INSERT INTO words (original, translation) VALUES ('test34', 'test34');
+INSERT INTO words (original, translation) VALUES ('45', '45');

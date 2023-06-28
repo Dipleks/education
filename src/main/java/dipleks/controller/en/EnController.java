@@ -1,18 +1,16 @@
 package dipleks.controller.en;
 
-import dipleks.database.WriterBackupWordInDB;
-import dipleks.model.en.Favorites;
-import dipleks.view.en.FavoritesWindow;
+import dipleks.database.WordsDataBase;
+import dipleks.model.en.Words;
+import dipleks.view.en.Favorites;
 import dipleks.view.en.RootWindow;
 import dipleks.database.entity.DictionaryEntity;
-import dipleks.model.en.ListWords;
-import dipleks.view.en.NewWordWindow;
+import dipleks.view.en.NewWord;
 import dipleks.view.settings.Root;
 import dipleks.view.settings.SizeWindow;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,7 +22,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EnglishTabController implements Initializable {
+public class EnController implements Initializable {
 
     @FXML
     private MenuBar menuBar;
@@ -60,13 +58,13 @@ public class EnglishTabController implements Initializable {
 
     @FXML
     private void addFavorites() {
-        Favorites.getListFavorites(dictionary);
+        Words.LIST.updateFavorites(dictionary);
         RootWindow.getAlert("Избранное", "Ваш выбор сохранен!");
     }
 
     @FXML
     private void addWord() {
-        NewWordWindow.getWordsWindow();
+        NewWord.getWordsWindow();
     }
 
     @FXML
@@ -74,7 +72,7 @@ public class EnglishTabController implements Initializable {
         rootPane.getChildren().clear();
         try {
             rootPane.getChildren().add(
-                    new FXMLLoader(Root.class.getResource(EnglishTabController.FXML_URL_TASK)).load());
+                    new FXMLLoader(Root.class.getResource(EnController.FXML_URL_TASK)).load());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -87,7 +85,7 @@ public class EnglishTabController implements Initializable {
         favorites.setCellValueFactory(new PropertyValueFactory<>("favorites"));
 
         try {
-            dictionary = ListWords.getListWords();
+            dictionary = Words.LIST.get();
             topTableWord.setItems(dictionary);
 
             FilteredList<DictionaryEntity> filteredList =
@@ -130,13 +128,13 @@ public class EnglishTabController implements Initializable {
 
     @FXML
     private void openFavorites() {
-        FavoritesWindow.getWordsWindow();
+        Favorites.getWordsWindow();
     }
 
     @FXML
     private void getBackup() {
         rootPane.getChildren().clear();
-        WriterBackupWordInDB.writeDown();
+        WordsDataBase.LIST.restoreFromBackup();
         RootWindow.getGeneralWindows();
         RootWindow.getAlert("Backup", "Значения обновлены в Базе Данных!");
     }

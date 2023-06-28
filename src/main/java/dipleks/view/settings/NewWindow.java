@@ -6,22 +6,31 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class NewWindow {
+public enum NewWindow {
 
-    private NewWindow() {
-    }
+    WINDOW {
+        public void create(String fxml, Stage window, double width, double height,
+                                  String title, boolean alwaysOnTop) {
 
-    public static void getNewWindow(String fxml, Stage window, double width, double height,
-                                    String title, boolean alwaysOnTop) {
-        FXMLLoader fxmlLoader = new FXMLLoader(Root.class.getResource(fxml));
-        try {
-            window.setScene(new Scene(fxmlLoader.load(), width, height));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            FXMLLoader fxmlLoader = new FXMLLoader(Root.class.getResource(fxml));
+            try {
+                window.setScene(new Scene(fxmlLoader.load(), width, height));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            window.getIcons().add(new Image("/icone.png"));
+            window.setTitle(title);
+            window.setAlwaysOnTop(alwaysOnTop);
+            window.show();
         }
-        window.getIcons().add(new Image("/icone.png"));
-        window.setTitle(title);
-        window.setAlwaysOnTop(alwaysOnTop);
-        window.show();
-    }
+    };
+
+    public abstract void create(
+            String fxml,
+            Stage window,
+            double width,
+            double height,
+            String title,
+            boolean alwaysOnTop
+    );
 }
