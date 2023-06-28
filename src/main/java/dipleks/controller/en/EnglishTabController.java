@@ -1,5 +1,6 @@
 package dipleks.controller.en;
 
+import dipleks.database.WriterBackupWordInDB;
 import dipleks.model.en.Favorites;
 import dipleks.view.en.FavoritesWindow;
 import dipleks.view.en.RootWindow;
@@ -11,6 +12,7 @@ import dipleks.view.settings.SizeWindow;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -129,5 +131,13 @@ public class EnglishTabController implements Initializable {
     @FXML
     private void openFavorites() {
         FavoritesWindow.getWordsWindow();
+    }
+
+    @FXML
+    private void getBackup() {
+        rootPane.getChildren().clear();
+        WriterBackupWordInDB.writeDown();
+        RootWindow.getGeneralWindows();
+        RootWindow.getAlert("Backup", "Значения обновлены в Базе Данных!");
     }
 }

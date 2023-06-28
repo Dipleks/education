@@ -11,6 +11,7 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Изменить">
             <MenuItem mnemonicParsing="false" text="Копировать" />
+         <MenuItem mnemonicParsing="false" onAction="#getBackup" text="Восстановить БД" />
         </Menu>
         <Menu mnemonicParsing="false" text="Помощь">
             <MenuItem mnemonicParsing="false" text="О программе" />
@@ -22,18 +23,16 @@
             <AnchorPane fx:id="rootPane" minHeight="0.0" minWidth="0.0">
                 <HBox spacing="20.0" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20">
                     <Button mnemonicParsing="false" onAction="#addWord" text="Добавить слово" />
-                    <Button mnemonicParsing="false" onAction="#passTest" text="Проверь себя" />
+                    <Button disable="true" mnemonicParsing="false" onAction="#passTest" text="Проверь себя" />
                     <Button mnemonicParsing="false" onAction="#openFavorites" text="Избранное" />
                 </HBox>
-                    <VBox fx:id="topTableWordPane" alignment="CENTER_LEFT"
-                          spacing="5.0" AnchorPane.leftAnchor="40">
+                    <VBox fx:id="topTableWordPane" alignment="CENTER_LEFT" spacing="5.0" AnchorPane.leftAnchor="40">
                         <Label prefWidth="400" text="Поиск по словам:" textFill="#239d78">
                             <font>
                                 <Font name="System Bold Italic" size="18.0" />
                             </font>
                         </Label>
-                        <VBox alignment="CENTER_RIGHT"
-                              spacing="5.0">
+                        <VBox alignment="CENTER_RIGHT" spacing="5.0">
                             <TextField fx:id="search" promptText="Search..." />
                             <TableView fx:id="topTableWord" prefHeight="315" style="-fx-font-style: italic; -fx-font-size: 13px;">
                                 <columns>
@@ -45,9 +44,7 @@
                                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                 </columnResizePolicy>
                             </TableView>
-                            <Button mnemonicParsing="false"
-                                    onAction="#addFavorites"
-                                    text="Сохранить список Избранного"/>
+                            <Button mnemonicParsing="false" onAction="#addFavorites" text="Сохранить список Избранного" />
                         </VBox>
                     </VBox>
             </AnchorPane>
