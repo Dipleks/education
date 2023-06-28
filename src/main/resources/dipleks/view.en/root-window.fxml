@@ -36,8 +36,8 @@
                             <TextField fx:id="search" promptText="Search..." />
                             <TableView fx:id="topTableWord" prefHeight="315" style="-fx-font-style: italic; -fx-font-size: 13px;">
                                 <columns>
-                                    <TableColumn fx:id="translation" style="-fx-alignment: center;" text="Перевод" />
                                     <TableColumn fx:id="original" style="-fx-alignment: center;" text="Оригинал" />
+                                    <TableColumn fx:id="translation" style="-fx-alignment: center;" text="Перевод" />
                                     <TableColumn fx:id="favorites" style="-fx-alignment: center;" text="Избранное" />
                                 </columns>
                                 <columnResizePolicy>
