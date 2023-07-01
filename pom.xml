@@ -89,7 +89,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>dipleks.EducationApp</mainClass>
+                            <mainClass>edumath.EducationApp</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
@@ -107,7 +107,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>dipleks.EducationApp</mainClass>
+                            <mainClass>edumath.EducationApp</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

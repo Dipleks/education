@@ -1,16 +1,13 @@
-package dipleks.view.en;
+package edumath.view;
 
-import dipleks.view.settings.NewWindow;
-import dipleks.view.settings.SizeRootWindow;
-import dipleks.view.settings.SizeWindow;
+import edumath.settings.NewWindow;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 public class RootWindow {
     private static final Stage WINDOW = new Stage();
     private static final String TITLE_WINDOW = "Образование";
-    private static final String FXML_URL = "/dipleks/view.en/root.fxml";
-//    private static final String FXML_URL = "/dipleks/view.en/root-window.fxml";
+    private static final String FXML_URL = "/edumath/root.fxml";
 
     private RootWindow() {
     }
@@ -20,8 +17,6 @@ public class RootWindow {
         NewWindow.WINDOW.create(
                 FXML_URL,
                 WINDOW,
-                SizeRootWindow.WIDTH.getSize(),
-                SizeRootWindow.HEIGHT.getSize(),
                 TITLE_WINDOW,
                 false
         );

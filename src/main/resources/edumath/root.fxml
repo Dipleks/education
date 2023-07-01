@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.RootController">
+    <MenuBar prefHeight="30" prefWidth="1200" style="-fx-font-size: 14;">
+        <Menu mnemonicParsing="false" text="Файл">
+            <MenuItem mnemonicParsing="false" text="Настройки" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Предметы">
+            <MenuItem mnemonicParsing="false" onAction="#getMath" text="Математика" />
+            <MenuItem mnemonicParsing="false" onAction="#getEn" text="Английский" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Сервис">
+            <MenuItem mnemonicParsing="false" text="Восстановить БД" />
+            <MenuItem mnemonicParsing="false" text="О программе" />
+        </Menu>
+    </MenuBar>
+    <Pane fx:id="rootPane" layoutY="30.0" prefHeight="570.0" prefWidth="1200.0">
+        <fx:include  fx:id="math" source="math.fxml" visible="true"/>
+        <fx:include  fx:id="en" source="en.fxml" visible="false"/>
+    </Pane>
+</AnchorPane>

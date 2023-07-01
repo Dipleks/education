@@ -1,6 +1,6 @@
 package dipleks.controller;
 
-import dipleks.view.settings.SizeRootWindow;
+import edumath.settings.SizeRootWindow;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.MenuBar;

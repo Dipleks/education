@@ -1,4 +1,4 @@
-package dipleks.view.settings;
+package edumath.settings;
 
 import javafx.stage.Screen;
 

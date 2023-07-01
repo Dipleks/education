@@ -1,6 +1,6 @@
-package dipleks.view.settings;
+package edumath.settings;
 
-import dipleks.view.en.RootWindow;
+import edumath.view.RootWindow;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

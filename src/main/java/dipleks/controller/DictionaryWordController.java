@@ -1,6 +1,6 @@
 package dipleks.controller;
 
-import dipleks.view.en.RootWindow;
+import edumath.view.RootWindow;
 import javafx.fxml.FXML;
 
 public class DictionaryWordController {

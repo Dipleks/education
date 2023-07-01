@@ -1,21 +1,20 @@
-package dipleks.view.settings;
+package edumath.settings;
 
-import edumath.settings.Root;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
 public enum NewWindow {
 
     WINDOW {
-        public void create(String fxml, Stage window, double width, double height,
-                                  String title, boolean alwaysOnTop) {
+        public void create(String fxml, Stage window, String title, boolean alwaysOnTop) {
 
             FXMLLoader fxmlLoader = new FXMLLoader(Root.class.getResource(fxml));
             try {
-                window.setScene(new Scene(fxmlLoader.load(), width, height));
+                window.setScene(new Scene(fxmlLoader.load()));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -29,8 +28,6 @@ public enum NewWindow {
     public abstract void create(
             String fxml,
             Stage window,
-            double width,
-            double height,
             String title,
             boolean alwaysOnTop
     );

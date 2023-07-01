@@ -1,6 +1,6 @@
-package dipleks;
+package edumath;
 
-import dipleks.view.settings.Root;
+import edumath.settings.Root;
 
 public class EducationApp {
     public static void main(String[] args) {
