@@ -1,4 +1,4 @@
-package dipleks.database.entity;
+package dipleks.entity;
 
 import javafx.scene.control.CheckBox;
 

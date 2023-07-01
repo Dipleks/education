@@ -1,4 +1,4 @@
-package dipleks.controller.en;
+package dipleks.controller;
 
 import dipleks.view.en.RootWindow;
 import javafx.fxml.FXML;

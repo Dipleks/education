@@ -1,4 +1,4 @@
-package dipleks.model.en;
+package dipleks.model;
 
 import java.io.File;
 import java.io.FileReader;

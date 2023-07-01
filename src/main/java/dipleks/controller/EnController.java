@@ -1,12 +1,13 @@
-package dipleks.controller.en;
+package dipleks.controller;
 
 import dipleks.database.WordsDataBase;
-import dipleks.model.en.Words;
+import dipleks.model.Words;
 import dipleks.view.en.Favorites;
 import dipleks.view.en.RootWindow;
-import dipleks.database.entity.DictionaryEntity;
+import dipleks.entity.DictionaryEntity;
 import dipleks.view.en.NewWord;
 import dipleks.view.settings.Root;
+import dipleks.view.settings.SizeRootWindow;
 import dipleks.view.settings.SizeWindow;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -44,8 +45,8 @@ public class EnController implements Initializable {
     private TableColumn<DictionaryEntity, Boolean> favorites;
 
     private static final String FXML_URL_TASK = "/dipleks/view.en/tasks-in-english.fxml";
-    private static final double WIDTH = SizeWindow.getRootWindowWIDTH();
-    private static final double HEIGHT = SizeWindow.getRootWindowHEIGHT();
+    private static final double WIDTH = SizeRootWindow.WIDTH.getSize();
+    private static final double HEIGHT = SizeRootWindow.HEIGHT.getSize();
 
     private ObservableList<DictionaryEntity> dictionary;
 

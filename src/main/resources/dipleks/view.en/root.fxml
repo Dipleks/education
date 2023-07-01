@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="778.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dipleks.controller.RootController">
+  <MenuBar fx:id="menuBar">
+    <Menu mnemonicParsing="false" text="Файл">
+      <MenuItem mnemonicParsing="false" text="Настройки" />
+    </Menu>
+    <Menu mnemonicParsing="false" text="Изменить">
+      <MenuItem mnemonicParsing="false" text="Копировать" />
+      <MenuItem mnemonicParsing="false" text="Восстановить БД" />
+    </Menu>
+    <Menu mnemonicParsing="false" text="Помощь">
+      <MenuItem mnemonicParsing="false" text="О программе" />
+    </Menu>
+  </MenuBar>
+
+  <Pane fx:id="pane" prefHeight="771.0" prefWidth="1198.0">
+         <VBox alignment="CENTER" layoutX="57.0" layoutY="78.0" spacing="20.0">
+               <Button mnemonicParsing="false" text="Английский" />
+               <Button mnemonicParsing="false" text="Математика" />
+         </VBox>
+  </Pane>
+</AnchorPane>

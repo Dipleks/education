@@ -1,4 +1,4 @@
-package dipleks.database.entity;
+package dipleks.entity;
 
 public class WordsEntity {
     private int id;

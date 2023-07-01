@@ -1,8 +1,8 @@
 package dipleks.database;
 
-import dipleks.database.entity.DictionaryEntity;
-import dipleks.database.entity.WordsEntity;
-import dipleks.model.en.Backup;
+import dipleks.entity.DictionaryEntity;
+import dipleks.entity.WordsEntity;
+import dipleks.model.Backup;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;

@@ -1,17 +1,16 @@
 package dipleks.view.en;
 
 import dipleks.view.settings.NewWindow;
+import dipleks.view.settings.SizeRootWindow;
 import dipleks.view.settings.SizeWindow;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 public class RootWindow {
-
-    private static final double WIDTH = SizeWindow.getRootWindowWIDTH();
-    private static final double HEIGHT = SizeWindow.getRootWindowHEIGHT();
     private static final Stage WINDOW = new Stage();
     private static final String TITLE_WINDOW = "Образование";
-    private static final String FXML_URL = "/dipleks/view.en/root-window.fxml";
+    private static final String FXML_URL = "/dipleks/view.en/root.fxml";
+//    private static final String FXML_URL = "/dipleks/view.en/root-window.fxml";
 
     private RootWindow() {
     }
@@ -21,8 +20,8 @@ public class RootWindow {
         NewWindow.WINDOW.create(
                 FXML_URL,
                 WINDOW,
-                WIDTH,
-                HEIGHT,
+                SizeRootWindow.WIDTH.getSize(),
+                SizeRootWindow.HEIGHT.getSize(),
                 TITLE_WINDOW,
                 false
         );

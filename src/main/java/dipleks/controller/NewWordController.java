@@ -1,6 +1,6 @@
-package dipleks.controller.en;
+package dipleks.controller;
 
-import dipleks.model.en.Words;
+import dipleks.model.Words;
 import dipleks.view.en.NewWord;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

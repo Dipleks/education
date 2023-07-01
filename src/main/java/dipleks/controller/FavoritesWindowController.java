@@ -1,7 +1,7 @@
-package dipleks.controller.en;
+package dipleks.controller;
 
-import dipleks.database.entity.DictionaryEntity;
-import dipleks.model.en.Words;
+import dipleks.entity.DictionaryEntity;
+import dipleks.model.Words;
 import dipleks.view.en.Favorites;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

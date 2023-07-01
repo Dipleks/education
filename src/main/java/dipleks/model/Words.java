@@ -1,7 +1,7 @@
-package dipleks.model.en;
+package dipleks.model;
 
 import dipleks.database.WordsDataBase;
-import dipleks.database.entity.DictionaryEntity;
+import dipleks.entity.DictionaryEntity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
