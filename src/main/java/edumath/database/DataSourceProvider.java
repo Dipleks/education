@@ -1,4 +1,4 @@
-package dipleks.database;
+package edumath.database;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
