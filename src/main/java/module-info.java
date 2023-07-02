@@ -15,4 +15,6 @@ module denis.zagorodnev {
     opens edumath.view to javafx.fxml;
     exports edumath.settings;
     opens edumath.settings to javafx.fxml;
+    exports edumath.controller.math;
+    opens edumath.controller.math to javafx.fxml;
 }

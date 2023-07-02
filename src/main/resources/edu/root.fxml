@@ -18,7 +18,7 @@
         </Menu>
     </MenuBar>
     <Pane fx:id="rootPane" layoutY="30.0" prefHeight="570.0" prefWidth="1200.0">
-        <fx:include  fx:id="math" source="math.fxml" visible="true"/>
-        <fx:include  fx:id="en" source="en.fxml" visible="false"/>
+        <fx:include fx:id="math" source="math/math.fxml" visible="true" />
+        <fx:include fx:id="en" source="en.fxml" visible="false" />
     </Pane>
 </AnchorPane>

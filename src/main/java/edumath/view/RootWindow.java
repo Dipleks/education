@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class RootWindow {
     private static final Stage WINDOW = new Stage();
     private static final String TITLE_WINDOW = "Образование";
-    private static final String FXML_URL = "/edumath/root.fxml";
+    private static final String FXML_URL = "/edu/root.fxml";
 
     private RootWindow() {
     }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane layoutX="250" prefHeight="570.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.math.MathController">
+    <Label fx:id="condition" layoutX="120.0" layoutY="116.0" prefHeight="137.0" prefWidth="573.0" text="Нажми на кнопку Старт вверху" textAlignment="JUSTIFY" wrapText="true">
+        <font>
+            <Font name="System Bold Italic" size="18.0" />
+        </font>
+    </Label>
+    <Separator layoutX="150.0" layoutY="252.0" prefHeight="0.0" prefWidth="515.0" />
+    <Button layoutX="463.0" layoutY="276.0" mnemonicParsing="false" onAction="#check" prefHeight="47.0" prefWidth="131.0" text="Проверить">
+        <font>
+            <Font name="System Bold Italic" size="18.0" />
+        </font>
+    </Button>
+    <TextField alignment="CENTER" layoutX="214.0" layoutY="268.0" prefHeight="62.0" prefWidth="178.0" promptText="Напиши ответ">
+        <font>
+            <Font name="System Italic" size="18.0" />
+        </font>
+    </TextField>
+    <Label layoutX="343.0" layoutY="81.0" text="Условие Задачи" textFill="#8c1bbc">
+        <font>
+            <Font name="System Bold Italic" size="24.0" />
+        </font>
+    </Label>
+    <Label layoutX="313.0" layoutY="368.0" text="Верно/Не верно" textFill="#e40c0c">
+        <font>
+            <Font name="System Bold Italic" size="24.0" />
+        </font>
+    </Label>
+   <Button fx:id="start" layoutX="363.0" layoutY="22.0" mnemonicParsing="false" onAction="#startTask" prefHeight="35.0" prefWidth="145.0" text="Старт">
+      <font>
+         <Font name="System Bold Italic" size="18.0" />
+      </font>
+   </Button>
+</Pane>
