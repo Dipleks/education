@@ -3,7 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.RootController">
+<AnchorPane prefHeight="600" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.RootController">
     <MenuBar prefHeight="30" prefWidth="1200" style="-fx-font-size: 14;">
         <Menu mnemonicParsing="false" text="Файл">
             <MenuItem mnemonicParsing="false" text="Настройки" />
@@ -13,12 +14,12 @@
             <MenuItem mnemonicParsing="false" onAction="#getEn" text="Английский" />
         </Menu>
         <Menu mnemonicParsing="false" text="Сервис">
-            <MenuItem mnemonicParsing="false" text="Восстановить БД" />
+            <MenuItem onAction="#restore" mnemonicParsing="false" text="Восстановить задачи в БД" />
             <MenuItem mnemonicParsing="false" text="О программе" />
         </Menu>
     </MenuBar>
-    <Pane fx:id="rootPane" layoutY="30.0" prefHeight="570.0" prefWidth="1200.0">
-        <fx:include fx:id="math" source="math/math.fxml" visible="true" />
+    <Pane layoutY="30.0" prefHeight="570.0" prefWidth="1200.0">
+        <fx:include fx:id="math" source="math/math.fxml"/>
         <fx:include fx:id="en" source="en.fxml" visible="false" />
     </Pane>
 </AnchorPane>

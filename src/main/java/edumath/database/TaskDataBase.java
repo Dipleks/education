@@ -24,6 +24,11 @@ public enum TaskDataBase {
         }
 
         @Override
+        public void restore(String sql) {
+            TEMPLATE.update(String.format(sql));
+        }
+
+        @Override
         public List<TaskEntity> get() {
             return TEMPLATE.query(
                     "SELECT * FROM task WHERE status = false LIMIT 1;",
@@ -83,6 +88,7 @@ public enum TaskDataBase {
             new JdbcTemplate(DataSourceProvider.INSTANCE.getDataSource());
 
     public abstract void add(int number, String condition, String answer);
+    public abstract void restore(String sql);
     public abstract List<TaskEntity> get();
     public abstract List<TaskEntity> getAll();
     public abstract void edit(int number, String condition, String answer, boolean status);

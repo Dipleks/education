@@ -31,6 +31,7 @@ public class MathAddTaskController {
                 getAlarm("Проверте ввод номера задачи!\n" +
                         "Используйте только цифры!");
             }
+
         } else {
             getAlarm("Есть не заполненые поля!");
         }
