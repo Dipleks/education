@@ -1,6 +1,6 @@
 create table answer
 (
-    id       integer               not null
+    id       serial
         constraint answer_pk
             primary key,
     datetime varchar               not null,
