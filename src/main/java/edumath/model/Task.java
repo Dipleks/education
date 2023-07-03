@@ -10,17 +10,11 @@ public class Task {
         TaskDataBase.TASKS.add(number, condition, answer);
     }
 
-    public static String getCondition() {
-        String condition = "Не удалось загрузить задачу!";
-        try {
-            List<TaskEntity> list = TaskDataBase.TASKS.get();
-            for(TaskEntity taskEntity : list) {
-                condition = taskEntity.getCondition();
-            }
-        } catch (Exception e) {
-            return "Подключение к БД отсутствует!";
-        }
+    public static List<TaskEntity> getTask() {
+        return TaskDataBase.TASKS.get();
+    }
 
-        return condition;
+    public static void editStatus(int number, String condition, String answer, boolean status) {
+        TaskDataBase.TASKS.edit(number, condition, answer, status);
     }
 }

@@ -16,7 +16,7 @@
             <Font name="System Bold Italic" size="18.0" />
         </font>
     </Button>
-    <TextField alignment="CENTER" layoutX="214.0" layoutY="268.0" prefHeight="62.0" prefWidth="178.0" promptText="Напиши ответ">
+    <TextField fx:id="answer" alignment="CENTER" layoutX="214.0" layoutY="268.0" prefHeight="62.0" prefWidth="178.0" promptText="Напиши ответ">
         <font>
             <Font name="System Italic" size="18.0" />
         </font>
@@ -26,7 +26,7 @@
             <Font name="System Bold Italic" size="24.0" />
         </font>
     </Label>
-    <Label layoutX="313.0" layoutY="368.0" text="Верно/Не верно" textFill="#e40c0c">
+    <Label fx:id="answerUser" layoutX="313.0" layoutY="368.0">
         <font>
             <Font name="System Bold Italic" size="24.0" />
         </font>

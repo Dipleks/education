@@ -26,9 +26,12 @@ public enum TaskDataBase {
         @Override
         public List<TaskEntity> get() {
             return TEMPLATE.query(
-                    "SELECT condition FROM task WHERE status = false LIMIT 1;",
+                    "SELECT * FROM task WHERE status = false LIMIT 1;",
                     (rs, rowNum) -> new TaskEntity(
-                            rs.getString("condition")
+                            rs.getInt("number"),
+                            rs.getString("condition"),
+                            rs.getString("answer"),
+                            rs.getBoolean("status")
                     )
             );
         }

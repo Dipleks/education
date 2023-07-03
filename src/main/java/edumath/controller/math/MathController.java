@@ -1,20 +1,23 @@
 package edumath.controller.math;
 
+import edumath.entity.TaskEntity;
 import edumath.model.Task;
 import edumath.settings.NewWindow;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.net.URL;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.List;
+import java.util.Objects;
 
 public class MathController {
 
+    @FXML
+    private Label answerUser;
+    @FXML
+    private TextField answer;
     @FXML
     private Button start;
     @FXML
@@ -79,16 +82,31 @@ public class MathController {
 
     @FXML
     public void check() {
-        condition.setText("Следующая задача");
-        //TODO при нажатии кнопки происходит проверка ответа полученого
-        // из textField, в случае верного ответа status в БД меняется
-        // на true и происходит переход к сл задаче
+        Task.getTask()
+                .forEach(taskEntity -> {
+                    if (answer.getText().equalsIgnoreCase(taskEntity.getAnswer())) {
+                        Task.editStatus(
+                                taskEntity.getNumber(),
+                                taskEntity.getCondition(),
+                                taskEntity.getAnswer(),
+                                true
+                        );
+                        Task.getTask()
+                                .forEach(nextTask -> condition.setText(nextTask.getCondition()));
+                        answerUser.setText("Верно! Молодец!");
+                        answerUser.setTextFill(Color.GREEN);
+                    } else {
+                        answerUser.setText("Не Верно! Попробуй еще раз!");
+                        answerUser.setTextFill(Color.RED);
+                    }
+                });
+        answer.clear();
     }
 
     @FXML
     private void startTask() {
-        String text = Task.getCondition();
-        condition.setText(text);
+        Task.getTask()
+                .forEach(taskEntity -> condition.setText(taskEntity.getCondition()));
         start.setDisable(true);
     }
 }
