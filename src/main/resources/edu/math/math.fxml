@@ -4,29 +4,29 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane prefHeight="570.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.math.MathController">
+<Pane prefHeight="570.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.math.MathController">
     <Pane prefHeight="570.0" prefWidth="1200.0">
         <fx:include fx:id="mathHome" source="math-home.fxml" visible="true" />
         <fx:include fx:id="mathTask" source="math-task.fxml" visible="false" />
         <fx:include fx:id="mathExamples" source="math-examples.fxml" visible="false" />
     </Pane>
-    <Pane prefHeight="570.0" prefWidth="250.0">
-        <ToggleButton fx:id="home" layoutX="48.0" layoutY="65.0" mnemonicParsing="false" onAction="#getHome" prefHeight="65.0" prefWidth="154.0" selected="true" text="На главную" textFill="#069653">
-         <font>
-            <Font name="System Bold Italic" size="18.0" />
-         </font></ToggleButton>
-        <ToggleButton fx:id="tasks" layoutX="49.0" layoutY="146.0" mnemonicParsing="false" onAction="#getTasks" prefHeight="65.0" prefWidth="154.0" text="Задачи" textFill="#069653">
-         <font>
-            <Font name="System Bold Italic" size="18.0" />
-         </font></ToggleButton>
-        <ToggleButton fx:id="examples" layoutX="49.0" layoutY="229.0" mnemonicParsing="false" onAction="#getExamples" prefHeight="65.0" prefWidth="154.0" text="Примеры" textFill="#069653">
-         <font>
-            <Font name="System Bold Italic" size="18.0" />
-         </font></ToggleButton>
-        <Button layoutX="17.0" layoutY="448.0" mnemonicParsing="false" onAction="#addTask" prefHeight="74.0" prefWidth="218.0" text="Добавить новую задачу" textAlignment="CENTER" textFill="#069653" wrapText="true">
-            <font>
-                <Font name="System Bold Italic" size="18.0" />
-            </font></Button>
-        <Separator layoutX="245.0" layoutY="35" orientation="VERTICAL" prefHeight="500.0" prefWidth="1.0" />
+    <Pane prefHeight="570.0" prefWidth="250.0" styleClass="menuPane" stylesheets="@../css/math/math.css">
+        <ToggleButton fx:id="home" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#getHome"
+                      prefHeight="30.0" prefWidth="230.0" selected="true" text="На главную"
+                      styleClass="buttonMenu">
+        </ToggleButton>
+        <ToggleButton fx:id="tasks" layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onAction="#getTasks"
+                      prefHeight="30.0" prefWidth="230.0" text="Задачи"
+                      styleClass="buttonMenu">
+        </ToggleButton>
+        <ToggleButton fx:id="examples" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" onAction="#getExamples"
+                      prefHeight="30.0" prefWidth="230.0" text="Примеры"
+                      styleClass="buttonMenu">
+        </ToggleButton>
+        <Button layoutX="10.0" layoutY="500.0" mnemonicParsing="false" onAction="#addTask"
+                prefHeight="30.0" prefWidth="230.0" text="Добавить задачу"
+                styleClass="buttonMenu">
+        </Button>
     </Pane>
 </Pane>

@@ -4,18 +4,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane layoutX="250" prefHeight="570.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.math.MathController">
-    <Label fx:id="condition" layoutX="191.0" layoutY="220.0" prefHeight="105.0" prefWidth="459.0" text="Нажми на кнопку Старт вверху" textAlignment="JUSTIFY" wrapText="true">
-        <font>
-            <Font name="System Bold Italic" size="18.0" />
-        </font>
+<Pane layoutX="250" prefHeight="570.0" prefWidth="950.0" styleClass="taskPane" stylesheets="@../css/math/mathTask.css"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edumath.controller.math.MathController">
+
+    <Label fx:id="condition" layoutX="191.0" layoutY="220.0" styleClass="taskLabel"
+           text="Нажми на кнопку Старт вверху" textAlignment="JUSTIFY">
     </Label>
-    <Separator layoutX="163.0" layoutY="337.0" prefHeight="0.0" prefWidth="515.0" style="-fx-background-color: green;" />
-    <Button layoutX="467.0" layoutY="357.0" mnemonicParsing="false" onAction="#check" prefHeight="47.0" prefWidth="131.0" text="Проверить">
-        <font>
-            <Font name="System Bold Italic" size="18.0" />
-        </font>
-    </Button>
+
+    <Separator layoutX="163.0" layoutY="195.0" prefHeight="0.0" prefWidth="515.0"
+               style="-fx-background-color: #7a0ed9;"/>
+
+    <Button styleClass="buttonCheck" layoutX="467.0" layoutY="357.0" mnemonicParsing="false" onAction="#check"
+            prefHeight="47.0" prefWidth="131.0" text="Проверить"/>
     <TextField fx:id="answer" alignment="CENTER" layoutX="225.0" layoutY="350.0" prefHeight="62.0" prefWidth="178.0" promptText="Напиши ответ">
         <font>
             <Font name="System Italic" size="18.0" />
@@ -31,10 +32,8 @@
             <Font name="System Bold Italic" size="24.0" />
         </font>
     </Label>
-   <Button fx:id="start" layoutX="349.0" layoutY="107.0" mnemonicParsing="false" onAction="#startTask" prefHeight="35.0" prefWidth="145.0" text="Старт">
-      <font>
-         <Font name="System Bold Italic" size="18.0" />
-      </font>
-   </Button>
-   <Separator layoutX="164.0" layoutY="207.0" prefHeight="3.0" prefWidth="515.0" style="-fx-background-color: green;" />
+    <Button fx:id="start" layoutX="349.0" layoutY="107.0" mnemonicParsing="false"
+            onAction="#startTask" prefHeight="35.0" prefWidth="145.0" text="Старт"
+            styleClass="buttonCheck" />
+   <Separator layoutX="164.0" layoutY="336.0" prefHeight="3.0" prefWidth="515.0" style="-fx-background-color: #7a0ed9;" />
 </Pane>

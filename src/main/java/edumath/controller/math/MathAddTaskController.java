@@ -1,6 +1,7 @@
 package edumath.controller.math;
 
 import edumath.model.Task;
+import edumath.view.AlertWindow;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
@@ -42,10 +43,7 @@ public class MathAddTaskController {
 
     private void getAlarm(String info) {
         MathController.NEW_TASK.close();
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information error");
-        alert.setContentText(info);
-        alert.setHeaderText(null);
+        Alert alert = AlertWindow.getAlertInformation("Information error", info);
         Optional<ButtonType> press = alert.showAndWait();
         if (press.isPresent()) {
             MathController.NEW_TASK.show();

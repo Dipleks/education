@@ -1,6 +1,7 @@
 package edumath.controller;
 
 import edumath.model.Task;
+import edumath.view.AlertWindow;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,6 +41,11 @@ public class RootController implements Initializable {
     @FXML
     private void restore() {
         Task.restoreTask();
+        Alert alert = AlertWindow.getAlertInformation(
+                "Восствновление",
+                "Данные базы восстановлены к изначальному состоянию"
+        );
+        alert.showAndWait();
         //TODO доработать: вызвать новое окно с вариантами восстановления
         // для начала будет одна активная кнопка "Восстановить Задачи по дефолту"
     }

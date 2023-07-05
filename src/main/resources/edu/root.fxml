@@ -5,15 +5,16 @@
 
 <AnchorPane prefHeight="600" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.RootController">
-    <MenuBar prefHeight="30" prefWidth="1200" style="-fx-font-size: 14;">
-        <Menu mnemonicParsing="false" text="Файл">
-            <MenuItem mnemonicParsing="false" text="Настройки" />
+    <MenuBar prefHeight="30" prefWidth="1200"
+             styleClass="menuBar" stylesheets="@../edu/css/root.css">
+        <Menu mnemonicParsing="false" text="Файл" styleClass="menuBar">
+            <MenuItem mnemonicParsing="false" text="Настройки"/>
         </Menu>
-        <Menu mnemonicParsing="false" text="Предметы">
+        <Menu mnemonicParsing="false" text="Предметы" styleClass="menuBar">
             <MenuItem mnemonicParsing="false" onAction="#getMath" text="Математика" />
             <MenuItem mnemonicParsing="false" onAction="#getEn" text="Английский" />
         </Menu>
-        <Menu mnemonicParsing="false" text="Сервис">
+        <Menu mnemonicParsing="false" text="Сервис" styleClass="menuBar">
             <MenuItem onAction="#restore" mnemonicParsing="false" text="Восстановить задачи в БД" />
             <MenuItem mnemonicParsing="false" text="О программе" />
         </Menu>

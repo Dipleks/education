@@ -1,16 +1,13 @@
 package edumath.controller.math;
 
-import edumath.entity.TaskEntity;
 import edumath.model.Task;
 import edumath.settings.NewWindow;
+import edumath.view.AlertWindow;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
-import java.util.List;
-import java.util.Objects;
 
 public class MathController {
 
@@ -105,8 +102,14 @@ public class MathController {
 
     @FXML
     private void startTask() {
-        Task.getTask()
-                .forEach(taskEntity -> condition.setText(taskEntity.getCondition()));
-        start.setDisable(true);
+        try {
+            Task.getTask()
+                    .forEach(taskEntity -> condition.setText(taskEntity.getCondition()));
+            start.setDisable(true);
+        } catch (Exception x) {
+            Alert alert = AlertWindow.getAlertInformation("Error", "Ошбка подключения к базе данных.");
+            alert.showAndWait();
+        }
+
     }
 }

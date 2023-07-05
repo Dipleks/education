@@ -1,0 +1,29 @@
+.taskPane {
+
+}
+
+.taskLabel {
+    -fx-background-color: #7a0ed9;
+    -fx-background-radius: 10 10 10 10;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-padding: 10 10 10 10;
+    -fx-max-height: 105;
+    -fx-max-width: 470;
+}
+
+.buttonCheck {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #7a0ed9;
+    -fx-font-size: 18;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+}
+
+.buttonCheck:pressed {
+    -fx-text-fill: #7a0ed9;
+    -fx-background-color: #ffffff;
+}
