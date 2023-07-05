@@ -1,4 +1,5 @@
 package edumath.controller.math;
 
-public class MathHomeController {
+public class MathHomeController{
+
 }

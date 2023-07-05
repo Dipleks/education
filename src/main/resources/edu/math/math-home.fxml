@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<Pane layoutX="250" prefHeight="570.0" prefWidth="950.0"
-      xmlns="http://javafx.com/javafx/17.0.2-ea"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="edumath.controller.math.MathHomeController">
-   <Label layoutX="314.0" layoutY="116.0" prefHeight="137.0" prefWidth="573.0"
-          text="В разработке"
-          textAlignment="JUSTIFY" wrapText="true">
-      <font>
-         <Font name="System Bold Italic" size="18.0"/>
-      </font>
-   </Label>
+<Pane layoutX="250" prefHeight="570.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.math.MathHomeController">
 
+   <ImageView fitHeight="500.0" fitWidth="800.0" layoutX="120.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <Image
+              url="/multiplicationTable.jpg"
+              backgroundLoading="true"
+      />
+   </ImageView>
 </Pane>

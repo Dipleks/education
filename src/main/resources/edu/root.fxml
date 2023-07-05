@@ -5,22 +5,21 @@
 
 <AnchorPane prefHeight="600" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.RootController">
-    <MenuBar prefHeight="30" prefWidth="1200"
-             styleClass="menuBar" stylesheets="@../edu/css/root.css">
-        <Menu mnemonicParsing="false" text="Файл" styleClass="menuBar">
-            <MenuItem mnemonicParsing="false" text="Настройки"/>
+    <MenuBar prefHeight="30" prefWidth="1200" styleClass="menuBar" stylesheets="@../edu/css/root.css">
+        <Menu mnemonicParsing="false" styleClass="menuBar" text="Файл">
+            <MenuItem mnemonicParsing="false" text="Настройки" />
         </Menu>
-        <Menu mnemonicParsing="false" text="Предметы" styleClass="menuBar">
+        <Menu mnemonicParsing="false" styleClass="menuBar" text="Предметы">
             <MenuItem mnemonicParsing="false" onAction="#getMath" text="Математика" />
             <MenuItem mnemonicParsing="false" onAction="#getEn" text="Английский" />
         </Menu>
-        <Menu mnemonicParsing="false" text="Сервис" styleClass="menuBar">
-            <MenuItem onAction="#restore" mnemonicParsing="false" text="Восстановить задачи в БД" />
+        <Menu mnemonicParsing="false" styleClass="menuBar" text="Сервис">
+            <MenuItem mnemonicParsing="false" onAction="#restore" text="Восстановить задачи в БД" />
             <MenuItem mnemonicParsing="false" text="О программе" />
         </Menu>
     </MenuBar>
     <Pane layoutY="30.0" prefHeight="570.0" prefWidth="1200.0">
-        <fx:include fx:id="math" source="math/math.fxml"/>
+        <fx:include fx:id="math" source="math/math.fxml" />
         <fx:include fx:id="en" source="en.fxml" visible="false" />
     </Pane>
 </AnchorPane>
