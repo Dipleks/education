@@ -27,3 +27,15 @@
     -fx-text-fill: #7a0ed9;
     -fx-background-color: #ffffff;
 }
+
+.numberLabel {
+    -fx-background-radius: 10 10 10 10;
+    -fx-text-fill: #1fa305;
+    -fx-font-size: 22;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-padding: 10 10 10 10;
+    -fx-max-height: 105;
+    -fx-max-width: 470;
+}

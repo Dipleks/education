@@ -1,4 +1,4 @@
-package edumath.entity;
+package edumath.model.entity;
 
 public class TaskEntity {
     private int id;

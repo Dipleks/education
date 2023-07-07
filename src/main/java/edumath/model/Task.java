@@ -1,7 +1,7 @@
 package edumath.model;
 
 import edumath.database.TaskDataBase;
-import edumath.entity.TaskEntity;
+import edumath.model.entity.TaskEntity;
 
 import java.io.File;
 import java.io.FileReader;

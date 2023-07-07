@@ -1,6 +1,6 @@
 package edumath.database;
 
-import edumath.entity.TaskEntity;
+import edumath.model.entity.TaskEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;

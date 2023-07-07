@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 public class MathController {
 
     @FXML
+    private Label number;
+    @FXML
     private Label answerUser;
     @FXML
     private TextField answer;
@@ -89,7 +91,10 @@ public class MathController {
                                 true
                         );
                         Task.getTask()
-                                .forEach(nextTask -> condition.setText(nextTask.getCondition()));
+                                .forEach(nextTask -> {
+                                    condition.setText(nextTask.getCondition());
+                                    number.setText(String.valueOf(nextTask.getNumber()));
+                                });
                         answerUser.setText("Верно! Молодец!");
                         answerUser.setTextFill(Color.GREEN);
                     } else {
@@ -104,7 +109,10 @@ public class MathController {
     private void startTask() {
         try {
             Task.getTask()
-                    .forEach(taskEntity -> condition.setText(taskEntity.getCondition()));
+                    .forEach(taskEntity -> {
+                        condition.setText(taskEntity.getCondition());
+                        number.setText(String.valueOf(taskEntity.getNumber()));
+                    });
             start.setDisable(true);
         } catch (Exception x) {
             Alert alert = AlertWindow.getAlertInformation("Error", "Ошбка подключения к базе данных.");
