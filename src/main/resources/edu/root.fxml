@@ -2,10 +2,12 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.stage.Screen?>
 
-<AnchorPane prefHeight="600" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.RootController">
-    <MenuBar prefHeight="30" prefWidth="1200" styleClass="menuBar" stylesheets="@../edu/css/root.css">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="edumath.controller.RootController"
+            styleClass="anchor" stylesheets="@../edu/css/root.css">
+    <MenuBar styleClass="menuBar">
         <Menu mnemonicParsing="false" styleClass="menuBar" text="Файл">
             <MenuItem mnemonicParsing="false" text="Настройки" />
         </Menu>
@@ -18,7 +20,7 @@
             <MenuItem mnemonicParsing="false" text="О программе" />
         </Menu>
     </MenuBar>
-    <Pane layoutY="30.0" prefHeight="570.0" prefWidth="1200.0">
+    <Pane styleClass="panes" layoutY="30.0">
         <fx:include fx:id="math" source="math/math.fxml" />
         <fx:include fx:id="en" source="en.fxml" visible="false" />
     </Pane>
