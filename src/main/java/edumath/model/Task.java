@@ -4,6 +4,7 @@ import edumath.database.TaskDataBase;
 import edumath.model.entity.TaskEntity;
 
 import java.io.*;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,22 +32,19 @@ public class Task {
     }
 
     private static void save(int number, String condition, String answer) {
+        // TODO исправить баг с сохранением бэкапа в файл
         try {
-            InputStream is = Task.class.getResourceAsStream("/database/math/backup-task.sql");
-            if (null == is) {
-                throw new FileNotFoundException("/database/math/backup-task.sql");
-            }
-            File fileSQL = new File(String.valueOf(is));
+//            InputStream path = Task.class.getResourceAsStream("/database/math/backup-task.sql");
+//            System.out.println();
+            File fileSQL = new File(BACKUP_TASK);
             FileWriter fileWriterSQL = new FileWriter(fileSQL, true);
-//            BufferedWriter in = new BufferedWriter(fileWriterSQL);
             String sqlElement =
                     "INSERT INTO task (number, condition, answer) VALUES (" +
                             number + ", '" + condition + "', '" + answer + "');";
-//            in.write(sqlElement);
-            fileWriterSQL.write(sqlElement);
-//            in.close();
-            fileWriterSQL.close();
-            is.close();
+            BufferedWriter buffer = new BufferedWriter(fileWriterSQL);
+            buffer.newLine();
+            buffer.write(sqlElement);
+            buffer.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
