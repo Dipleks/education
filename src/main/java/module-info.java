@@ -17,4 +17,8 @@ module denis.zagorodnev {
     opens edumath.settings to javafx.fxml;
     exports edumath.controller.math;
     opens edumath.controller.math to javafx.fxml;
+    exports edumath.model.json;
+    opens edumath.model.json to com.fasterxml.jackson.databind;
+    exports edumath.model.entity;
+    opens edumath.model.entity to com.fasterxml.jackson.databind;
 }

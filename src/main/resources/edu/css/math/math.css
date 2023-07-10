@@ -16,3 +16,7 @@
     -fx-text-fill: #7a0ed9;
     -fx-background-color: #ffffff;
 }
+
+.buttonMenu:hover {
+    -fx-background-color: #b272f1;
+}

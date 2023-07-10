@@ -3,10 +3,8 @@ package edumath.model;
 import edumath.database.TaskDataBase;
 import edumath.model.entity.TaskEntity;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -29,34 +27,43 @@ public class Task {
 
     public static void restoreTask() {
         TaskDataBase.TASKS.deleteAll();
-        restore().forEach(TaskDataBase.TASKS::restore);
+        new Task().restore().forEach(TaskDataBase.TASKS::restore);
     }
 
     private static void save(int number, String condition, String answer) {
         try {
-            File fileSQL = new File(BACKUP_TASK);
+            InputStream is = Task.class.getResourceAsStream("/database/math/backup-task.sql");
+            if (null == is) {
+                throw new FileNotFoundException("/database/math/backup-task.sql");
+            }
+            File fileSQL = new File(String.valueOf(is));
             FileWriter fileWriterSQL = new FileWriter(fileSQL, true);
+//            BufferedWriter in = new BufferedWriter(fileWriterSQL);
             String sqlElement =
                     "INSERT INTO task (number, condition, answer) VALUES (" +
                             number + ", '" + condition + "', '" + answer + "');";
-            fileWriterSQL.write(sqlElement + "\n");
+//            in.write(sqlElement);
+            fileWriterSQL.write(sqlElement);
+//            in.close();
             fileWriterSQL.close();
+            is.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private static List<String> restore() {
+    private List<String> restore() {
         List<String> listSQL = new ArrayList<>();
-        try {
-            File fileSQL = new File(BACKUP_TASK);
-            FileReader fileReaderSQL = new FileReader(fileSQL);
-            Scanner readSQLFile = new Scanner(fileReaderSQL);
-
-            while (readSQLFile.hasNextLine()) {
-                listSQL.add(readSQLFile.nextLine());
+        try (InputStream is = Task.class.getResourceAsStream("/database/math/backup-task.sql")) {
+            if (null == is) {
+                throw new FileNotFoundException("/database/math/backup-task.sql");
             }
-            readSQLFile.close();
+            try (BufferedReader in = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))) {
+                String line;
+                while ((line = in.readLine()) != null) {
+                    listSQL.add(line);
+                }
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -28,6 +28,11 @@
     -fx-background-color: #ffffff;
 }
 
+.buttonCheck:hover {
+    -fx-background-color: #b272f1;
+    /*-fx-background-radius: 30 0 0 30;*/
+}
+
 .numberLabel {
     -fx-background-radius: 10 10 10 10;
     -fx-text-fill: #1fa305;
