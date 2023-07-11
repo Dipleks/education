@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane layoutX="250" prefHeight="570.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.controller.MathControllerHome">
+
+   <ImageView fitHeight="500.0" fitWidth="800.0" layoutX="120.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <Image
+              url="/multiplicationTable.jpg"
+              backgroundLoading="true"
+      />
+   </ImageView>
+</Pane>
