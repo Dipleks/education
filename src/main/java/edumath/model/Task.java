@@ -4,11 +4,9 @@ import edumath.database.TaskDataBase;
 import edumath.model.entity.TaskEntity;
 
 import java.io.*;
-import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Task {
 
@@ -37,6 +35,7 @@ public class Task {
 //            InputStream path = Task.class.getResourceAsStream("/database/math/backup-task.sql");
 //            System.out.println();
             File fileSQL = new File(BACKUP_TASK);
+//            File fileSQL = new File(new File(".").getAbsolutePath(), "/database/math/backup-task.sql");
             FileWriter fileWriterSQL = new FileWriter(fileSQL, true);
             String sqlElement =
                     "INSERT INTO task (number, condition, answer) VALUES (" +
