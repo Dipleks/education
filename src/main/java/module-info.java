@@ -5,6 +5,12 @@ module denis.zagorodnev {
     requires org.postgresql.jdbc;
     requires spring.jdbc;
     requires java.naming;
+    requires spring.core;
+    requires spring.beans;
+    requires spring.context;
+    requires spring.web;
+    requires spring.webmvc;
+    requires thymeleaf.spring5;
 
     exports edu.controller;
     opens edu.controller to javafx.fxml;
