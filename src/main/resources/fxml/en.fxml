@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane layoutY="20" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.controller.EnController">
-   <children>
-      <CheckBox layoutX="204.0" layoutY="138.0" mnemonicParsing="false" text="CheckBox" />
-   </children>
+<Pane layoutY="20" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.controller.EnController">
+   <CheckBox layoutX="204.0" layoutY="138.0" mnemonicParsing="false" text="CheckBox"/>
 </Pane>

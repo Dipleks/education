@@ -1,6 +1,7 @@
 module denis.zagorodnev {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.base;
     requires java.sql;
     requires org.postgresql.jdbc;
     requires spring.jdbc;
