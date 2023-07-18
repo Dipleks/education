@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.ExamplesController">
    <children>
       <Label layoutX="60.0" layoutY="122.0" text="Тут Будут Примеры" textFill="#f60d0d">

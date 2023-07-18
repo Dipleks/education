@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.TasksController">
    <children>
-      <Label layoutX="29.0" layoutY="171.0" text="Тут Будет панель задач" textFill="#e60f0f">
+      <Label layoutX="47.0" layoutY="74.0" prefHeight="60.0" prefWidth="300.0" text="Тут Будет панель задач" textFill="#e60f0f">
          <font>
             <Font name="System Bold Italic" size="64.0" />
          </font>

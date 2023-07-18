@@ -2,6 +2,9 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -10,17 +13,22 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.SchoolMasterController">
+<AnchorPane fx:id="windowPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.SchoolMasterController">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutY="25.0" prefHeight="200.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
             <VBox maxWidth="275.0" prefHeight="600.0" prefWidth="275.0" styleClass="controlPanel" stylesheets="@../css/schoolMaster.css" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label styleClass="titleControl" stylesheets="@../css/schoolMaster.css" text="Школьный мастер" textFill="#9d9999">
+                        <Label prefHeight="30.0" prefWidth="134.0" styleClass="titleControl" stylesheets="@../css/schoolMaster.css" text="Школьный" textFill="#9d9999">
                            <font>
                               <Font name="Cambria Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text="Мастер" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria Italic" size="24.0" />
                            </font>
                         </Label>
                      </children>
@@ -41,7 +49,6 @@
                   <VBox alignment="BOTTOM_CENTER" prefHeight="227.0" prefWidth="250.0" spacing="5.0" VBox.vgrow="ALWAYS">
                      <children>
                         <ToggleButton mnemonicParsing="false" onAction="#addTask" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Добавить задачу" />
-                        <ToggleButton mnemonicParsing="false" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Настройки" />
                      </children>
                      <padding>
                         <Insets bottom="30.0" />
@@ -51,8 +58,28 @@
             </VBox>
          </left>
          <center>
-            <StackPane fx:id="root" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <StackPane fx:id="root" prefHeight="600.0" prefWidth="598.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
+      <MenuBar styleClass="menuBar" stylesheets="@../css/schoolMaster.css" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Предметы">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#getMathematics" text="Математика" />
+                  <MenuItem disable="true" mnemonicParsing="false" onAction="#getEnglish" text="Английский" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Настройки">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" text="Настройки БД" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Сервис">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" text="О программе" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

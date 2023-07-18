@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
@@ -13,7 +14,10 @@ import java.util.ResourceBundle;
 
 public class SchoolMasterController implements Initializable {
     @FXML
+    private AnchorPane windowPane;
+    @FXML
     private StackPane root;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         getInit("/view/tasks.fxml", new TasksController());
@@ -41,6 +45,16 @@ public class SchoolMasterController implements Initializable {
     private void addTask() {
         root.getChildren().clear();
         getInit("/view/addNewTask.fxml", new AddNewTaskController());
+    }
+
+    @FXML
+    private void getMathematics() {
+       // windowPane.getChildren().clear();
+    }
+
+    @FXML
+    private void getEnglish() {
+       // windowPane.getChildren().clear();
     }
 
     private void getInit(String fxml, MyController controller) {

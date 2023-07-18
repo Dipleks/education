@@ -4,7 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.AddNewTaskController">
    <children>
       <Label layoutX="46.0" layoutY="185.0" text="Тут я буду добовлять новые задачи" textFill="#f40505">

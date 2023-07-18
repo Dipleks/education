@@ -1,6 +1,30 @@
+.menuBar {
+    -fx-background-color: #7a0ed9;
+    -fx-background-radius: 10 10 10 10;
+    -fx-font-family: Cambria;
+    -fx-font-size: 20;
+    -fx-font-style: Italic;
+    -fx-effect: dropshadow(gaussian, rgba(79, 77, 77, 0.7), 10, 0, 10, 10);
+}
+
+.menu {
+    -fx-background-color: #7a0ed9;
+}
+
+/*.itemMenuBar:focused {*/
+/*    -fx-text-fill: #7a0ed9;*/
+/*    -fx-background-color: #ffffff;*/
+/*}*/
+
 .controlPanel {
     -fx-background-color: #7a0ed9;
     -fx-background-radius: 0 20 20 0;
+    -fx-border-radius: 20;
+}
+
+.itemsPanel {
+    -fx-background-color: #7a0ed9;
+    -fx-background-radius: 20 20 20 20;
     -fx-border-radius: 20;
 }
 
@@ -8,6 +32,17 @@
     -fx-text-fill: #ffffff;
     -fx-background-color: #7a0ed9;
     -fx-background-radius: 20 20 20 20;
+    -fx-font-family: Cambria;
+    -fx-font-size: 20;
+    -fx-font-style: Italic;
+    -fx-pref-height: 40;
+    -fx-pref-width: 230;
+    -fx-text-alignment: center;
+}
+
+.itemsButton {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #7a0ed9;
     -fx-font-family: Cambria;
     -fx-font-size: 20;
     -fx-font-style: Italic;
@@ -25,6 +60,16 @@
     -fx-background-color: #b272f1;
 }
 
+.itemsButton:focused {
+    -fx-text-fill: #7a0ed9;
+    -fx-background-color: #ffffff;
+}
+
+.itemsButton:hover {
+    -fx-background-color: #b272f1;
+}
+
 .titleControl {
     -fx-text-fill: #9d9999;
 }
+
