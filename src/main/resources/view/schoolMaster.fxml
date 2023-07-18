@@ -40,7 +40,7 @@
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" prefHeight="227.0" prefWidth="250.0" spacing="5.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <ToggleButton mnemonicParsing="false" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Добавить задачу" />
+                        <ToggleButton mnemonicParsing="false" onAction="#addTask" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Добавить задачу" />
                         <ToggleButton mnemonicParsing="false" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Настройки" />
                      </children>
                      <padding>

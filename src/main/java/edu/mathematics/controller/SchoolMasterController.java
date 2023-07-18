@@ -16,56 +16,42 @@ public class SchoolMasterController implements Initializable {
     private StackPane root;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        getInit();
+        getInit("/view/tasks.fxml", new TasksController());
     }
 
     @FXML
     private void getTasks() {
         root.getChildren().clear();
-        getInit();
+        getInit("/view/tasks.fxml",  new TasksController());
     }
 
     @FXML
     private void getExamples() {
         root.getChildren().clear();
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/view/examples.fxml"));
-            AnchorPane anchorPane = fxmlLoader.load();
-            root.getChildren().add(anchorPane);
-
-            ExamplesController examplesController = fxmlLoader.getController();
-            examplesController.setData();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        getInit("/view/examples.fxml", new ExamplesController());
     }
 
     @FXML
     private void getMultiplicationTable() {
         root.getChildren().clear();
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/view/multiplicationTable.fxml"));
-            AnchorPane anchorPane = fxmlLoader.load();
-            root.getChildren().add(anchorPane);
-
-            MultiplicationTableController mtc = fxmlLoader.getController();
-            mtc.setData();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        getInit("/view/multiplicationTable.fxml", new MultiplicationTableController());
     }
 
-    private void getInit() {
+    @FXML
+    private void addTask() {
+        root.getChildren().clear();
+        getInit("/view/addNewTask.fxml", new AddNewTaskController());
+    }
+
+    private void getInit(String fxml, MyController controller) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/view/tasks.fxml"));
+            fxmlLoader.setLocation(getClass().getResource(fxml));
             AnchorPane anchorPane = fxmlLoader.load();
             root.getChildren().add(anchorPane);
 
-            TasksController tasksController = fxmlLoader.getController();
-            tasksController.setData();
+            controller = fxmlLoader.getController();
+            controller.setData();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

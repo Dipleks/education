@@ -1,6 +1,6 @@
 package edu.mathematics.controller;
 
-public class MultiplicationTableController {
+public class MultiplicationTableController implements MyController {
     public void setData() {
     }
 }
