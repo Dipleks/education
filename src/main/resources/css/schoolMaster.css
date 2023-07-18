@@ -40,6 +40,15 @@
     -fx-text-alignment: center;
 }
 
+.buttonControl:focused {
+    -fx-text-fill: #7a0ed9;
+    -fx-background-color: #ffffff;
+}
+
+.buttonControl:hover {
+    -fx-background-color: #b272f1;
+}
+
 .itemsButton {
     -fx-text-fill: #ffffff;
     -fx-background-color: #7a0ed9;
@@ -49,15 +58,6 @@
     -fx-pref-height: 40;
     -fx-pref-width: 230;
     -fx-text-alignment: center;
-}
-
-.buttonControl:focused {
-    -fx-text-fill: #7a0ed9;
-    -fx-background-color: #ffffff;
-}
-
-.buttonControl:hover {
-    -fx-background-color: #b272f1;
 }
 
 .itemsButton:focused {
