@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.RootController">
+   <StackPane fx:id="rootPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    <MenuBar styleClass="menuBar" stylesheets="@../css/schoolMaster.css" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Предметы">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#getMathematics" text="Математика" />
+                    <MenuItem mnemonicParsing="false" onAction="#getEnglish" text="Английский" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Настройки">
+                <items>
+                    <MenuItem disable="true" mnemonicParsing="false" text="Настройки БД" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Сервис">
+                <items>
+                    <MenuItem disable="true" mnemonicParsing="false" text="О программе" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</AnchorPane>

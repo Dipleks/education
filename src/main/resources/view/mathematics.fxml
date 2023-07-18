@@ -7,17 +7,16 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="windowPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.SchoolMasterController">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.MathematicsController">
    <children>
-      <BorderPane layoutY="25.0" prefHeight="200.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <left>
-            <VBox maxWidth="275.0" prefHeight="600.0" prefWidth="275.0" styleClass="controlPanel" stylesheets="@../css/schoolMaster.css" BorderPane.alignment="CENTER">
+      <StackPane prefHeight="150.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox maxWidth="275.0" prefHeight="600.0" prefWidth="275.0" styleClass="controlPanel" stylesheets="@../css/schoolMaster.css">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
@@ -56,30 +55,8 @@
                   </VBox>
                </children>
             </VBox>
-         </left>
-         <center>
-            <StackPane fx:id="root" prefHeight="600.0" prefWidth="598.0" BorderPane.alignment="CENTER" />
-         </center>
-      </BorderPane>
-      <MenuBar styleClass="menuBar" stylesheets="@../css/schoolMaster.css" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Предметы">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#getMathematics" text="Математика" />
-                  <MenuItem disable="true" mnemonicParsing="false" onAction="#getEnglish" text="Английский" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Настройки">
-            <items>
-              <MenuItem disable="true" mnemonicParsing="false" text="Настройки БД" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Сервис">
-            <items>
-              <MenuItem disable="true" mnemonicParsing="false" text="О программе" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+         </children>
+      </StackPane>
+      <StackPane fx:id="root" prefHeight="600.0" prefWidth="925.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>
