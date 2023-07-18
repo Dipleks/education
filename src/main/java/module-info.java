@@ -15,6 +15,8 @@ module denis.zagorodnev {
 
     exports edu.controller;
     opens edu.controller to javafx.fxml;
+    exports edu.mathematics.controller;
+    opens edu.mathematics.controller to javafx.fxml;
     exports edu;
     opens edu to javafx.fxml;
     exports edu.view;

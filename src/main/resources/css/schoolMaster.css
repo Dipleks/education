@@ -1,0 +1,30 @@
+.controlPanel {
+    -fx-background-color: #7a0ed9;
+    -fx-background-radius: 0 20 20 0;
+    -fx-border-radius: 20;
+}
+
+.buttonControl {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #7a0ed9;
+    -fx-background-radius: 20 20 20 20;
+    -fx-font-family: Cambria;
+    -fx-font-size: 20;
+    -fx-font-style: Italic;
+    -fx-pref-height: 40;
+    -fx-pref-width: 230;
+    -fx-text-alignment: center;
+}
+
+.buttonControl:focused {
+    -fx-text-fill: #7a0ed9;
+    -fx-background-color: #ffffff;
+}
+
+.buttonControl:hover {
+    -fx-background-color: #b272f1;
+}
+
+.titleControl {
+    -fx-text-fill: #9d9999;
+}
