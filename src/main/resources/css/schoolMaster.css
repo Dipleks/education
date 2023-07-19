@@ -40,7 +40,7 @@
     -fx-text-alignment: center;
 }
 
-.buttonControl:focused {
+.buttonControl:selected {
     -fx-text-fill: #7a0ed9;
     -fx-background-color: #ffffff;
 }

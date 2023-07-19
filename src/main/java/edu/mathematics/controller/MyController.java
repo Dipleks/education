@@ -1,6 +1,7 @@
 package edu.mathematics.controller;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
@@ -20,6 +21,15 @@ public interface MyController {
             myController.setData();
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    default void isSelected(ToggleButton press, ToggleButton unclenched1,
+                            ToggleButton unclenched2, ToggleButton unclenched3) {
+        if (press.isSelected()) {
+            unclenched1.setSelected(false);
+            unclenched2.setSelected(false);
+            unclenched3.setSelected(false);
         }
     }
 }
