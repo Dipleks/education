@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane layoutX="250" prefHeight="570.0" prefWidth="950.0" styleClass="taskPane" stylesheets="@../css/mathTask.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.controller.MathController">
+<Pane layoutX="250" prefHeight="570.0" prefWidth="950.0" styleClass="taskPane" stylesheets="@../oldCSS/mathTask.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.controller.MathController">
 
     <Label fx:id="condition" layoutX="191.0" layoutY="220.0" styleClass="taskLabel" text="Нажми на кнопку Старт вверху" textAlignment="JUSTIFY">
     </Label>

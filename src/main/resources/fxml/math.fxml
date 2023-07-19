@@ -11,7 +11,7 @@
         <fx:include fx:id="mathTask" source="math-task.fxml" visible="false" />
         <fx:include fx:id="mathExamples" source="math-examples.fxml" visible="false" />
     </Pane>
-    <Pane prefHeight="570.0" prefWidth="250.0" styleClass="menuPane" stylesheets="@../css/math.css">
+    <Pane prefHeight="570.0" prefWidth="250.0" styleClass="menuPane" stylesheets="@../oldCSS/math.css">
         <ToggleButton fx:id="home" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#getHome"
                       prefHeight="30.0" prefWidth="230.0" selected="true" text="На главную"
                       styleClass="buttonMenu">

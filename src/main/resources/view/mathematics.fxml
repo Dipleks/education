@@ -16,11 +16,11 @@
    <children>
       <StackPane prefHeight="150.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox maxWidth="275.0" prefHeight="600.0" prefWidth="275.0" styleClass="controlPanel" stylesheets="@../css/schoolMaster.css">
+            <VBox maxWidth="275.0" prefHeight="600.0" prefWidth="275.0" styleClass="controlPanel" stylesheets="@../css/root.css">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="30.0" prefWidth="134.0" styleClass="titleControl" stylesheets="@../css/schoolMaster.css" text="Школьный" textFill="#9d9999">
+                        <Label prefHeight="30.0" prefWidth="134.0" styleClass="titleControl" stylesheets="@../css/root.css" text="Школьный" textFill="#9d9999">
                            <font>
                               <Font name="Cambria Bold Italic" size="24.0" />
                            </font>
@@ -34,9 +34,9 @@
                   </HBox>
                   <VBox alignment="TOP_CENTER" prefHeight="282.0" prefWidth="250.0" spacing="5.0">
                      <children>
-                        <ToggleButton fx:id="tasks" mnemonicParsing="false" onAction="#getTasks" selected="true" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Задачи" />
-                        <ToggleButton fx:id="examples" mnemonicParsing="false" onAction="#getExamples" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Примеры" />
-                        <ToggleButton fx:id="multiTable" mnemonicParsing="false" onAction="#getMultiplicationTable" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Таблица умножения" />
+                        <ToggleButton fx:id="tasks" mnemonicParsing="false" onAction="#getTasks" selected="true" styleClass="buttonControl" stylesheets="@../css/root.css" text="Задачи" />
+                        <ToggleButton fx:id="examples" mnemonicParsing="false" onAction="#getExamples" styleClass="buttonControl" stylesheets="@../css/root.css" text="Примеры" />
+                        <ToggleButton fx:id="multiTable" mnemonicParsing="false" onAction="#getMultiplicationTable" styleClass="buttonControl" stylesheets="@../css/root.css" text="Таблица умножения" />
                      </children>
                      <opaqueInsets>
                         <Insets />
@@ -47,7 +47,7 @@
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" prefHeight="227.0" prefWidth="250.0" spacing="5.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <ToggleButton fx:id="addButtonTask" mnemonicParsing="false" onAction="#addTask" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Добавить задачу" />
+                        <ToggleButton fx:id="addButtonTask" mnemonicParsing="false" onAction="#addTask" styleClass="buttonControl" stylesheets="@../css/root.css" text="Добавить задачу" />
                      </children>
                      <padding>
                         <Insets bottom="30.0" />

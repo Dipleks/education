@@ -15,11 +15,11 @@
     <children>
         <StackPane prefHeight="150.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <VBox maxWidth="275.0" prefHeight="600.0" prefWidth="275.0" styleClass="controlPanel" stylesheets="@../css/schoolMaster.css">
+                <VBox maxWidth="275.0" prefHeight="600.0" prefWidth="275.0" styleClass="controlPanel" stylesheets="@../css/root.css">
                     <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                             <children>
-                                <Label prefHeight="30.0" prefWidth="134.0" styleClass="titleControl" stylesheets="@../css/schoolMaster.css" text="Школьный" textFill="#9d9999">
+                                <Label prefHeight="30.0" prefWidth="134.0" styleClass="titleControl" stylesheets="@../css/root.css" text="Школьный" textFill="#9d9999">
                                     <font>
                                         <Font name="Cambria Bold Italic" size="24.0" />
                                     </font>
@@ -33,9 +33,9 @@
                         </HBox>
                         <VBox alignment="TOP_CENTER" prefHeight="282.0" prefWidth="250.0" spacing="5.0">
                             <children>
-                                <ToggleButton mnemonicParsing="false" onAction="#getWord" selected="true" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Слова" />
-                                <ToggleButton mnemonicParsing="false" onAction="#getText" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Предложения" />
-                                <ToggleButton mnemonicParsing="false" onAction="#getTableWords" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Таблица слов" />
+                                <ToggleButton fx:id="wordButton" mnemonicParsing="false" onAction="#getWord" selected="true" styleClass="buttonControl" stylesheets="@../css/root.css" text="Слова" />
+                                <ToggleButton fx:id="textButton" mnemonicParsing="false" onAction="#getText" styleClass="buttonControl" stylesheets="@../css/root.css" text="Предложения" />
+                                <ToggleButton fx:id="tableWordsButton" mnemonicParsing="false" onAction="#getTableWords" styleClass="buttonControl" stylesheets="@../css/root.css" text="Таблица слов" />
                             </children>
                             <opaqueInsets>
                                 <Insets />
@@ -46,7 +46,7 @@
                         </VBox>
                         <VBox alignment="BOTTOM_CENTER" prefHeight="227.0" prefWidth="250.0" spacing="5.0" VBox.vgrow="ALWAYS">
                             <children>
-                                <ToggleButton mnemonicParsing="false" onAction="#addWord" styleClass="buttonControl" stylesheets="@../css/schoolMaster.css" text="Добавить слово" />
+                                <ToggleButton fx:id="addWordButton" mnemonicParsing="false" onAction="#addWord" styleClass="buttonControl" stylesheets="@../css/root.css" text="Добавить слово" />
                             </children>
                             <padding>
                                 <Insets bottom="30.0" />
