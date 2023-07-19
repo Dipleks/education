@@ -1,5 +1,6 @@
 .tasksLabel {
-    -fx-background-color: #7a0ed9;
+    /*-fx-background-color: #7a0ed9;*/
+    -fx-background-color: linear-gradient(#7a0ed9 0%, #b272f1 100%);
     -fx-background-radius: 10 10 10 10;
     -fx-text-fill: #ffffff;
     -fx-font-size: 16;

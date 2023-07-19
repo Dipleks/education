@@ -6,41 +6,46 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.TasksController">
+<AnchorPane prefHeight="500.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mathematics.controller.TasksController">
    <children>
-      <VBox alignment="CENTER" layoutX="47.0" layoutY="14.0" prefHeight="475.0" prefWidth="645.0" spacing="20.0">
+      <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label text="Верно!! Молодец!!!" textFill="#0aef1a">
-               <font>
-                  <Font name="System Bold Italic" size="24.0" />
-               </font>
-            </Label>
-            <Label styleClass="tasksLabel" stylesheets="@../css/addNewTask.css" text="Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task " textAlignment="JUSTIFY" wrapText="true">
-               <font>
-                  <Font name="System Bold Italic" size="18.0" />
-               </font>
-            </Label>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+            <VBox alignment="CENTER" maxHeight="500.0" maxWidth="750.0" prefHeight="504.0" prefWidth="912.0" spacing="20.0">
                <children>
-                  <TextField prefHeight="57.0" prefWidth="268.0" promptText="Введите ответ" styleClass="answerTextField" stylesheets="@../css/addNewTask.css">
+                  <Label text="Верно!! Молодец!!!" textFill="#0aef1a">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold Italic" size="24.0" />
                      </font>
-                  </TextField>
-                  <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="162.0" styleClass="buttonControl" stylesheets="@../css/addNewTask.css" text="Проверить" textAlignment="CENTER">
+                  </Label>
+                  <Label styleClass="tasksLabel" stylesheets="@../css/task.css" text="Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task " textAlignment="JUSTIFY" wrapText="true">
                      <font>
-                        <Font name="Cambria Italic" size="18.0" />
+                        <Font name="System Bold Italic" size="18.0" />
                      </font>
-                  </Button>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <TextField prefHeight="57.0" prefWidth="268.0" promptText="Введите ответ" styleClass="answerTextField" stylesheets="@../css/task.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="162.0" styleClass="buttonControl" stylesheets="@../css/task.css" text="Проверить" textAlignment="CENTER">
+                           <font>
+                              <Font name="Cambria Italic" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+            </VBox>
          </children>
-         <padding>
-            <Insets top="50.0" />
-         </padding>
-      </VBox>
+      </StackPane>
    </children>
 </AnchorPane>
