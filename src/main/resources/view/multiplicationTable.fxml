@@ -9,7 +9,7 @@
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label prefHeight="70.0" prefWidth="610.0" text="Тут будет таблица умножения" textFill="#ef1515">
+            <Label prefHeight="70.0" prefWidth="807.0" text="Тут будет таблица умножения" textFill="#ef1515">
                <font>
                   <Font name="System Bold Italic" size="48.0" />
                </font>

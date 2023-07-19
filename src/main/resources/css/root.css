@@ -1,5 +1,5 @@
 .menuBar {
-    -fx-background-color: #7a0ed9;
+    -fx-background-color: linear-gradient(#a245f5 0%, #b272f1 100%);
     -fx-background-radius: 10 10 10 10;
     -fx-font-family: Cambria;
     -fx-font-size: 20;
@@ -8,13 +8,8 @@
 }
 
 .menu {
-    -fx-background-color: #7a0ed9;
+    -fx-background-color: linear-gradient(#a245f5 0%, #b272f1 100%);
 }
-
-/*.itemMenuBar:focused {*/
-/*    -fx-text-fill: #7a0ed9;*/
-/*    -fx-background-color: #ffffff;*/
-/*}*/
 
 .controlPanel {
     -fx-background-color: #7a0ed9;
@@ -72,4 +67,3 @@
 .titleControl {
     -fx-text-fill: #9d9999;
 }
-
