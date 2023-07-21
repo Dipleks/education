@@ -1,6 +1,6 @@
 package edu;
 
-import edu.view.settings.Root;
+import edu.startApp.Root;
 
 public class EducationApp {
     public static void main(String[] args) {
