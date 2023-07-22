@@ -16,24 +16,24 @@
          <children>
             <VBox alignment="CENTER" maxHeight="500.0" maxWidth="750.0" prefHeight="504.0" prefWidth="912.0" spacing="20.0">
                <children>
-                  <Label text="Верно!! Молодец!!!" textFill="#0aef1a">
+                  <Label fx:id="status">
                      <font>
                         <Font name="System Bold Italic" size="24.0" />
                      </font>
                   </Label>
-                  <Label styleClass="tasksLabel" stylesheets="@../../css/task.css" text="Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task " textAlignment="JUSTIFY" wrapText="true">
+                  <Label fx:id="conditionTask" styleClass="tasksLabel" stylesheets="@../../css/task.css" text="Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task Task " textAlignment="JUSTIFY" wrapText="true">
                      <font>
                         <Font name="System Bold Italic" size="18.0" />
                      </font>
                   </Label>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
                      <children>
-                        <TextField prefHeight="57.0" prefWidth="268.0" promptText="Введите ответ" styleClass="answerTextField" stylesheets="@../../css/task.css">
+                        <TextField fx:id="answerTask" prefHeight="57.0" prefWidth="268.0" promptText="Введите ответ" styleClass="answerTextField" stylesheets="@../../css/task.css">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </TextField>
-                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="162.0" styleClass="buttonControl" stylesheets="@../../css/task.css" text="Проверить" textAlignment="CENTER">
+                        <Button mnemonicParsing="false" onAction="#checkAnswer" prefHeight="57.0" prefWidth="162.0" styleClass="buttonControl" stylesheets="@../../css/task.css" text="Проверить" textAlignment="CENTER">
                            <font>
                               <Font name="Cambria Italic" size="18.0" />
                            </font>

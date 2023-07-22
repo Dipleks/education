@@ -14,11 +14,11 @@
          <children>
             <VBox alignment="CENTER" maxWidth="600.0" prefHeight="500.0" prefWidth="916.0" spacing="30.0">
                <children>
-                  <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Условие задачи" styleClass="answerTextField" stylesheets="@../../css/task.css" />
+                  <TextArea fx:id="conditionTask" prefHeight="200.0" prefWidth="200.0" promptText="Условие задачи" styleClass="answerTextField" stylesheets="@../../css/task.css" />
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
                      <children>
-                        <TextField prefHeight="65.0" prefWidth="258.0" promptText="Ответ" styleClass="answerTextField" stylesheets="@../../css/task.css" />
-                        <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="202.0" styleClass="buttonControl" stylesheets="@../../css/task.css" text="Добавить задачу" />
+                        <TextField fx:id="answerTask" prefHeight="65.0" prefWidth="258.0" promptText="Ответ" styleClass="answerTextField" stylesheets="@../../css/task.css" />
+                        <Button mnemonicParsing="false" onAction="#addNewTask" prefHeight="65.0" prefWidth="202.0" styleClass="buttonControl" stylesheets="@../../css/task.css" text="Добавить задачу" />
                      </children>
                   </HBox>
                </children>
