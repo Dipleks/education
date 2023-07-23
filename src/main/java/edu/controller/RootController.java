@@ -47,9 +47,6 @@ public class RootController implements Initializable {
             fxmlLoader.setLocation(getClass().getResource("/view/mathematics/mathematics.fxml"));
             AnchorPane anchorPane = fxmlLoader.load();
             rootPane.getChildren().add(anchorPane);
-
-//            SchoolMasterController schoolMasterController = fxmlLoader.getController();
-//            schoolMasterController.setData();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
