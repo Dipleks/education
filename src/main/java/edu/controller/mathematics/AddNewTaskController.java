@@ -16,6 +16,8 @@ public class AddNewTaskController implements MyController {
     @FXML
     private void addNewTask() {
         TaskHandler.addNewTask(conditionTask.getText(), answerTask.getText());
+        conditionTask.clear();
+        answerTask.clear();
     }
 
     public void setData(){
