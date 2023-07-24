@@ -4,7 +4,7 @@
     -fx-background-radius: 10 10 10 10;
     -fx-text-fill: #ffffff;
     -fx-font-size: 20;
-    -fx-font-style: italic;
+    /*-fx-font-style: italic;*/
     -fx-font-weight: bold;
     -fx-wrap-text: true;
     -fx-padding: 10 10 10 10;
