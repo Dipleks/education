@@ -26,6 +26,9 @@ public class TasksController implements MyController, Initializable{
     @FXML
     private Label status;
 
+    private int TRY_ANSWER = 1;
+    private int NET_CONDITION = 1;
+
     @FXML
     private void checkAnswer() {
         if (answerTask.getText().equalsIgnoreCase(TaskHandler.getAnswer())) {
@@ -37,8 +40,19 @@ public class TasksController implements MyController, Initializable{
             status.setStyle("-fx-text-fill: green;");
             status.setText("Верно! Молодец!!!");
         } else {
+            answerTask.clear();
             status.setStyle("-fx-text-fill: red;");
             status.setText("Не верно! Попробуй еще раз!");
+            if (TRY_ANSWER == 3) {
+                NET_CONDITION++;
+                answerTask.clear();
+                status.setStyle("-fx-text-fill: orange;");
+                status.setText("Давай пропустим эту задачу и вернёмся к ней в другой раз!");
+                getConditionTask(NET_CONDITION);
+                TRY_ANSWER = 1;
+            } else {
+                TRY_ANSWER++;
+            }
         }
     }
 
@@ -54,6 +68,15 @@ public class TasksController implements MyController, Initializable{
     private void getConditionTask() {
         try {
             conditionTask.setText(TaskHandler.getCondition());
+        } catch (Exception ex) {
+            condition.getChildren().clear();
+            init("/view/mathematics/errorGetTask.fxml", new ErrorGetTask(), condition);
+        }
+    }
+
+    private void getConditionTask(int limit) {
+        try {
+            conditionTask.setText(TaskHandler.getCondition(limit));
         } catch (Exception ex) {
             condition.getChildren().clear();
             init("/view/mathematics/errorGetTask.fxml", new ErrorGetTask(), condition);

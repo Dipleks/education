@@ -24,7 +24,7 @@ public class TestSpringJob {
 //        System.out.println(taskHandlerDB.getTask().isStatus());
 //        taskHandlerDB.updateStatus(taskHandlerDB.getTask().getNumber());
 
-        System.out.println(TaskHandler.getCondition());
+//        System.out.println(taskHandlerDB.getNextID(3));
 
         context.close();
     }

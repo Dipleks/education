@@ -6,9 +6,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class TaskHandler {
 
-    private static AnnotationConfigApplicationContext context =
+    private static final AnnotationConfigApplicationContext context =
             new AnnotationConfigApplicationContext(TaskConfig.class);
-    private static TaskHandlerDB TASK_HANDLER =
+    private static final TaskHandlerDB TASK_HANDLER =
             context.getBean("taskHandlerDB", TaskHandlerDB.class);
 
     public static void addNewTask(String condition, String answer) {
@@ -18,6 +18,12 @@ public class TaskHandler {
 
     public static String getCondition() {
         String condition = TASK_HANDLER.getTask(getTaskID()).getCondition();
+        context.close();
+        return condition;
+    }
+
+    public static String getCondition(int limit) {
+        String condition = TASK_HANDLER.getTask(getTaskID(limit)).getCondition();
         context.close();
         return condition;
     }
@@ -34,6 +40,12 @@ public class TaskHandler {
     }
     private static int getTaskID() {
         int number = TASK_HANDLER.getID();
+        context.close();
+        return number;
+    }
+
+    private static int getTaskID(int limit) {
+        int number = TASK_HANDLER.getNextID(limit);
         context.close();
         return number;
     }

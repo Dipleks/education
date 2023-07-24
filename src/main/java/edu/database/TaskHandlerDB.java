@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Objects;
 
 @Component
@@ -37,6 +38,14 @@ public class TaskHandlerDB {
         return Objects.requireNonNull(jdbcTemplate.query(
                 "SELECT * FROM tasks WHERE status = false LIMIT 1", new BeanPropertyRowMapper<>(Task.class))
                 .stream().findAny().orElse(null)).getNumber();
+        // TODO в дальнейшем null заменить!
+    }
+
+    public int getNextID(int limit) {
+        List<Task> tasks = jdbcTemplate.query(
+                        "SELECT * FROM tasks WHERE status = false LIMIT ?", new Object[]{limit},
+                        new BeanPropertyRowMapper<>(Task.class));
+        return tasks.get(tasks.size() - 1).getNumber();
         // TODO в дальнейшем null заменить!
     }
 
