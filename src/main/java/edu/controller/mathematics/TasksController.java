@@ -31,6 +31,10 @@ public class TasksController implements MyController, Initializable{
 
     @FXML
     private void checkAnswer() {
+        if(NET_CONDITION == 4) {
+            NET_CONDITION = 1;
+            getConditionTask();
+        }
         if (answerTask.getText().equalsIgnoreCase(TaskHandler.getAnswer())) {
             TaskHandler.isStatus();
             answerTask.clear();
