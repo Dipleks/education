@@ -31,10 +31,6 @@ public class TasksController implements MyController, Initializable{
 
     @FXML
     private void checkAnswer() {
-        if(NET_CONDITION == 4) {
-            NET_CONDITION = 1;
-            getConditionTask();
-        }
         if (answerTask.getText().equalsIgnoreCase(TaskHandler.getAnswer())) {
             TaskHandler.isStatus();
             answerTask.clear();
@@ -47,16 +43,7 @@ public class TasksController implements MyController, Initializable{
             answerTask.clear();
             status.setStyle("-fx-text-fill: red;");
             status.setText("Не верно! Попробуй еще раз!");
-            if (TRY_ANSWER == 3) {
-                NET_CONDITION++;
-                answerTask.clear();
-                status.setStyle("-fx-text-fill: orange;");
-                status.setText("Давай пропустим эту задачу и вернёмся к ней в другой раз!");
-                getConditionTask(NET_CONDITION);
-                TRY_ANSWER = 1;
-            } else {
-                TRY_ANSWER++;
-            }
+            getNextConditionTask();
         }
     }
 
@@ -78,12 +65,27 @@ public class TasksController implements MyController, Initializable{
         }
     }
 
-    private void getConditionTask(int limit) {
-        try {
-            conditionTask.setText(TaskHandler.getCondition(limit));
-        } catch (Exception ex) {
-            condition.getChildren().clear();
-            init("/view/mathematics/errorGetTask.fxml", new ErrorGetTask(), condition);
+    private void getNextConditionTask() {
+        if (TRY_ANSWER == 3) {
+            answerTask.clear();
+            status.setStyle("-fx-text-fill: orange;");
+            status.setText("Давай пропустим эту задачу и вернёмся к ней в другой раз!");
+            try {
+                NET_CONDITION++;
+                TRY_ANSWER = 1;
+                if(NET_CONDITION == 4) {
+                    NET_CONDITION = 1;
+                    getConditionTask();
+                } else {
+                    conditionTask.setText(TaskHandler.getCondition(NET_CONDITION));
+                }
+            } catch (Exception ex) {
+                condition.getChildren().clear();
+                init("/view/mathematics/errorGetTask.fxml", new ErrorGetTask(), condition);
+            }
+        } else {
+            TRY_ANSWER++;
         }
+
     }
 }
