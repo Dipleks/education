@@ -1,11 +1,12 @@
 package edu.controller.english;
 
 import edu.controller.MyController;
+import edu.controller.mathematics.PathFXML;
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.StackPane;
 
-public class EnglishController implements MyController {
+public class EnglishController implements MyController, PathFXML {
     @FXML
     private ToggleButton wordButton;
     @FXML
@@ -38,7 +39,7 @@ public class EnglishController implements MyController {
     @FXML
     private void addWord() {
         root.getChildren().clear();
-        init("/view/english/addNewWord.fxml", new AddNewWordController(), root);
+        init(ADD_NEW_WORD, new AddNewWordController(), root);
         isSelected(addWordButton, textButton, tableWordsButton, wordButton);
     }
 

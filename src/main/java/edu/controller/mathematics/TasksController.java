@@ -3,19 +3,14 @@ package edu.controller.mathematics;
 import edu.controller.MyController;
 import edu.model.TaskHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TasksController implements MyController, Initializable{
+public class TasksController implements MyController, PathFXML, Initializable{
 
     @FXML
     private StackPane condition;
@@ -61,7 +56,7 @@ public class TasksController implements MyController, Initializable{
             conditionTask.setText(TaskHandler.getCondition());
         } catch (Exception ex) {
             condition.getChildren().clear();
-            init("/view/mathematics/errorGetTask.fxml", new ErrorGetTask(), condition);
+            init(ERROR_GET_TASK, new ErrorGetTask(), condition);
         }
     }
 
@@ -69,19 +64,21 @@ public class TasksController implements MyController, Initializable{
         if (TRY_ANSWER == 3) {
             answerTask.clear();
             status.setStyle("-fx-text-fill: orange;");
-            status.setText("Давай пропустим эту задачу и вернёмся к ней в другой раз!");
+            status.setText("Давай пропустим ту задачу и попробуем решить эту!");
             try {
                 NET_CONDITION++;
                 TRY_ANSWER = 1;
                 if(NET_CONDITION == 4) {
                     NET_CONDITION = 1;
+                    status.setStyle("-fx-text-fill: green;");
+                    status.setText("Давай попробуем решить то, что не получилось:");
                     getConditionTask();
                 } else {
                     conditionTask.setText(TaskHandler.getCondition(NET_CONDITION));
                 }
             } catch (Exception ex) {
                 condition.getChildren().clear();
-                init("/view/mathematics/errorGetTask.fxml", new ErrorGetTask(), condition);
+                init(ERROR_GET_TASK, new ErrorGetTask(), condition);
             }
         } else {
             TRY_ANSWER++;

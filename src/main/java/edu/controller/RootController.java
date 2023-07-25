@@ -1,5 +1,6 @@
 package edu.controller;
 
+import edu.controller.mathematics.PathFXML;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,7 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RootController implements Initializable {
+public class RootController implements Initializable, PathFXML {
     @FXML
     private StackPane rootPane;
 
@@ -19,7 +20,7 @@ public class RootController implements Initializable {
          rootPane.getChildren().clear();
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/view/mathematics/mathematics.fxml"));
+            fxmlLoader.setLocation(getClass().getResource(MATHEMATICS));
             AnchorPane anchorPane = fxmlLoader.load();
             rootPane.getChildren().add(anchorPane);
         } catch (IOException e) {
@@ -32,7 +33,7 @@ public class RootController implements Initializable {
          rootPane.getChildren().clear();
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/view/english/english.fxml"));
+            fxmlLoader.setLocation(getClass().getResource(ENGLISH));
             AnchorPane anchorPane = fxmlLoader.load();
             rootPane.getChildren().add(anchorPane);
         } catch (IOException e) {
@@ -44,7 +45,7 @@ public class RootController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/view/mathematics/mathematics.fxml"));
+            fxmlLoader.setLocation(getClass().getResource(MATHEMATICS));
             AnchorPane anchorPane = fxmlLoader.load();
             rootPane.getChildren().add(anchorPane);
         } catch (IOException e) {
