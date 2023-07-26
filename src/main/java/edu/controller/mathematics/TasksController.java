@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,6 +28,26 @@ public class TasksController implements MyController, PathFXML, Initializable{
 
     @FXML
     private void checkAnswer() {
+        check();
+    }
+
+    public void setData() {
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        getConditionTask();
+    }
+
+    @FXML
+    private void pressEnter(KeyEvent keyEvent) {
+        if (keyEvent.getCode().equals(KeyCode.ENTER)) {
+            check();
+        }
+    }
+
+    private void check() {
         if (answerTask.getText().equalsIgnoreCase(TaskHandler.getAnswer())) {
             TaskHandler.isStatus();
             answerTask.clear();
@@ -40,15 +62,6 @@ public class TasksController implements MyController, PathFXML, Initializable{
             status.setText("Не верно! Попробуй еще раз!");
             getNextConditionTask();
         }
-    }
-
-    public void setData() {
-
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        getConditionTask();
     }
 
     private void getConditionTask() {

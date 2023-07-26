@@ -28,7 +28,7 @@
                   </Label>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
                      <children>
-                        <TextField fx:id="answerTask" prefHeight="57.0" prefWidth="268.0" promptText="Введите ответ" styleClass="answerTextField" stylesheets="@../../css/task.css">
+                        <TextField fx:id="answerTask" onKeyPressed="#pressEnter" prefHeight="57.0" prefWidth="268.0" promptText="Введите ответ" styleClass="answerTextField" stylesheets="@../../css/task.css">
                            <font>
                               <Font size="18.0" />
                            </font>
