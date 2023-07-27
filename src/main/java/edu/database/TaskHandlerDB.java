@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.Objects;
 
@@ -24,12 +23,12 @@ public class TaskHandlerDB {
                 condition, answer);
     }
 
-    public void updateStatus(int number) {
-        jdbcTemplate.update("UPDATE tasks SET status=true WHERE number=?", number);
+    public void updateStatus(int id) {
+        jdbcTemplate.update("UPDATE tasks SET status=true WHERE id=?", id);
     }
 
-    public Task getTask(int number) {
-        return jdbcTemplate.query("SELECT * FROM tasks WHERE number = ?", new Object[]{number},
+    public Task getTask(int id) {
+        return jdbcTemplate.query("SELECT * FROM tasks WHERE id=?", new Object[]{id},
                 new BeanPropertyRowMapper<>(Task.class)).stream().findAny().orElse(null);
         // TODO в дальнейшем null заменить!
     }
@@ -37,7 +36,7 @@ public class TaskHandlerDB {
     public int getID() {
         return Objects.requireNonNull(jdbcTemplate.query(
                 "SELECT * FROM tasks WHERE status = false LIMIT 1", new BeanPropertyRowMapper<>(Task.class))
-                .stream().findAny().orElse(null)).getNumber();
+                .stream().findAny().orElse(null)).getId();
         // TODO в дальнейшем null заменить!
     }
 
@@ -45,7 +44,7 @@ public class TaskHandlerDB {
         List<Task> tasks = jdbcTemplate.query(
                         "SELECT * FROM tasks WHERE status = false LIMIT ?", new Object[]{limit},
                         new BeanPropertyRowMapper<>(Task.class));
-        return tasks.get(tasks.size() - 1).getNumber();
+        return tasks.get(tasks.size() - 1).getId();
         // TODO в дальнейшем null заменить!
     }
 

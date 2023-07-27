@@ -2,7 +2,10 @@ package edu.model;
 
 import edu.config.TaskConfig;
 import edu.database.TaskHandlerDB;
+import edu.model.entity.Task;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.List;
 
 public class TestSpringJob {
     public static void main(String[] args) {
@@ -25,6 +28,16 @@ public class TestSpringJob {
 //        taskHandlerDB.updateStatus(taskHandlerDB.getTask().getNumber());
 
 //        System.out.println(taskHandlerDB.getNextID(3));
+
+//        for (int i = 1; i < 121; i++) {
+//            System.out.println("INSERT INTO public.statuses (tasks_id, status) VALUES (" + i + ", false);");
+//        }
+//        TaskHandlerDB taskHandlerDB = context.getBean("taskHandlerDB", TaskHandlerDB.class);
+//        List<Task> list = taskHandlerDB.getTask();
+//
+//        for (Task t: list) {
+//            System.out.println(t.getId());
+//        }
 
         context.close();
     }

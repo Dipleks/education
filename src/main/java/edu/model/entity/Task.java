@@ -1,26 +1,26 @@
 package edu.model.entity;
 
 public class Task {
-    private int number;
+    private int id;
     private String condition;
     private String answer;
     private boolean status;
 
     public Task() {}
 
-    public Task(int number, String condition, String answer, boolean status) {
-        this.number = number;
+    public Task(int id, String condition, String answer, boolean status) {
+        this.id = id;
         this.condition = condition;
         this.answer = answer;
         this.status = status;
     }
 
-    public int getNumber() {
-        return number;
+    public int getId() {
+        return id;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCondition() {
@@ -50,7 +50,7 @@ public class Task {
     @Override
     public String toString() {
         return "Task{" +
-                "number=" + number +
+                "id=" + id +
                 ", condition='" + condition + '\'' +
                 ", answer='" + answer + '\'' +
                 ", status=" + status +
