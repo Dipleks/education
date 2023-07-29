@@ -9,5 +9,6 @@ public interface PathFXML {
     String MULTIPLICATION_TABLE = "/view/mathematics/multiplicationTable.fxml";
     String ADD_NEW_TASK = "/view/mathematics/addNewTask.fxml";
     String ERROR_GET_TASK =  "/view/mathematics/errorGetTask.fxml";
+    String ERROR_END_TASK =  "/view/mathematics/errorEndTask.fxml";
     String ADD_NEW_WORD = "/view/english/addNewWord.fxml";
 }

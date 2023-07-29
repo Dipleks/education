@@ -6,6 +6,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 public interface MyController {
     void setData();
@@ -24,12 +25,9 @@ public interface MyController {
         }
     }
 
-    default void isSelected(ToggleButton press, ToggleButton unclenched1,
-                            ToggleButton unclenched2, ToggleButton unclenched3) {
+    default void isSelected(ToggleButton press, ToggleButton... unclenched) {
         if (press.isSelected()) {
-            unclenched1.setSelected(false);
-            unclenched2.setSelected(false);
-            unclenched3.setSelected(false);
+            Arrays.stream(unclenched).forEach(button -> button.setSelected(false));
         }
     }
 }

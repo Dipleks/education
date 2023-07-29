@@ -1,4 +1,4 @@
-package edu.config;
+package edu.model.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

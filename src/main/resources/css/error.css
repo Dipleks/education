@@ -8,6 +8,16 @@
     /*-fx-padding: 10 10 10 10;*/
 }
 
+.errorEndTask {
+    /*-fx-background-color: #7a0ed9;*/
+    -fx-text-fill: green;
+    -fx-font-size: 24;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    /*-fx-padding: 10 10 10 10;*/
+}
+
 .actionOnErrors {
     /*-fx-background-color: #7a0ed9;*/
     -fx-text-fill: #000000;

@@ -1,11 +1,9 @@
 package edu.model;
 
-import edu.config.TaskConfig;
-import edu.database.TaskHandlerDB;
-import edu.model.entity.Task;
+import edu.model.config.TaskConfig;
+import edu.model.database.TasksDAO;
+import edu.model.mathematicks.TaskHandler;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.util.List;
 
 public class TestSpringJob {
     public static void main(String[] args) {
@@ -18,6 +16,8 @@ public class TestSpringJob {
 
 //        TaskHandler taskHandler = context.getBean("taskHandler", TaskHandler.class);
 //        taskHandler.addTask("test1", "t1");
+
+//        TaskHandler.updateTask(1, "test1", "t1", true);
 
 //        TaskHandlerDB taskHandlerDB = context.getBean("taskHandlerDB", TaskHandlerDB.class);
 //        taskHandlerDB.add("test2", "t2");
@@ -39,6 +39,10 @@ public class TestSpringJob {
 //            System.out.println(t.getId());
 //        }
 
+//        TaskHandler.checkAnswer("9");
+
+        TasksDAO tasksDAO = context.getBean("tasksDAO", TasksDAO.class);
+        System.out.println(tasksDAO.count());
         context.close();
     }
 }

@@ -1,7 +1,7 @@
 package edu.controller.mathematics;
 
 import edu.controller.MyController;
-import edu.model.TaskHandler;
+import edu.model.mathematicks.TaskHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
