@@ -2,6 +2,7 @@ package edu.controller.mathematics;
 
 import edu.controller.MyController;
 import edu.model.mathematicks.TaskHandler;
+import edu.model.mathematicks.Tasks;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -26,7 +27,7 @@ public class TasksController implements MyController, PathFXML, Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            conditionTask.setText(TaskHandler.showCondition());
+            conditionTask.setText(Tasks.showCondition());
         } catch (Exception ex) {
             condition.getChildren().clear();
             init(ERROR_GET_TASK, new ErrorGetTask(), condition);
@@ -46,25 +47,26 @@ public class TasksController implements MyController, PathFXML, Initializable{
     }
 
     private void check() {
-        if (answerTask.getText().equalsIgnoreCase(TaskHandler.getAnswer())) {
-            TaskHandler.updateStatus();
-            answerTask.clear();
+        try {
+            if (answerTask.getText().equalsIgnoreCase(Tasks.checkAnswer())) {
+                TaskHandler.updateStatus(Tasks.getID());
+                Tasks.deleteTasksFromBuffer();
+                answerTask.clear();
 
-            try {
-                conditionTask.setText(TaskHandler.showCondition());
-            } catch (Exception ex) {
-                condition.getChildren().clear();
-                init(ERROR_END_TASK, new ErrorGetTask(), condition);
+                conditionTask.setText(Tasks.showCondition());
+
+                status.setStyle("-fx-text-fill: green;");
+                status.setText("Верно! Молодец!!!");
+            } else {
+                answerTask.clear();
+                status.setStyle("-fx-text-fill: red;");
+                status.setText("Не верно! Попробуй еще раз!");
+
+                conditionTask.setText(Tasks.tryingDecide());
             }
-
-            status.setStyle("-fx-text-fill: green;");
-            status.setText("Верно! Молодец!!!");
-        } else {
-            answerTask.clear();
-            status.setStyle("-fx-text-fill: red;");
-            status.setText("Не верно! Попробуй еще раз!");
-
-            conditionTask.setText(TaskHandler.nextCondition());
+        } catch (Exception ex) {
+            condition.getChildren().clear();
+            init(ERROR_END_TASK, new ErrorGetTask(), condition);
         }
     }
     public void setData() {

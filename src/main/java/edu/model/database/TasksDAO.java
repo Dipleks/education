@@ -4,7 +4,6 @@ import edu.model.entity.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Objects;
@@ -16,6 +15,12 @@ public class TasksDAO {
     @Autowired
     public TasksDAO(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+
+    public List<Task> getAll() {
+        return Objects.requireNonNull(jdbcTemplate.query(
+                        "SELECT * FROM tasks WHERE status = false",
+                new BeanPropertyRowMapper<>(Task.class)));
     }
 
     public void add(String condition, String answer) {

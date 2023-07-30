@@ -2,7 +2,7 @@ package edu.model;
 
 import edu.model.config.TaskConfig;
 import edu.model.database.TasksDAO;
-import edu.model.mathematicks.TaskHandler;
+import edu.model.database.TasksBuffer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class TestSpringJob {
@@ -41,8 +41,20 @@ public class TestSpringJob {
 
 //        TaskHandler.checkAnswer("9");
 
-        TasksDAO tasksDAO = context.getBean("tasksDAO", TasksDAO.class);
-        System.out.println(tasksDAO.count());
+//        TasksDAO tasksDAO = context.getBean("tasksDAO", TasksDAO.class);
+//        TasksBuffer tasksBuffer = context.getBean("tasksBuffer", TasksBuffer.class);
+
+//        tasksDAO.getAll().forEach(task -> tasksDAOH2.add(
+//                task.getId(), task.getCondition(), task.getAnswer()));
+
+//        System.out.println(tasksDAOH2.getTask().getCondition());
+//        System.out.println("----------------");
+//        tasksDAOH2.delete(tasksDAOH2.getTask().getId());
+//        System.out.println(tasksDAOH2.getTask().getCondition());
+
+//        tasksDAOH2.update(tasksDAO.getTask().getId(), 0);
+
+//        tasksBuffer.deleteAll();
         context.close();
     }
 }

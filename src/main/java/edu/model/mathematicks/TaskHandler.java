@@ -42,8 +42,8 @@ public class TaskHandler {
         return answer;
     }
 
-    public static void updateStatus() {
-        TASK_HANDLER.updateStatus(ID);
+    public static void updateStatus(int id) {
+        TASK_HANDLER.updateStatus(id);
         context.close();
     }
 
