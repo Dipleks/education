@@ -8,18 +8,13 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Objects;
-
 
 @Component
 public class TasksBuffer {
-
     private final JdbcTemplate jdbcTemplate;
-
 
     @Autowired
     public TasksBuffer(JdbcTemplate jdbcTemplate) {

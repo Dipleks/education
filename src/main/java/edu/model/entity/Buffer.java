@@ -1,7 +1,6 @@
 package edu.model.entity;
 
 public class Buffer {
-
     private int id;
     private String condition;
     private String answer;

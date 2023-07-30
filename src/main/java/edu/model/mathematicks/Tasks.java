@@ -7,7 +7,6 @@ import edu.model.entity.Buffer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Tasks {
-
     private static final AnnotationConfigApplicationContext context =
             new AnnotationConfigApplicationContext(TaskConfig.class);
 

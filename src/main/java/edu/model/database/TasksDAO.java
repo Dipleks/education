@@ -38,37 +38,10 @@ public class TasksDAO {
         jdbcTemplate.update("UPDATE tasks SET status=true WHERE id=?", id);
     }
 
-    public int count() {
-        return Objects.requireNonNull(jdbcTemplate.queryForObject(
-                "SELECT count(*) FROM public.tasks WHERE status=false",
-                Integer.class));
-    }
-
     public Task getTask() {
         return Objects.requireNonNull(jdbcTemplate.query(
                         "SELECT * FROM tasks WHERE status = false LIMIT 1", new BeanPropertyRowMapper<>(Task.class))
                 .stream().findAny().orElse(null));
-        // TODO в дальнейшем null заменить!
-    }
-
-    public Task getTask(int id) {
-        return jdbcTemplate.query("SELECT * FROM tasks WHERE id=?", new Object[]{id},
-                new BeanPropertyRowMapper<>(Task.class)).stream().findAny().orElse(null);
-        // TODO в дальнейшем null заменить!
-    }
-
-    public int getID() {
-        return Objects.requireNonNull(jdbcTemplate.query(
-                "SELECT * FROM tasks WHERE status = false LIMIT 1", new BeanPropertyRowMapper<>(Task.class))
-                .stream().findAny().orElse(null)).getId();
-        // TODO в дальнейшем null заменить!
-    }
-
-    public int getNextID(int limit) {
-        List<Task> tasks = jdbcTemplate.query(
-                        "SELECT * FROM tasks WHERE status = false LIMIT ?", new Object[]{limit},
-                        new BeanPropertyRowMapper<>(Task.class));
-        return tasks.get(tasks.size() - 1).getId();
         // TODO в дальнейшем null заменить!
     }
 
