@@ -19,10 +19,18 @@ public class CreatorDB {
      * Если нет, создать недостающий элемент.
      * */
     public void createDB() {
+
         // Создаем БД
     }
 
     public void createTableBuffer() {
+        jdbcTemplate.execute("create table buffer" +
+                "(" +
+                "    id        int not null ," +
+                "    condition varchar not null," +
+                "    answer    varchar (50) not null," +
+                "    count    int default 3 not null" +
+                ");");
         // Создаем таблицу Буффера
     }
 

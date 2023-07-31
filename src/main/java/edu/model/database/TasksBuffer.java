@@ -32,23 +32,31 @@ public class TasksBuffer {
         jdbcTemplate.update("UPDATE buffer SET count=3");
     }
 
-    public void add(List<Task> list) {
-        jdbcTemplate.batchUpdate(
-                "INSERT INTO buffer (id, condition, answer) VALUES (?, ?, ?)",
-                new BatchPreparedStatementSetter() {
-                    @Override
-                    public void setValues(@Nullable PreparedStatement ps, int i) throws SQLException {
-                        assert ps != null;
-                        ps.setInt(1, list.get(i).getId());
-                        ps.setString(2, list.get(i).getCondition());
-                        ps.setString(3, list.get(i).getAnswer());
-                    }
+    private boolean isCheckTable(String tableName) {
+        return Boolean.TRUE.equals(jdbcTemplate.queryForObject(
+                "SELECT EXISTS (SELECT * FROM information_schema.tables WHERE table_name = ?)",
+                new Object[]{tableName}, Boolean.class));
+    }
 
-                    @Override
-                    public int getBatchSize() {
-                        return list.size();
-                    }
-                });
+    public void add(List<Task> list) {
+        if (isCheckTable("buffer")) {
+            jdbcTemplate.batchUpdate(
+                    "INSERT INTO buffer (id, condition, answer) VALUES (?, ?, ?)",
+                    new BatchPreparedStatementSetter() {
+                        @Override
+                        public void setValues(@Nullable PreparedStatement ps, int i) throws SQLException {
+                            assert ps != null;
+                            ps.setInt(1, list.get(i).getId());
+                            ps.setString(2, list.get(i).getCondition());
+                            ps.setString(3, list.get(i).getAnswer());
+                        }
+
+                        @Override
+                        public int getBatchSize() {
+                            return list.size();
+                        }
+                    });
+        }
     }
 
     public void update(int id, int updateCount) {
@@ -60,6 +68,8 @@ public class TasksBuffer {
     }
 
     public void deleteAll() {
-        jdbcTemplate.update("DELETE FROM buffer");
+        if (isCheckTable("buffer")) {
+            jdbcTemplate.update("DELETE FROM buffer");
+        }
     }
 }
