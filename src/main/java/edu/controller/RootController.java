@@ -1,6 +1,5 @@
 package edu.controller;
 
-import edu.controller.mathematics.PathFXML;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -34,6 +33,19 @@ public class RootController implements Initializable, PathFXML {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource(ENGLISH));
+            AnchorPane anchorPane = fxmlLoader.load();
+            rootPane.getChildren().add(anchorPane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    private void getSettingsDB() {
+        rootPane.getChildren().clear();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource(SETTINGS_DB));
             AnchorPane anchorPane = fxmlLoader.load();
             rootPane.getChildren().add(anchorPane);
         } catch (IOException e) {

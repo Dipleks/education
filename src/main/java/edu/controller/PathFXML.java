@@ -1,9 +1,10 @@
-package edu.controller.mathematics;
+package edu.controller;
 
 public interface PathFXML {
 
     String MATHEMATICS = "/view/mathematics/mathematics.fxml";
     String ENGLISH = "/view/english/english.fxml";
+    String SETTINGS_DB = "/view/settingsDB.fxml";
     String TASKS = "/view/mathematics/tasks.fxml";
     String EXAMPLES = "/view/mathematics/examples.fxml";
     String MULTIPLICATION_TABLE = "/view/mathematics/multiplicationTable.fxml";

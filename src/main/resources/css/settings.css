@@ -1,0 +1,40 @@
+.title {
+    -fx-text-fill: black;
+    -fx-underline: true;
+    -fx-font-size: 24;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow(gaussian, rgba(79, 77, 77, 0.7), 10, 0, 10, 10);
+}
+
+.explanations {
+    -fx-text-fill: black;
+    -fx-font-size: 20;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow(gaussian, rgba(79, 77, 77, 0.7), 10, 0, 10, 10);
+}
+
+.buttonCreat {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #7a0ed9;
+    -fx-background-radius: 20 20 20 20;
+    -fx-font-family: Cambria;
+    -fx-font-size: 20;
+    -fx-font-style: Italic;
+    -fx-pref-height: 40;
+    -fx-pref-width: 230;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(79, 77, 77, 0.7), 10, 0, 10, 10);
+}
+
+.buttonCreat:selected {
+    -fx-text-fill: #7a0ed9;
+    -fx-background-color: #ffffff;
+}
+
+.buttonCreat:hover {
+    -fx-background-color: #b272f1;
+}

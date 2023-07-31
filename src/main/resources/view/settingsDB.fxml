@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.controller.SettingsDBController">
+   <children>
+      <StackPane layoutX="350.0" layoutY="175.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" spacing="20.0">
+               <StackPane.margin>
+                  <Insets bottom="20.0" left="60.0" right="20.0" top="20.0" />
+               </StackPane.margin>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="70.0">
+                     <children>
+                        <Label styleClass="title" stylesheets="@../css/settings.css" text="Настройки Базы Данных" textAlignment="CENTER" />
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label styleClass="explanations" stylesheets="@../css/settings.css" text="1) Создать базу данных:" />
+                        <Button mnemonicParsing="false" onAction="#createDB" styleClass="buttonCreat" stylesheets="@../css/settings.css" text="Создать" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label styleClass="explanations" stylesheets="@../css/settings.css" text="2) Создать таблицу с Задачами:" />
+                        <Button mnemonicParsing="false" onAction="#createTableTasks" styleClass="buttonCreat" stylesheets="@../css/settings.css" text="Создать" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label styleClass="explanations" stylesheets="@../css/settings.css" text="3) Создать Буффер для Задач:" />
+                        <Button mnemonicParsing="false" onAction="#createTableBuffer" styleClass="buttonCreat" stylesheets="@../css/settings.css" text="Создать" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,6 +1,7 @@
 package edu.controller.mathematics;
 
 import edu.controller.MyController;
+import edu.controller.PathFXML;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ToggleButton;

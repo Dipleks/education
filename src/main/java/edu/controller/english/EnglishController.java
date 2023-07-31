@@ -1,7 +1,7 @@
 package edu.controller.english;
 
 import edu.controller.MyController;
-import edu.controller.mathematics.PathFXML;
+import edu.controller.PathFXML;
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.StackPane;
