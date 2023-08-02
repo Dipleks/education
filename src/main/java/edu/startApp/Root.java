@@ -11,11 +11,6 @@ public class Root extends Application {
     }
 
     @Override
-    public void init() throws Exception{
-        Tasks.copyTasksInBufferTable();
-    }
-
-    @Override
     public void start(Stage primaryStage) {
         RootWindow.getGeneralWindows();
     }
