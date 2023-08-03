@@ -17,6 +17,10 @@ import java.util.ResourceBundle;
 public class TasksController implements MyController, PathFXML, Initializable{
 
     @FXML
+    private Label countLoyalAnswer;
+    @FXML
+    private Label countAnswer;
+    @FXML
     private StackPane condition;
     @FXML
     private Label conditionTask;
@@ -24,8 +28,6 @@ public class TasksController implements MyController, PathFXML, Initializable{
     private TextField answerTask;
     @FXML
     private Label status;
-    @FXML
-    private Label countAnswer;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -57,6 +59,10 @@ public class TasksController implements MyController, PathFXML, Initializable{
                 answerTask.clear();
 
                 conditionTask.setText(Tasks.showCondition());
+
+                int count = Integer.parseInt(countLoyalAnswer.getText());
+                count++;
+                countLoyalAnswer.setText(String.valueOf(count));
 
                 status.setStyle("-fx-text-fill: green;");
                 status.setText("Верно! Молодец!!!");

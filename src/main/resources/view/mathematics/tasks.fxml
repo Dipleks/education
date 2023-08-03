@@ -18,6 +18,15 @@
                <children>
                   <HBox spacing="10.0">
                      <children>
+                        <Label styleClass="countAnswer" stylesheets="@../../css/task.css" text="Верно решенные задачи:" />
+                        <Label fx:id="countLoyalAnswer" styleClass="countAnswer" stylesheets="@../../css/task.css" text="0" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
                         <Label alignment="CENTER" styleClass="countAnswer" stylesheets="@../../css/task.css" text="Неверных ответов:" />
                         <Label fx:id="countAnswer" styleClass="countAnswer" stylesheets="@../../css/task.css" text="0" />
                      </children>
