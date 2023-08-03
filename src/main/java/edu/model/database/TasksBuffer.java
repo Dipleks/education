@@ -69,7 +69,7 @@ public class TasksBuffer {
 
     public void deleteAll() {
         if (isCheckTable("buffer")) {
-            jdbcTemplate.update("DELETE FROM buffer");
+            jdbcTemplate.update("TRUNCATE TABLE buffer");
         }
     }
 }

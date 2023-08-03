@@ -24,6 +24,8 @@ public class TasksController implements MyController, PathFXML, Initializable{
     private TextField answerTask;
     @FXML
     private Label status;
+    @FXML
+    private Label countAnswer;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -64,6 +66,10 @@ public class TasksController implements MyController, PathFXML, Initializable{
                 status.setText("Не верно! Попробуй еще раз!");
 
                 conditionTask.setText(Tasks.tryingDecide());
+
+                int count = Integer.parseInt(countAnswer.getText());
+                count++;
+                countAnswer.setText(String.valueOf(count));
             }
         } catch (Exception ex) {
             condition.getChildren().clear();

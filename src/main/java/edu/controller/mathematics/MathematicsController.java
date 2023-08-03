@@ -24,8 +24,8 @@ public class MathematicsController implements Initializable, MyController, PathF
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        init(TASKS, new TasksController(), root);
         Tasks.copyTasksInBufferTable();
+        init(TASKS, new TasksController(), root);
     }
 
     @FXML

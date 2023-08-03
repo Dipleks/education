@@ -16,6 +16,15 @@
          <children>
             <VBox alignment="CENTER" maxHeight="500.0" maxWidth="750.0" prefHeight="504.0" prefWidth="912.0" spacing="20.0">
                <children>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER" styleClass="countAnswer" stylesheets="@../../css/task.css" text="Неверных ответов:" />
+                        <Label fx:id="countAnswer" styleClass="countAnswer" stylesheets="@../../css/task.css" text="0" />
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
                   <Label fx:id="status">
                      <font>
                         <Font name="System Bold Italic" size="24.0" />
