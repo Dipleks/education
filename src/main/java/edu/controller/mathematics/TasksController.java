@@ -62,6 +62,7 @@ public class TasksController implements MyController, PathFXML, Initializable{
 
                 int count = Integer.parseInt(countLoyalAnswer.getText());
                 count++;
+                countLoyalAnswer.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
                 countLoyalAnswer.setText(String.valueOf(count));
 
                 status.setStyle("-fx-text-fill: green;");
@@ -75,6 +76,7 @@ public class TasksController implements MyController, PathFXML, Initializable{
 
                 int count = Integer.parseInt(countAnswer.getText());
                 count++;
+                countAnswer.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
                 countAnswer.setText(String.valueOf(count));
             }
         } catch (Exception ex) {
