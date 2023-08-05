@@ -75,24 +75,23 @@ public class ExamplesController implements MyController, Initializable {
     }
 
     private void check() {
-        if (result.getText().equals(Examples.getResult(
-                firstValue.getText(), sign.getText(), secondValue.getText()
-        ))) {
+        if (result.getText().equals(Examples.getResult(firstValue.getText(), sign.getText(), secondValue.getText()))) {
             status.setStyle("-fx-text-fill: green;");
             status.setText("Верно! Молодец!!!");
             int count = Integer.parseInt(countSuccess.getText());
             count++;
             countSuccess.setStyle("-fx-text-fill: green; -fx-font-weight: bold;");
             countSuccess.setText(String.valueOf(count));
+
+            getExample();
         } else {
             status.setStyle("-fx-text-fill: red;");
-            status.setText("Не верно! Попробуем решить другой пример!");
+            status.setText("Не верно! Попробуй еще раз!");
             int count = Integer.parseInt(countException.getText());
             count++;
             countException.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
             countException.setText(String.valueOf(count));
         }
-        getExample();
         result.clear();
     }
 
