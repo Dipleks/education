@@ -1,0 +1,41 @@
+.buttonControl {
+    background-color: #7a0ed9;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*margin: 0 -50% 0 0;*/
+    transform: translate(-50%, -50%)
+}
+
+.buttonControl:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.buttonControl:active:after {
+    border-radius: 15px;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
